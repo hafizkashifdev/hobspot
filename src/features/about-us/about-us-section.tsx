@@ -1,17 +1,18 @@
 "use client";
 
-import { Container, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import backVector from "./assets/back-vector.svg";
-import Section from "./assets/Section.svg";
+// import Section from "./assets/Section.svg";
 import Section2 from "./assets/section2.svg";
+
 
 import Link from "next/link";
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 
-export const AboutUsSection = () => {
+const AboutUsSection = () => {
   const router = useRouter();
   const onBackIconClick = useCallback(() => {
     router.push("/");
@@ -31,3 +32,5 @@ export const AboutUsSection = () => {
     </>
   );
 };
+
+export default AboutUsSection

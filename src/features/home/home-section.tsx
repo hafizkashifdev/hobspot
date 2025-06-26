@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { homeData } from "./home-section-data";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const HomeSection = () => {
   return (
