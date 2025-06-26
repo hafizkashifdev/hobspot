@@ -18,7 +18,7 @@ export const AboutUsSection = () => {
   }, [router]);
 
   return (
-    <Container maxWidth="xl">
+    <>
       <Stack flexDirection="row" alignItems={"center"} mt={2} mb={5}>
         <Link href="/" style={{ textDecoration: "none" }}>
           <Image src={backVector} alt="Hero Image" width={40} height={40} onClick={onBackIconClick}/>
@@ -28,6 +28,6 @@ export const AboutUsSection = () => {
         </Typography>
       </Stack>
       <Image src={Section2} alt="Hero Image" width={40} height={40} style={{width:"100%", height:"100%", }}/>
-    </Container>
+    </>
   );
 };

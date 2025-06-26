@@ -6,7 +6,7 @@ import { Container, Grid } from "@mui/material";
 
 const HomeSection = () => {
   return (
-    <Container maxWidth="xl">
+    <>
       <Grid container spacing={3}>
         {homeData.map((item: any) => (
           <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.title}>
@@ -22,7 +22,7 @@ const HomeSection = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </>
   );
 };
 

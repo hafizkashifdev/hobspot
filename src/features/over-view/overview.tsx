@@ -5,7 +5,7 @@ import { Box, Container, Typography } from "@mui/material";
 
 export const OverviewSection = () => {
   return (
- <Container maxWidth="xl">
+ <>
 
     <Box
       sx={{
@@ -2117,6 +2117,6 @@ export const OverviewSection = () => {
 
 
 export default OverviewPurpose;
-    </Container>
+    </>
   );
 };
