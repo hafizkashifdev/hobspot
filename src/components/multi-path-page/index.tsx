@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { MultiBackIcon } from "@/assets";
 
 type MultiPathPageItem = {
-  title: string;
+  key: string;
   link: string;
   icon: string;
 };
@@ -16,12 +16,14 @@ type MultiPathPageProps = {
   arrayData: MultiPathPageItem[];
   pageTitle: string;
   backRoute?: string;
+  fontSize?: any;
 };
 
 const MultiPathPage: React.FC<MultiPathPageProps> = ({
   arrayData,
   pageTitle,
   backRoute = "/",
+  fontSize = { xs: "0.8rem", sm: "18px", md: "22px" },
 }) => {
   const router = useRouter();
   const onBackIconClick = useCallback(() => {
@@ -46,7 +48,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
         <Typography
           variant="h5"
           color="#0246BC"
-          fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }}
+          fontSize={fontSize}
           fontWeight={{ md: 600, xs: 500 }}
           ml={{ md: 2, xs: 1 }}
           sx={{
@@ -59,7 +61,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
       <Grid container spacing={2}>
         {!!arrayData.length &&
           arrayData.map((item) => (
-            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.title}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.key}>
               <Link href={item.link} style={{ textDecoration: "none" }}>
                 <Image
                   src={item.icon}
@@ -70,6 +72,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
                     width: "100%",
                     height: "100%",
                     borderRadius: "20px",
+                    cursor: "pointer",
                   }}
                 />
               </Link>
