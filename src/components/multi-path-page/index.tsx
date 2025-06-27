@@ -3,8 +3,8 @@ import React, { useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import backVector from "../../features/about-us/assets/back-vector.svg";
 import { useRouter } from "next/navigation";
+import { MultiBackIcon } from "@/assets";
 
 type MultiPathPageItem = {
   title: string;
@@ -15,35 +15,43 @@ type MultiPathPageItem = {
 type MultiPathPageProps = {
   arrayData: MultiPathPageItem[];
   pageTitle: string;
-  backRoute: string;
+  backRoute?: string;
 };
 
 const MultiPathPage: React.FC<MultiPathPageProps> = ({
   arrayData,
   pageTitle,
-  backRoute,
+  backRoute = "/",
 }) => {
   const router = useRouter();
   const onBackIconClick = useCallback(() => {
     router.push(backRoute);
   }, [router]);
   return (
-    <Box sx={{ p: 3 }}>
-      <Stack flexDirection="row" alignItems={"center"} mt={2} mb={5}>
+    <Box p={{ md: 3, xs: 2 }}>
+      <Stack
+        flexDirection={"row"}
+        alignItems={"center"}
+        mt={{ md: 2, xs: 1 }}
+        mb={{ md: 5, sm: 3, xs: 2 }}
+      >
         <Image
-          src={backVector}
-          alt={pageTitle || "Back"}
+          src={MultiBackIcon}
+          alt={pageTitle}
           width={40}
           height={40}
           onClick={onBackIconClick}
           style={{ cursor: "pointer" }}
         />
         <Typography
-          variant="h3"
+          variant="h5"
           color="#0246BC"
-          fontSize={{ xs: "1rem", sm: "2rem", md: "2.5rem" }}
-          fontWeight={600}
-          ml={2}
+          fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }}
+          fontWeight={{ md: 600, xs: 500 }}
+          ml={{ md: 2, xs: 1 }}
+          sx={{
+            fontFamily: "inherit",
+          }}
         >
           {pageTitle}
         </Typography>

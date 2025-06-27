@@ -1,19 +1,19 @@
 "use client";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import backVector from "../../features/about-us/assets/back-vector.svg";
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { CommonBackIcon } from "@/assets";
 
 interface CommonPageProps {
   src: any;
-  backRoute: string;
+  backRoute?: string;
   pageTitle: string;
 }
 
 const CommonPage: React.FC<CommonPageProps> = ({
   src,
-  backRoute,
+  backRoute = "/",
   pageTitle,
 }) => {
   const router = useRouter();
@@ -22,10 +22,15 @@ const CommonPage: React.FC<CommonPageProps> = ({
   }, [router]);
 
   return (
-    <Box sx={{ p: 3 }}>
-      <Stack flexDirection="row" alignItems={"center"} mt={2} mb={5}>
+    <Box p={{ md: 3, xs: 2 }}>
+      <Stack
+        flexDirection={"row"}
+        alignItems={"center"}
+        mt={{ md: 2, xs: 1 }}
+        mb={{ md: 5, sm: 3, xs: 2 }}
+      >
         <Image
-          src={backVector}
+          src={CommonBackIcon}
           alt={pageTitle}
           width={40}
           height={40}
@@ -33,11 +38,14 @@ const CommonPage: React.FC<CommonPageProps> = ({
           style={{ cursor: "pointer" }}
         />
         <Typography
-          variant="h3"
+          variant="h5"
           color="#5A5867"
-          fontSize={{ xs: "1rem", sm: "2rem", md: "2.5rem" }}
-          fontWeight={600}
-          ml={2}
+          fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }}
+          fontWeight={{ md: 600, xs: 500 }}
+          ml={{ md: 2, xs: 1 }}
+          sx={{
+            fontFamily: "inherit",
+          }}
         >
           {pageTitle}
         </Typography>
