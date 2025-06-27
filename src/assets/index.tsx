@@ -1,1 +1,14 @@
-export { default as IMAGESample } from "./Section.svg";
+// export { default as IMAGESample } from "./Section.svg";
+export { default as backVector } from "./back-vector.svg";
+export { default as mainSection } from "./main-section.svg";
+export { default as section1 } from "./section1.svg";
+export { default as section2 } from "./section2.svg";
+export { default as section3 } from "./section3.svg";
+export { default as section4 } from "./section4.svg";
+export { default as section5 } from "./section5.svg";
+export { default as section6 } from "./section6.svg";
+export { default as section7 } from "./section7.svg";
+export { default as section8 } from "./section8.svg";
+export { default as section9 } from "./section9.svg";
+export { default as section10 } from "./section10.svg";
+export { default as homeImg } from "./section10.svg";
