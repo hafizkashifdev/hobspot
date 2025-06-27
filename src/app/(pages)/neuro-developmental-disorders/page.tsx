@@ -3,10 +3,10 @@
 import { AboutUsSection } from '@/features/about-us/about-us-section'
 import React from 'react'
 
-const MajorDepressiveDisorderPage = () => {
+const NeuroDevelopmentalDisordersPage = () => {
   return (
     < AboutUsSection/>
   )
 }
 
-export default MajorDepressiveDisorderPage
+export default NeuroDevelopmentalDisordersPage
