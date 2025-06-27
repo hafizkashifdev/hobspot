@@ -1,12 +1,14 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { homeData } from "./home-section-data";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
-const HomeSection = () => {
+export const HomeSection = () => {
   return (
-    <>
+    <Box sx={{ p: 3 }}>
       <Grid container spacing={3}>
         {homeData.map((item: any) => (
           <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.title}>
@@ -22,8 +24,6 @@ const HomeSection = () => {
           </Grid>
         ))}
       </Grid>
-    </>
+    </Box>
   );
 };
-
-export default HomeSection;
