@@ -5,7 +5,7 @@ import React from "react";
 import Image from "next/image";
 import backVector from "./assets/back-vector.svg";
 // import Section from "./assets/Section.svg";
-import Section2 from "./assets/section2.svg";
+import Section2 from "./assets/wer.svg";
 
 import Link from "next/link";
 import { useCallback } from "react";
@@ -19,7 +19,7 @@ export const AboutUsSection = () => {
 
   return (
     <Box sx={{ p: 3 }}>
-      <Typography
+      {/* <Typography
           variant="h3"
           my={1}
           color="#5A5867"
@@ -51,8 +51,8 @@ export const AboutUsSection = () => {
           >
          Colour Legend
         </Typography>
-          </Stack>
-      {/* <Stack flexDirection="row" alignItems={"center"} mt={2} mb={5}>
+          </Stack> */}
+      <Stack flexDirection="row" alignItems={"center"} mt={2} mb={5}>
         <Link href="/" style={{ textDecoration: "none" }}>
           <Image
             src={backVector}
@@ -79,7 +79,7 @@ export const AboutUsSection = () => {
         width={40}
         height={40}
         style={{ width: "100%", height: "100%" }}
-      /> */}
+      />
     </Box>
   );
 };
