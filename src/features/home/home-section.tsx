@@ -4,11 +4,15 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { section10 } from "@/assets";
+import { colorLegends, section10 } from "@/assets";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 export const HomeSection = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <Box sx={{ p: 3 }}>
+    <Box sx={{ p: 3, position: "relative" }}>
       <Typography
         variant="h3"
         my={1}
@@ -23,6 +27,7 @@ export const HomeSection = () => {
         flexDirection="row"
         alignItems={"center"}
         justifyContent="space-between"
+        flexWrap={"wrap"}
         mt={2}
         // mb={5}
       >
@@ -47,7 +52,13 @@ export const HomeSection = () => {
         >
           Colour Legend{" "}
           <KeyboardArrowDownIcon
-            sx={{ fontSize: "35px", border: "1px solid", borderRadius: "40px" }}
+            sx={{
+              fontSize: "25px",
+              border: "2px solid",
+              borderRadius: "40px",
+              cursor: "pointer",
+            }}
+            onClick={toggleDropdown}
           />
         </Typography>
       </Stack>
@@ -62,6 +73,7 @@ export const HomeSection = () => {
           flexDirection="row"
           alignItems={"center"}
           justifyContent="space-between"
+           flexWrap={"wrap"}
           mb={5}
         >
           <Typography
@@ -97,6 +109,17 @@ export const HomeSection = () => {
           height={40}
           style={{ width: "100%", height: "100%" }}
         />
+        {isOpen && (
+          <Box sx={{ position: "absolute", top: "150px", right: "50px" }}>
+            <Image
+              src={colorLegends}
+              alt="Hero Image"
+              width={40}
+              height={40}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Box>
+        )}
       </Box>
     </Box>
   );
