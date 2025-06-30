@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { AntisocialPersonalityDisorderIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const AntisocialpersonalityDisorderPage = () => {
   return (
-    < AboutUsSection/>
+   <CommonPage
+      src={AntisocialPersonalityDisorderIcon}
+      backRoute="/personality-disorders"
+      pageTitle="Mental Health / Personality Disorders/ Antisocial Personality Disorder (ASPD)"
+    />
   )
 }
 

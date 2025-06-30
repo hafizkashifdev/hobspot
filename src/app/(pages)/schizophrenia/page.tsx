@@ -1,12 +1,15 @@
-
-
-import { AboutUsSection } from '@/features/about-us/about-us-section'
-import React from 'react'
+import { Schizophrenia } from "@/assets";
+import { CommonPage } from "@/components";
+import React from "react";
 
 const SchizophreniaPage = () => {
   return (
-    < AboutUsSection/>
-  )
-}
+    <CommonPage
+      src={Schizophrenia}
+      backRoute="/psychotic-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Psychotic Disorders / Schizophrenia"
+    />
+  );
+};
 
-export default SchizophreniaPage
+export default SchizophreniaPage;

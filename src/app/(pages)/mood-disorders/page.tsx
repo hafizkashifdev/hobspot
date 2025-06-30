@@ -18,12 +18,12 @@ const moodDisordersData = [
   },
   {
     key: 'cyclothymia',
-    link: '/cyclothymia',
+    link: '/dysthymia-persistent-epressive-disorder',
     icon: MoodDisordersImg3,
   },
   {
     key: 'dysthymia',
-    link: '/dysthymia-persistent-epressive-disorder',
+    link: '/cyclothymia',
     icon: MoodDisordersImg4,
   },
 ];

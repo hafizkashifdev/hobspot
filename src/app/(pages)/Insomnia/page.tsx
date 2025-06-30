@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { Insomnia } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const InsomniaPage = () => {
   return (
-    < AboutUsSection/>
+ <CommonPage
+      src={Insomnia}
+      backRoute="/sleep-wake-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Sleep-Wake Disorders/ Insomnia"
+    />
   )
 }
 

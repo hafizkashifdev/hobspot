@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { NarcolepsyIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const NarcolepsyPage = () => {
   return (
-    < AboutUsSection/>
+  <CommonPage
+      src={NarcolepsyIcon}
+      backRoute="/sleep-wake-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Sleep-Wake Disorders / Narcolepsyh"
+    />
   )
 }
 

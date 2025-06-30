@@ -1,13 +1,12 @@
 export { default as CommonBackIcon } from "./common-back.svg";
 export { default as MultiBackIcon } from "./multi-back.svg";
-<<<<<<< HEAD
 export { default as BackVectorIcon } from "./back-vector.svg";
 export { default as AntisocialPersonalityDisorderIcon } from "./antisocialpersonality-disorder.svg";
 export { default as AnxietyDisordersImg1 } from "./anxiety-disorders-img-1.svg";
 export { default as AnxietyDisordersImg2 } from "./anxiety-disorders-img-2.svg";
 export { default as AnxietyDisordersImg3 } from "./anxiety-disorders-img-3.svg";
 export { default as AnxietyDisordersImg4 } from "./anxiety-disorders-img-4.svg";
-// export { default as BipolarDisorderIcon } from "./bipolar-disorder.svg";
+export { default as BipolarDisorderIcon } from "./bipolar-disorder.svg";
 export { default as BorderlinePersonalityDisorderIcon } from "./borderline-personality-disorder.svg";
 export { default as CyclothymiaIcon } from "./cyclothymia.svg";
 export { default as DysthymiaIcon } from "./dysthymia-persistent-epressive-disorder.svg";
@@ -30,7 +29,6 @@ export { default as SleepWakeDisordersImg1 } from "./sleep-wake-disorders-img-1.
 export { default as SleepWakeDisordersImg2 } from "./sleep-wake-disorders-img-2.svg";
 export { default as SocialAnxietyDisorderIcon } from "./social-anxiety-disorder.svg";
 export { default as SpecificPhobiasIcon } from "./specific-phobias.svg";
-=======
 export { default as ObsessiveCompulsiveDisorderImage } from "./obsessive-compulsive-disorder.svg";
 export { default as BodyDysmorphicDisordersImage } from "./body-dysmorphic-disorder.svg";
 export { default as ObsessiveCompulsiveDisorderPageImage } from "./obsessive-compulsive-disorder-img.svg";
@@ -43,7 +41,7 @@ export { default as BulimiaNervosaPageImage } from "./bulimia-nervosa-img.svg";
 export { default as BingeEatingDisorderPageImage } from "./binge-eating-disorder-img.svg";
 export { default as PostTraumaticStressDisorderImage } from "./post-traumatic-stress-disorder-img.svg";
 export { default as backVector } from "./back-vector.svg";
-export { default as mainSection } from "./main-section.svg";
+export { default as mainSection } from "./main.svg";
 export { default as section1 } from "./section1.svg";
 export { default as section2 } from "./section2.svg";
 export { default as section3 } from "./section3.svg";
@@ -66,4 +64,9 @@ export { default as homeImg8 } from "./home-img8.svg";
 export { default as homeImg9 } from "./home-img9.svg";
 export { default as homeImg10 } from "./home-img10.svg";
 export { default as colorLegends } from "./color-legends.svg";
->>>>>>> cf64b2caf73a229aa4ca874c02ec3041fd3e338d
+export { default as Insomnia } from "./insomnia.svg";
+export { default as SchizoaffectiveDisorders } from "./schizoaffective-disorders.svg";
+export { default as Schizophrenia } from "./Schizophrenia.svg";
+export { default as AttentionDeficitHyperactivityDisorder } from "./AttentionDeficitHyperactivityDisorder.svg";
+
+export { default as Dysthym } from "./Dysthym.svg"

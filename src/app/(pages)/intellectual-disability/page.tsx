@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { IntellectualDisabilityIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const IntellectualDisabilityPage = () => {
   return (
-    < AboutUsSection/>
+    <CommonPage
+      src={IntellectualDisabilityIcon}
+      backRoute="/personality-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorder /  Neurodevelopmental Disorders / Intellectual Disability"
+    /> 
   )
 }
 

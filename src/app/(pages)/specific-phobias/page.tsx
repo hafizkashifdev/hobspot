@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { SpecificPhobiasIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const SpecificPhobiasPage = () => {
   return (
-    < AboutUsSection/>
+ <CommonPage
+      src={SpecificPhobiasIcon}
+      backRoute="/anxiety-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Anxiety Disorders / Specific Phobias "
+    /> 
   )
 }
 

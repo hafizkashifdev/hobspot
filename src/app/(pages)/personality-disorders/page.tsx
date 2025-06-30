@@ -12,7 +12,7 @@ const personalityDisordersData = [
   },
   {
     key: 'personality-2',
-    link: 'h/personality-disorders/img-2',
+    link: 'personality-disorders/img-2',
     icon: PersonalityDisordersImg2,
   },
 ];
