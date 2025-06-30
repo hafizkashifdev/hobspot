@@ -25,7 +25,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
   pageTitle,
   backRoute = "/",
   fontSize = { xs: "20rem", sm: "30px", md: "40px" },
-  iconWidth = "100%",
+  iconWidth = "auto",
 }) => {
   const router = useRouter();
   const onBackIconClick = useCallback(() => {
