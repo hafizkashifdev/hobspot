@@ -53,7 +53,7 @@ const PsychiatricAssessmentMentalHealthDisordersData = [
   },
   {
     key: 'disorder-7',
-    link: '/neurocognitive-disorders',
+    link: '/neuro-developmental-disorders',
     icon: PsychiatricAssessmentMentalHealthDisordersImg7,
   },
   {
