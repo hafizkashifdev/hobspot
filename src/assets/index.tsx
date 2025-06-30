@@ -85,5 +85,18 @@ export { default as Insomnia } from "./insomnia.svg";
 export { default as SchizoaffectiveDisorders } from "./schizoaffective-disorders.svg";
 export { default as Schizophrenia } from "./Schizophrenia.svg";
 export { default as AttentionDeficitHyperactivityDisorder } from "./AttentionDeficitHyperactivityDisorder.svg";
-
 export { default as Dysthym } from "./Dysthym.svg"
+export { default as PsychiatricAssessmentMentalHealthDisordersImg1 } from "./PsychiatricAssessmentMentalHealthDisordersImg1.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg2 } from "./PsychiatricAssessmentMentalHealthDisordersImg2.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg3 } from "./PsychiatricAssessmentMentalHealthDisordersImg3.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg4 } from "./PsychiatricAssessmentMentalHealthDisordersImg4.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg5 } from "./PsychiatricAssessmentMentalHealthDisordersImg5.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg6 } from "./PsychiatricAssessmentMentalHealthDisordersImg6.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg7 } from "./PsychiatricAssessmentMentalHealthDisordersImg7.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg8 } from "./PsychiatricAssessmentMentalHealthDisordersImg8.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg9 } from "./PsychiatricAssessmentMentalHealthDisordersImg9.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg10 } from "./PsychiatricAssessmentMentalHealthDisordersImg10.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg11 } from "./PsychiatricAssessmentMentalHealthDisordersImg11.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg12 } from "./PsychiatricAssessmentMentalHealthDisordersImg12.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg13 } from "./PsychiatricAssessmentMentalHealthDisordersImg13.svg";
+export { default as PsychiatricAssessmentMentalHealthDisordersImg14 } from "./PsychiatricAssessmentMentalHealthDisordersImg14.svg";
