@@ -1,16 +1,41 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { colorLegends, section10 } from "@/assets";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
 export const HomeSection = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const legendRef = useRef<HTMLDivElement>(null);
+  const iconRef = useRef<HTMLDivElement>(null);
+
+  const toggleDropdown = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      if (
+        legendRef.current &&
+        !legendRef.current.contains(target) &&
+        iconRef.current &&
+        !iconRef.current.contains(target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <Box sx={{ p: 3, position: "relative" }}>
       <Typography
@@ -23,6 +48,7 @@ export const HomeSection = () => {
       >
         Mental Health Listing Process
       </Typography>
+
       <Stack
         flexDirection="row"
         alignItems={"center"}
@@ -41,6 +67,7 @@ export const HomeSection = () => {
           Sequence Diagram for Process for Determining Unfitness to Stand Trial
           Based on Mental Health
         </Typography>
+
         <Typography
           variant="h3"
           my={3}
@@ -51,17 +78,20 @@ export const HomeSection = () => {
           ml={2}
         >
           Colour Legend{" "}
-          <KeyboardArrowDownIcon
-            sx={{
-              fontSize: "25px",
-              border: "2px solid",
-              borderRadius: "40px",
-              cursor: "pointer",
-            }}
-            onClick={toggleDropdown}
-          />
+          <span ref={iconRef}>
+            <KeyboardArrowDownIcon
+              sx={{
+                fontSize: "25px",
+                border: "2px solid",
+                borderRadius: "40px",
+                cursor: "pointer",
+              }}
+              onClick={toggleDropdown}
+            />
+          </span>
         </Typography>
       </Stack>
+
       <Box
         sx={{
           border: "3px dashed #000",
@@ -73,7 +103,7 @@ export const HomeSection = () => {
           flexDirection="row"
           alignItems={"center"}
           justifyContent="space-between"
-           flexWrap={"wrap"}
+          flexWrap={"wrap"}
           mb={5}
         >
           <Typography
@@ -86,6 +116,7 @@ export const HomeSection = () => {
           >
             End-to-End Mental health Listing Process
           </Typography>
+
           <Link href="/court-hearing" style={{ textDecoration: "none" }}>
             <Button
               sx={{
@@ -102,6 +133,7 @@ export const HomeSection = () => {
             </Button>
           </Link>
         </Stack>
+
         <Image
           src={section10}
           alt="Hero Image"
@@ -109,11 +141,16 @@ export const HomeSection = () => {
           height={40}
           style={{ width: "100%", height: "100%" }}
         />
+
         {isOpen && (
-          <Box sx={{ position: "absolute", top: "150px", right: "50px" }}>
+          <Box
+            ref={legendRef}
+            sx={{ position: "absolute", top: "150px", right: "50px" }}
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={colorLegends}
-              alt="Hero Image"
+              alt="Color Legend"
               width={40}
               height={40}
               style={{ width: "100%", height: "100%" }}
