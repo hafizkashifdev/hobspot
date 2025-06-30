@@ -65,7 +65,7 @@ export const courtHearingData = [
   },
   {
     key: "10",
-    link: "/",
+    link: "/psychiatric-assessment-mental-health-disorders",
     icon: homeImg10,
   },
 ];
