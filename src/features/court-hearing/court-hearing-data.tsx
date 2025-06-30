@@ -53,22 +53,19 @@ export const courtHearingData = [
     link: "/restoration-fitness-stand-trial",
     icon: homeImg7,
   },
-];
-
-export const courtHearingDataTwo = [
   {
-    md: 6,
+    key: "8",
     link: "/final-outcome-special-verdict",
     icon: homeImg8,
   },
   {
-    md: 6,
+    key: "9",
     link: "/monitoring-long-term-care",
     icon: homeImg9,
   },
   {
-    md: 12,
-    link: "/",
+    key: "10",
+    link: "/psychiatric-assessment-mental-health-disorders",
     icon: homeImg10,
   },
-]
+];
