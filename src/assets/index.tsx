@@ -64,9 +64,12 @@ export { default as homeImg8 } from "./home-img8.svg";
 export { default as homeImg9 } from "./home-img9.svg";
 export { default as homeImg10 } from "./home-img10.svg";
 export { default as colorLegends } from "./color-legends.svg";
+<<<<<<< HEAD
 export { default as Insomnia } from "./insomnia.svg";
 export { default as SchizoaffectiveDisorders } from "./schizoaffective-disorders.svg";
 export { default as Schizophrenia } from "./Schizophrenia.svg";
 export { default as AttentionDeficitHyperactivityDisorder } from "./AttentionDeficitHyperactivityDisorder.svg";
 
 export { default as Dysthym } from "./Dysthym.svg"
+=======
+>>>>>>> 5568881cc52a45faaa4ea4e35ca963600d36f886

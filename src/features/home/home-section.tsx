@@ -29,7 +29,6 @@ export const HomeSection = () => {
         justifyContent="space-between"
         flexWrap={"wrap"}
         mt={2}
-        // mb={5}
       >
         <Typography
           variant="h3"
@@ -46,8 +45,9 @@ export const HomeSection = () => {
           variant="h3"
           my={3}
           color="#5A5867"
-          fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+          fontSize={{ xs: "1rem", sm: "1.5rem", md: "1.8rem" }}
           fontWeight={600}
+          textTransform={"uppercase"}
           ml={2}
         >
           Colour Legend{" "}
