@@ -33,7 +33,7 @@ const MoodDisordersPage = () => {
     <MultiPathPage
       arrayData={moodDisordersData}
       pageTitle="Mood Disorders"
-      backRoute="/"
+      backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };
