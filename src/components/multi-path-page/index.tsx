@@ -17,13 +17,15 @@ type MultiPathPageProps = {
   pageTitle: string;
   backRoute?: string;
   fontSize?: any;
+  iconWidth?: string;
 };
 
 const MultiPathPage: React.FC<MultiPathPageProps> = ({
   arrayData,
   pageTitle,
   backRoute = "/",
-  fontSize = { xs: "0.8rem", sm: "18px", md: "22px" },
+  fontSize = { xs: "20rem", sm: "30px", md: "40px" },
+  iconWidth = "100%",
 }) => {
   const router = useRouter();
   const onBackIconClick = useCallback(() => {
@@ -69,7 +71,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
                   width={100}
                   height={100}
                   style={{
-                    width: "100%",
+                    width: iconWidth,
                     height: "100%",
                     borderRadius: "20px",
                     cursor: "pointer",

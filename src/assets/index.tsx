@@ -1,6 +1,6 @@
-export { default as IMAGESample } from "./Section.svg";
 export { default as CommonBackIcon } from "./common-back.svg";
 export { default as MultiBackIcon } from "./multi-back.svg";
+<<<<<<< HEAD
 export { default as BackVectorIcon } from "./back-vector.svg";
 export { default as AntisocialPersonalityDisorderIcon } from "./antisocialpersonality-disorder.svg";
 export { default as AnxietyDisordersImg1 } from "./anxiety-disorders-img-1.svg";
@@ -30,3 +30,40 @@ export { default as SleepWakeDisordersImg1 } from "./sleep-wake-disorders-img-1.
 export { default as SleepWakeDisordersImg2 } from "./sleep-wake-disorders-img-2.svg";
 export { default as SocialAnxietyDisorderIcon } from "./social-anxiety-disorder.svg";
 export { default as SpecificPhobiasIcon } from "./specific-phobias.svg";
+=======
+export { default as ObsessiveCompulsiveDisorderImage } from "./obsessive-compulsive-disorder.svg";
+export { default as BodyDysmorphicDisordersImage } from "./body-dysmorphic-disorder.svg";
+export { default as ObsessiveCompulsiveDisorderPageImage } from "./obsessive-compulsive-disorder-img.svg";
+export { default as BodyDysmorphicDisorderPageImage } from "./body-dysmorphic-disorder-img.svg";
+export { default as AnorexiaNervosaIcon } from "./anorexia-nervosa-icon.svg";
+export { default as BulimiaNervosaIcon } from "./bulimia-nervosa-icon.svg";
+export { default as BingeEatingDisorderIcon } from "./binge-eating-disorder-icon.svg";
+export { default as AnorexiaNervosaPageImage } from "./anorexia-nervosa-page-img.svg";
+export { default as BulimiaNervosaPageImage } from "./bulimia-nervosa-img.svg";
+export { default as BingeEatingDisorderPageImage } from "./binge-eating-disorder-img.svg";
+export { default as PostTraumaticStressDisorderImage } from "./post-traumatic-stress-disorder-img.svg";
+export { default as backVector } from "./back-vector.svg";
+export { default as mainSection } from "./main-section.svg";
+export { default as section1 } from "./section1.svg";
+export { default as section2 } from "./section2.svg";
+export { default as section3 } from "./section3.svg";
+export { default as section4 } from "./section4.svg";
+export { default as section5 } from "./section5.svg";
+export { default as section6 } from "./section6.svg";
+export { default as section7 } from "./section7.svg";
+export { default as section8 } from "./section8.svg";
+export { default as section9 } from "./section9.svg";
+export { default as section10 } from "./section10.svg";
+export { default as homeImg } from "./home-img.svg";
+export { default as homeImg1 } from "./home-img1.svg";
+export { default as homeImg2 } from "./home-img2.svg";
+export { default as homeImg3 } from "./home-img3.svg";
+export { default as homeImg4 } from "./home-img4.svg";
+export { default as homeImg5 } from "./home-img5.svg";
+export { default as homeImg6 } from "./home-img6.svg";
+export { default as homeImg7 } from "./home-img7.svg";
+export { default as homeImg8 } from "./home-img8.svg";
+export { default as homeImg9 } from "./home-img9.svg";
+export { default as homeImg10 } from "./home-img10.svg";
+export { default as colorLegends } from "./color-legends.svg";
+>>>>>>> cf64b2caf73a229aa4ca874c02ec3041fd3e338d
