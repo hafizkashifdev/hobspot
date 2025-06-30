@@ -21,7 +21,7 @@ const PsychoticDisordersPage = () => {
     <MultiPathPage
       arrayData={psychoticDisordersData}
       pageTitle="Psychotic Disorders"
-      backRoute="/"
+        backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };
