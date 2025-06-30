@@ -24,7 +24,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
   arrayData,
   pageTitle,
   backRoute = "/",
-  fontSize = { xs: "20rem", sm: "30px", md: "40px" },
+  fontSize = { xs: "20px", sm: "30px", md: "40px" },
   iconWidth = "100%",
 }) => {
   const router = useRouter();
