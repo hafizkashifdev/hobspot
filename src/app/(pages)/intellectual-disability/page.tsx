@@ -8,7 +8,7 @@ const IntellectualDisabilityPage = () => {
   return (
     <CommonPage
       src={IntellectualDisabilityIcon}
-      backRoute="/personality-disorders"
+      backRoute="/neuro-developmental-disorders"
       pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorder /  Neurodevelopmental Disorders / Intellectual Disability"
     /> 
   )
