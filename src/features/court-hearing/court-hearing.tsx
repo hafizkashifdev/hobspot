@@ -26,7 +26,7 @@ export const CourtHearingSection = () => {
                 width={100}
                 height={100}
                 style={{
-                  width: "100%",
+                  width: "auto",
                   height: "100%",
                   borderRadius: "20px",
                 }}
