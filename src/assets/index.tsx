@@ -7,7 +7,7 @@ export { default as AnxietyDisordersImg1 } from "./anxiety-disorders-img-1.svg";
 export { default as AnxietyDisordersImg2 } from "./anxiety-disorders-img-2.svg";
 export { default as AnxietyDisordersImg3 } from "./anxiety-disorders-img-3.svg";
 export { default as AnxietyDisordersImg4 } from "./anxiety-disorders-img-4.svg";
-export { default as BipolarDisorderIcon } from "./bipolar-disorder.svg";
+// export { default as BipolarDisorderIcon } from "./bipolar-disorder.svg";
 export { default as BorderlinePersonalityDisorderIcon } from "./borderline-personality-disorder.svg";
 export { default as CyclothymiaIcon } from "./cyclothymia.svg";
 export { default as DysthymiaIcon } from "./dysthymia-persistent-epressive-disorder.svg";
@@ -15,7 +15,7 @@ export { default as GeneralizedAnxietyDisorderIcon } from "./generalized-anxiety
 export { default as IntellectualDisabilityIcon } from "./intellectual-disability.svg";
 export { default as MajorDepressiveDisorderIcon } from "./major-depressive-disorder.svg";
 export { default as MoodDisordersImg1 } from "./mood-disorders-img-1.svg";
-export { default as MoodDisordersImg2 } from "./mood-disorders-img-2.png";
+export { default as MoodDisordersImg2 } from "./image-mood-two.svg";
 export { default as MoodDisordersImg3 } from "./mood-disorders-img-3.svg";
 export { default as MoodDisordersImg4 } from "./mood-disorders-img-4.svg";
 export { default as NarcolepsyIcon } from "./narcolepsy.svg";

@@ -1,12 +1,30 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
-import React from 'react'
+import React from 'react';
+import { MultiPathPage } from '@/components';
+import { PersonalityDisordersImg1, PersonalityDisordersImg2 } from '@/assets';
+
+const personalityDisordersData = [
+  {
+    key: 'personality-1',
+    link: '/personality-disorders/img-1',
+    icon: PersonalityDisordersImg1,
+  },
+  {
+    key: 'personality-2',
+    link: 'h/personality-disorders/img-2',
+    icon: PersonalityDisordersImg2,
+  },
+];
 
 const PersonalityDisordersPage = () => {
   return (
-    < AboutUsSection/>
-  )
-}
+    <MultiPathPage
+      arrayData={personalityDisordersData}
+      pageTitle="Personality Disorders"
+      backRoute="/"
+    />
+  );
+};
 
-export default PersonalityDisordersPage
+export default PersonalityDisordersPage;

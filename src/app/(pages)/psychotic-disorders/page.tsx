@@ -1,12 +1,29 @@
 
+import React from 'react';
+import { MultiPathPage } from '@/components';
+import { PsychoticDisordersImg1, PsychoticDisordersImg2 } from '@/assets';
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
-import React from 'react'
+const psychoticDisordersData = [
+  {
+    key: 'psychotic-1',
+    link: '/psychotic-disorders/img-1',
+    icon: PsychoticDisordersImg1,
+  },
+  {
+    key: 'psychotic-2',
+    link: '/psychotic-disorders/img-2',
+    icon: PsychoticDisordersImg2,
+  },
+];
 
 const PsychoticDisordersPage = () => {
   return (
-    < AboutUsSection/>
-  )
-}
+    <MultiPathPage
+      arrayData={psychoticDisordersData}
+      pageTitle="Psychotic Disorders"
+      backRoute="/"
+    />
+  );
+};
 
-export default PsychoticDisordersPage
+export default PsychoticDisordersPage;
