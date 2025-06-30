@@ -1,6 +1,5 @@
 export { default as CommonBackIcon } from "./common-back.svg";
 export { default as MultiBackIcon } from "./multi-back.svg";
-<<<<<<< HEAD
 export { default as BackVectorIcon } from "./back-vector.svg";
 export { default as AntisocialPersonalityDisorderIcon } from "./antisocialpersonality-disorder.svg";
 export { default as AnxietyDisordersImg1 } from "./anxiety-disorders-img-1.svg";
@@ -30,7 +29,6 @@ export { default as SleepWakeDisordersImg1 } from "./sleep-wake-disorders-img-1.
 export { default as SleepWakeDisordersImg2 } from "./sleep-wake-disorders-img-2.svg";
 export { default as SocialAnxietyDisorderIcon } from "./social-anxiety-disorder.svg";
 export { default as SpecificPhobiasIcon } from "./specific-phobias.svg";
-=======
 export { default as ObsessiveCompulsiveDisorderImage } from "./obsessive-compulsive-disorder.svg";
 export { default as BodyDysmorphicDisordersImage } from "./body-dysmorphic-disorder.svg";
 export { default as ObsessiveCompulsiveDisorderPageImage } from "./obsessive-compulsive-disorder-img.svg";
@@ -66,4 +64,3 @@ export { default as homeImg8 } from "./home-img8.svg";
 export { default as homeImg9 } from "./home-img9.svg";
 export { default as homeImg10 } from "./home-img10.svg";
 export { default as colorLegends } from "./color-legends.svg";
->>>>>>> cf64b2caf73a229aa4ca874c02ec3041fd3e338d
