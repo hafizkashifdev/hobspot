@@ -29,7 +29,7 @@ const SleepWakeDisordersPage = () => {
    <MultiPathPage
       arrayData={sleepWeekData}
       pageTitle="Sleep-Wake Disorders"
-      backRoute="/"
+      backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   )
 }

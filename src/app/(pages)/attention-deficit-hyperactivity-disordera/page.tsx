@@ -1,12 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { AttentionDeficitHyperactivityDisorder } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const AttentionDeficitHyperactivityDisordera = () => {
   return (
-    < AboutUsSection/>
-  )
+<CommonPage
+      src={AttentionDeficitHyperactivityDisorder}
+      backRoute="/personality-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Neurodevelopmental Disorders Attention-Deficit Hyperactivity Disorder (ADHD)"
+    />  )
 }
 
 export default AttentionDeficitHyperactivityDisordera

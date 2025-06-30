@@ -7,12 +7,12 @@ import { PersonalityDisordersImg1, PersonalityDisordersImg2 } from '@/assets';
 const personalityDisordersData = [
   {
     key: 'personality-1',
-    link: '/personality-disorders/img-1',
+    link: '/borderline-personality-disorder',
     icon: PersonalityDisordersImg1,
   },
   {
     key: 'personality-2',
-    link: 'h/personality-disorders/img-2',
+    link: 'antisocialpersonality-disorder',
     icon: PersonalityDisordersImg2,
   },
 ];
@@ -22,7 +22,7 @@ const PersonalityDisordersPage = () => {
     <MultiPathPage
       arrayData={personalityDisordersData}
       pageTitle="Personality Disorders"
-      backRoute="/"
+         backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };

@@ -1,11 +1,15 @@
 
-
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { CyclothymiaIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const CyclothymiaPage = () => {
   return (
-    < AboutUsSection/>
+    <CommonPage
+      src={CyclothymiaIcon}
+      backRoute="/mood-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Mood Disorders / Cyclothymia "
+    />
   )
 }
 

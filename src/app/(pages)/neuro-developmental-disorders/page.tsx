@@ -7,12 +7,12 @@ import { NeurodevelopmentalDisordersImg1, NeurodevelopmentalDisordersImg2 } from
 const neurodevelopmentalDisordersData = [
   {
     key: 'neurodevelopmental-1',
-    link: '/neuro-developmental-disorders',
+    link: '/attention-deficit-hyperactivity-disordera',
     icon: NeurodevelopmentalDisordersImg1,
   },
   {
     key: 'neurodevelopmental-2',
-    link: '/Intellectual Disability',
+    link: '/intellectual-disability',
     icon: NeurodevelopmentalDisordersImg2,
   },
 ];
@@ -22,7 +22,7 @@ const NeuroDevelopmentalDisordersPage = () => {
     <MultiPathPage
       arrayData={neurodevelopmentalDisordersData}
       pageTitle="Neurodevelopmental Disorders"
-      backRoute="/"
+      backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };

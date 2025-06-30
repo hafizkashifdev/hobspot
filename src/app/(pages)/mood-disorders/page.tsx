@@ -18,12 +18,12 @@ const moodDisordersData = [
   },
   {
     key: 'cyclothymia',
-    link: '/cyclothymia',
+    link: '/dysthymia-persistent-epressive-disorder',
     icon: MoodDisordersImg3,
   },
   {
     key: 'dysthymia',
-    link: '/dysthymia-persistent-epressive-disorder',
+    link: '/cyclothymia',
     icon: MoodDisordersImg4,
   },
 ];
@@ -33,7 +33,7 @@ const MoodDisordersPage = () => {
     <MultiPathPage
       arrayData={moodDisordersData}
       pageTitle="Mood Disorders"
-      backRoute="/"
+      backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };

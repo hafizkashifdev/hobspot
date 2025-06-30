@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { SocialAnxietyDisorderIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const SocialAnxietyDisorderPage = () => {
   return (
-    < AboutUsSection/>
+    <CommonPage
+      src={SocialAnxietyDisorderIcon}
+      backRoute="/anxiety-disorders"
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Anxiety Disorders / Social Anxiety Disorder (Social Phobia) "
+    /> 
   )
 }
 

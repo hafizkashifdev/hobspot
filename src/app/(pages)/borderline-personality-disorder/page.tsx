@@ -1,11 +1,16 @@
 
 
-import { AboutUsSection } from '@/features/about-us/about-us-section'
+import { BorderlinePersonalityDisorderIcon } from '@/assets'
+import { CommonPage } from '@/components'
 import React from 'react'
 
 const BorderlinePersonalityDisorderPage = () => {
   return (
-    < AboutUsSection/>
+   <CommonPage
+      src={BorderlinePersonalityDisorderIcon}
+      backRoute="/personality-disorders"
+      pageTitle="Mental Health / Personality Disorders/ Borderline Personality Disorder (BPD)"
+    />
   )
 }
 

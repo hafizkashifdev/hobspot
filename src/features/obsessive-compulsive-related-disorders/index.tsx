@@ -17,6 +17,7 @@ export const ObsessiveCompulsiveRelatedDisorders = () => {
         },
       ]}
       pageTitle="Obsessive-Compulsive & Related Disorders"
+      backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };
