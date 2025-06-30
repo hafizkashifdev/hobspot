@@ -26,6 +26,7 @@ export const EatingDisorders = () => {
         },
       ]}
       pageTitle="Eating Disorders"
+      backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };
