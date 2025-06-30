@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { colorLegends, mainSection } from "@/assets";
+import React, { useEffect, useRef, useState } from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { colorLegends, section10 } from "@/assets";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export const HomeSection = () => {
@@ -135,7 +135,7 @@ export const HomeSection = () => {
         </Stack>
 
         <Image
-          src={section10}
+          src={mainSection}
           alt="Hero Image"
           width={40}
           height={40}

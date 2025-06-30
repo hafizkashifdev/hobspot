@@ -1,5 +1,5 @@
 import React from "react";
-import { mainSection } from "@/assets";
+import { section10 } from "@/assets";
 import { CommonPage } from "@/components";
 
 const OverViewPage = () => {
@@ -8,7 +8,7 @@ const OverViewPage = () => {
       <CommonPage
         pageTitle="Mental Health / Overview & Purpose "
         backRoute="/court-hearing"
-        src={mainSection}
+        src={section10}
       />
     </div>
   );
