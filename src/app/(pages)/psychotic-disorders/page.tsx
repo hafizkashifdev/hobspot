@@ -6,12 +6,12 @@ import { PsychoticDisordersImg1, PsychoticDisordersImg2 } from '@/assets';
 const psychoticDisordersData = [
   {
     key: 'psychotic-1',
-    link: '/psychotic-disorders/img-1',
+    link: '/schizophrenia',
     icon: PsychoticDisordersImg1,
   },
   {
     key: 'psychotic-2',
-    link: '/psychotic-disorders/img-2',
+    link: '/schizoaffective-disorders',
     icon: PsychoticDisordersImg2,
   },
 ];

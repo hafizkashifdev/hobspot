@@ -22,7 +22,7 @@ const anxietyDisordersData = [
   },
   {
     key: 'anxiety-4',
-    link: '/anxiety-disorders/img-4',
+    link: '/specific-phobias',
     icon: AnxietyDisordersImg4,
   },
   
@@ -33,7 +33,7 @@ const AnxietyDisordersPage = () => {
     <MultiPathPage
       arrayData={anxietyDisordersData}
       pageTitle="Anxiety Disorders"
-      backRoute="/"
+          backRoute="/psychiatric-assessment-mental-health-disorders"
     />
   );
 };
