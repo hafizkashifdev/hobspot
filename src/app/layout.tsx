@@ -39,11 +39,11 @@ export const metadata: Metadata = {
     title: "Mental Health",
     description:
       "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
-    url: "https://mentalresponsive.netlify.app/",
+    url: "https://courthearing.netlify.app/",
     type: "website",
     images: [
       {
-        url: "/og-img.png",
+        url: "https://courthearing.netlify.app/og-img.png",
         width: 1200,
         height: 630,
         alt: "Mental Health",
