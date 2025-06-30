@@ -97,7 +97,7 @@ const PsychiatricAssessmentMentalHealthDisordersPage = () => {
   return (
     <MultiPathPage
       arrayData={PsychiatricAssessmentMentalHealthDisordersData}
-      pageTitle="Mood Disorders"
+      pageTitle="Psychiatric Assessment & Mental Health Disorders"
       backRoute="/court-hearing"
     />
   );
