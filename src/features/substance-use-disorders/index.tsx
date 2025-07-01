@@ -10,11 +10,13 @@ export const SubstanceUseDisorders = () => {
           key: "1",
           link: "/alcohol-use-disorder",
           icon: AlcoholUseDisorderIcon,
+          title: "Alcohol Use Disorder",
         },
         {
           key: "2",
           link: "/drug-use-disorder",
           icon: DrugUseDisorderIcon,
+          title: "Drug Use Disorder",
         },
       ]}
       backRoute="/psychiatric-assessment-mental-health-disorders"
