@@ -13,11 +13,11 @@ export const metadata = {
   openGraph: {
     title: "Mental Health",
     description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
-    url: "https://courthearing.netlify.app/generalized-anxiety-disorder",
+    url: "https://courthearing.netlify.app/",
     type: "website",
     images: [
       {
-         url: "https://courthearing.netlify.app/og-img.png",
+         url: "https://courthearing.netlify.app/og-img.png?v=2",
         width: 1200,
         height: 630,
         alt: "Mental Health",
