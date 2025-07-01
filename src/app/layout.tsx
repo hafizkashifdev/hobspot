@@ -7,9 +7,32 @@ const outfit = Outfit({
   weight: ['400', '500', '600', '700'],
   variable: '--font-outfit',
 });
-export const metadata = {
+export const metadata: Metadata = {
   title: "Mental Health",
   description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
+  icons: {
+    icon: [
+      { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "icon",
+        url: "/favicon-16x16.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+      {
+        rel: "icon",
+        url: "/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+    ],
+    apple: {
+      rel: "apple-touch-icon.png",
+      url: "/apple-touch-icon.png",
+      type: "image/png",
+      sizes: "180x180",
+    },
+  },
   openGraph: {
     title: "Mental Health",
     description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
@@ -17,20 +40,16 @@ export const metadata = {
     type: "website",
     images: [
       {
-         url: "https://courthearing.netlify.app/omg.png",
+        url: "https://courthearing.netlify.app/og.png",
+        type: "image/png",
         width: 1200,
         height: 630,
         alt: "Mental Health",
       },
     ],
-
-  },
-  other: {
-    "msapplication-TileImage": "https://courthearing.netlify.app/omg.png",
   },
 };
 
-import Head from "next/head";
 
 export default function RootLayout({
   children,
@@ -39,15 +58,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta property="og:image" content="https://courthearing.netlify.app/omg.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:title" content="Mental Health" />
-        <meta property="og:description" content="Concise visual breakdowns and structured diagrams for clear, accessible insight." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://courthearing.netlify.app/" />
-      </Head>
       <body className={`${outfit.className}`}>
         {children}
       </body>
