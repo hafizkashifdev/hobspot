@@ -23,6 +23,10 @@ export const metadata = {
         alt: "Mental Health",
       },
     ],
+
+  },
+  other: {
+    "msapplication-TileImage": "https://courthearing.netlify.app/og-img.png?v=3",
   },
 };
 
