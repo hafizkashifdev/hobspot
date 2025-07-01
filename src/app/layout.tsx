@@ -17,7 +17,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-         url: "https://courthearing.netlify.app/og-img.png?v=2",
+         url: "https://courthearing.netlify.app/omg.png",
         width: 1200,
         height: 630,
         alt: "Mental Health",
@@ -26,7 +26,7 @@ export const metadata = {
 
   },
   other: {
-    "msapplication-TileImage": "https://courthearing.netlify.app/og-img.png?v=3",
+    "msapplication-TileImage": "https://courthearing.netlify.app/omg.png",
   },
 };
 
