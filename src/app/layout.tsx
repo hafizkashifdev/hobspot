@@ -7,39 +7,13 @@ const outfit = Outfit({
   weight: ['400', '500', '600', '700'],
   variable: '--font-outfit',
 });
-export const metadata: Metadata = {
+export const metadata = {
   title: "Mental Health",
-  description:
-    "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
-  // viewport: "initial-scale=1, width=device-width",
-  icons: {
-    icon: [
-      { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
-      {
-        rel: "icon",
-        url: "/favicon-32x32.png",
-        type: "image/png",
-        sizes: "16x16",
-      },
-      {
-        rel: "icon",
-        url: "/favicon-32x32.png",
-        type: "image/png",
-        sizes: "32x32",
-      },
-    ],
-    apple: {
-      rel: "icon",
-      url: "/apple-touch-icon.png",
-      type: "image/png",
-      sizes: "180x180",
-    },
-  },
+  description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
   openGraph: {
     title: "Mental Health",
-    description:
-      "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
-    url: "https://courthearing.netlify.app/og-img.png",
+    description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
+    url: "https://courthearing.netlify.app/",
     type: "website",
     images: [
       {
