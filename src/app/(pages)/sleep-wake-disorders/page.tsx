@@ -1,37 +1,30 @@
-
-
-import { SleepWakeDisordersImg1, SleepWakeDisordersImg2 } from '@/assets';
-import { MultiPathPage } from '@/components'
-import React from 'react'
-
-
+import { SleepWakeDisordersImg1, SleepWakeDisordersImg2 } from "@/assets";
+import { MultiPathPage } from "@/components";
+import React from "react";
 
 const sleepWeekData = [
   {
-    key: 'Insomnia',
-    link: '/Insomnia',
+    key: "Insomnia",
+    link: "/Insomnia",
     icon: SleepWakeDisordersImg1,
+    title: "Insomnia",
   },
   {
-    key: 'narcolepsy',
-    link: '/narcolepsy',
+    key: "narcolepsy",
+    link: "/narcolepsy",
     icon: SleepWakeDisordersImg2,
+    title: "Narcolepsy",
   },
- 
 ];
-
-
-
-
 
 const SleepWakeDisordersPage = () => {
   return (
-   <MultiPathPage
+    <MultiPathPage
       arrayData={sleepWeekData}
       pageTitle="Sleep-Wake Disorders"
       backRoute="/psychiatric-assessment-mental-health-disorders"
     />
-  )
-}
+  );
+};
 
-export default SleepWakeDisordersPage
+export default SleepWakeDisordersPage;

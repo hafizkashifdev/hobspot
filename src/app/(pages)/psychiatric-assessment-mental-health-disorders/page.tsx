@@ -1,7 +1,4 @@
-
-
-
-import { MultiPathPage } from '@/components';
+import { MultiPathPage } from "@/components";
 import {
   PsychiatricAssessmentMentalHealthDisordersImg1,
   PsychiatricAssessmentMentalHealthDisordersImg2,
@@ -16,80 +13,94 @@ import {
   PsychiatricAssessmentMentalHealthDisordersImg11,
   PsychiatricAssessmentMentalHealthDisordersImg12,
   PsychiatricAssessmentMentalHealthDisordersImg13,
-  PsychiatricAssessmentMentalHealthDisordersImg14
-} from '@/assets';
-import React from 'react';
+  PsychiatricAssessmentMentalHealthDisordersImg14,
+} from "@/assets";
+import React from "react";
 
 const PsychiatricAssessmentMentalHealthDisordersData = [
   {
-    key: 'disorder-1',
-    link: '/mood-disorders',
+    key: "disorder-1",
+    link: "/mood-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg1,
+    title: "Mood Disorders",
   },
   {
-    key: 'disorder-2',
-    link: '/anxiety-disorders',
+    key: "disorder-2",
+    link: "/anxiety-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg2,
+    title: "Anxiety Disorders",
   },
   {
-    key: 'disorder-3',
-    link: '/psychotic-disorders',
+    key: "disorder-3",
+    link: "/psychotic-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg3,
+    title: "Psychotic Disorders",
   },
   {
-    key: 'disorder-4',
-    link: '/personality-disorders',
+    key: "disorder-4",
+    link: "/personality-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg4,
+    title: "Personality Disorders",
   },
   {
-    key: 'disorder-5',
-    link: '/obsessive-compulsive-related-disorders',
+    key: "disorder-5",
+    link: "/obsessive-compulsive-related-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg5,
+    title: "Obsessive-Compulsive & Related Disorders",
   },
   {
-    key: 'disorder-6',
-    link: '/post-traumatic-stress-disorder',
+    key: "disorder-6",
+    link: "/post-traumatic-stress-disorder",
     icon: PsychiatricAssessmentMentalHealthDisordersImg6,
+    title: "Trauma and Stressor-Related Disorders",
   },
   {
-    key: 'disorder-7',
-    link: '/neuro-developmental-disorders',
+    key: "disorder-7",
+    link: "/neuro-developmental-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg7,
+    title: "Neurodevelopmental Disorders",
   },
   {
-    key: 'disorder-8',
-    link: '/eating-disorders',
+    key: "disorder-8",
+    link: "/eating-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg8,
+    title: "Eating Disorders",
   },
   {
-    key: 'disorder-9',
-    link: '/substance-use-disorders',
+    key: "disorder-9",
+    link: "/substance-use-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg9,
+    title: "Substance Use Disorders",
   },
   {
-    key: 'disorder-10',
-    link: '/sleep-wake-disorders',
+    key: "disorder-10",
+    link: "/sleep-wake-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg10,
+    title: "Sleep-Wake Disorders",
   },
   {
-    key: 'disorder-11',
-    link: '/neurocognitive-disorders',
+    key: "disorder-11",
+    link: "/neurocognitive-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg11,
+    title: "Neurocognitive Disorders",
   },
   {
-    key: 'disorder-12',
-    link: '/somatic-symptom-and-related-disorders',
+    key: "disorder-12",
+    link: "/somatic-symptom-and-related-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg12,
+    title: "Somatic Symptom and Related Disorders",
   },
   {
-    key: 'disorder-13',
-    link: '/disruptive-impulse-control-and-conduct-disorders',
+    key: "disorder-13",
+    link: "/disruptive-impulse-control-and-conduct-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg13,
+    title: "Disruptive, Impulse-Control, and Conduct Disorders",
   },
   {
-    key: 'disorder-14',
-    link: '/paraphilic-disorders',
+    key: "disorder-14",
+    link: "/paraphilic-disorders",
     icon: PsychiatricAssessmentMentalHealthDisordersImg14,
+    title: "Paraphilic Disorders",
   },
 ];
 

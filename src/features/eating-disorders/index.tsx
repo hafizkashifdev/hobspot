@@ -13,16 +13,19 @@ export const EatingDisorders = () => {
           key: "1",
           icon: AnorexiaNervosaIcon,
           link: "/anorexia-nervosa",
+          title: "Anorexia Nervosa",
         },
         {
           key: "2",
           icon: BulimiaNervosaIcon,
           link: "/bulimia-nervosa",
+          title: "Bulimia Nervosa",
         },
         {
           key: "3",
           icon: BingeEatingDisorderIcon,
           link: "/binge-eating-disorder",
+          title: "Binge Eating Disorder (BED)",
         },
       ]}
       pageTitle="Eating Disorders"
