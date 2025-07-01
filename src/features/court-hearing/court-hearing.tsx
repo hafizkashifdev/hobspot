@@ -11,7 +11,6 @@ export const CourtHearingSection = () => {
       <MultiPathPage
         pageTitle="Court Hearing & Psychiatric Evaluation for Mental Health"
         backRoute="/"
-        fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem", lg: "3rem" }}
         arrayData={courtHearingData}
       />
     </Box>

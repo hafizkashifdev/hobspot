@@ -1,15 +1,15 @@
 "use client";
 import React, { useCallback } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, Grid, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { MultiBackIcon } from "@/assets";
 
 type MultiPathPageItem = {
   key: string;
-  link: string;
+  link?: string;
   icon: string;
+  title?: string;
 };
 
 type MultiPathPageProps = {
@@ -18,6 +18,7 @@ type MultiPathPageProps = {
   backRoute?: string;
   fontSize?: any;
   iconWidth?: string;
+  background?: string;
 };
 
 const MultiPathPage: React.FC<MultiPathPageProps> = ({
@@ -25,12 +26,14 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
   pageTitle,
   backRoute = "/",
   fontSize = { xs: "20px", sm: "30px", md: "40px" },
-  iconWidth = "100%",
+  background = "#e7f0ff",
 }) => {
   const router = useRouter();
+
   const onBackIconClick = useCallback(() => {
     router.push(backRoute);
   }, [router]);
+
   return (
     <Box p={{ md: 3, xs: 2 }}>
       <Stack
@@ -64,7 +67,45 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
         {!!arrayData.length &&
           arrayData.map((item) => (
             <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.key}>
-              <Link href={item.link} style={{ textDecoration: "none" }}>
+              <Card
+                onClick={() => {
+                  if (item.link) {
+                    router.push(item.link);
+                  }
+                }}
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: background,
+                  cursor: item.link ? "pointer" : "default",
+                  borderRadius: 6,
+                  textAlign: "center",
+                  boxShadow: "none",
+                  p: 5,
+                }}
+              >
+                <Image
+                  src={item.icon}
+                  alt={item.title ?? item.key}
+                  width={200}
+                  height={200}
+                  style={{ width: "100%", objectFit: "contain" }}
+                />
+                <CardContent>
+                  <Typography
+                    variant="h5"
+                    color="#3571b0"
+                    fontSize={{ xs: "0.8rem", sm: "18px", md: "32px" }}
+                    fontWeight={{ md: 600, xs: 500 }}
+                    sx={{
+                      fontFamily: "inherit",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </CardContent>
+              </Card>
+              {/* <Link href={item.link} style={{ textDecoration: "none" }}>
                 <Image
                   src={item.icon}
                   alt="Hero Image"
@@ -77,7 +118,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
                     cursor: "pointer",
                   }}
                 />
-              </Link>
+              </Link> */}
             </Grid>
           ))}
       </Grid>
