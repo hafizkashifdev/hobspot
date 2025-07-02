@@ -3,18 +3,21 @@ import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { CommonBackIcon } from "@/assets";
+import { CommonBackIcon } from "@/assets/common-assets";
+import { CheckboxForm } from "../checkbox-form";
 
 interface CommonPageProps {
   src: any;
   backRoute?: string;
   pageTitle: string;
+  onChange?: (selectedValue: string, page: string) => void;
 }
 
 const CommonPage: React.FC<CommonPageProps> = ({
   src,
   backRoute = "/",
   pageTitle,
+  onChange,
 }) => {
   const router = useRouter();
   const onBackIconClick = useCallback(() => {
@@ -27,7 +30,7 @@ const CommonPage: React.FC<CommonPageProps> = ({
         flexDirection={"row"}
         alignItems={"center"}
         mt={{ md: 2, xs: 1 }}
-        mb={{ md: 5, sm: 3, xs: 2 }}
+        mb={{ md: 4, sm: 3, xs: 2 }}
       >
         <Image
           src={CommonBackIcon}
@@ -50,6 +53,9 @@ const CommonPage: React.FC<CommonPageProps> = ({
           {pageTitle}
         </Typography>
       </Stack>
+      <Box mb={{ md: 4, sm: 3, xs: 2 }}>
+        <CheckboxForm onChange={onChange} />
+      </Box>
       <Image
         src={src}
         alt={pageTitle}

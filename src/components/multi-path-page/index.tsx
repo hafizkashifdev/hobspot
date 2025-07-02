@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 import Image from "next/image";
 import { Box, Card, CardContent, Grid, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { MultiBackIcon } from "@/assets";
+import { MultiBackIcon } from "@/assets/common-assets";
 
 type MultiPathPageItem = {
   key: string;
