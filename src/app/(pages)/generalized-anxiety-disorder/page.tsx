@@ -9,7 +9,7 @@ const GeneralizedAnxietyDisorderPage = () => {
      <CommonPage
       src={GeneralizedAnxietyDisorderIcon}
       backRoute="/anxiety-disorders"
-      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Anxiety Disorders / Social Anxiety Disorder (Social Phobia) "
+      pageTitle="Mental Health / Psychiatric Assessment & Mental Health Disorders / Generalized Anxiety Disorder (GAD)  "
     /> 
   )
 }
