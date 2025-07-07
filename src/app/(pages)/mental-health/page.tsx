@@ -11,13 +11,13 @@ const MentalHealthPageData = [
     key: "mental-1",
     link: "/mental-health-act-1983",
     icon: img1MentalHealthImage,
-    title: "Part II Section 1991",
+    title: "Mental Health Act 1983",
   },
   {
     key: "mental-2",
-    link: "/mental-health-act-1983",
+    link: "/criminal-procedure-insanity-act-1964-section1",
     icon: img2MentalHealthImage,
-    title: "Part II Enacted",
+    title: "Criminal Procedure (Insanity) Act 1964  ",
   }
 ];
 

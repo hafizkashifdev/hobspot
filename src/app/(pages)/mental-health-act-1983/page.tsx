@@ -80,7 +80,7 @@ const MentalHealthAct1983PageData = [
   },
   {
     key: "mental-11",
-    link: "/part-9-Offences",
+    link: "/Part-9-offences",
     icon: img11MentalHealthAct1983Image,
      title: "Part IX Offences",
   },
