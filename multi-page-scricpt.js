@@ -7,7 +7,7 @@ const assetsDir = path.join(__dirname, 'src', 'assets');
 
 // List of pages with pageTitle, image counts, and links
 const pages = [
-  { title: "Mental Health Act 1983", pageTitle: "Mental Health Act 1983", imageCount: 13, links: ["/", "/","/", "/","/", "/","/", "/","/", "/","/", "/","/", ] },
+  { title: "Part IV Consent to Treatment", pageTitle: "Part IV Consent to Treatment", imageCount: 2, links: ["/","/part-27", ] },
 ];
 
 // Convert to PascalCase

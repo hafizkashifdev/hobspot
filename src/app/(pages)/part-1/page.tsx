@@ -7,10 +7,10 @@ import React from "react";
 const Part1Page = () => {
   return (
     <AmendmentComparison
-      pageTitle={`Mental Health / Mental Health Act 1983 / Part (1) `}
+      pageTitle={`Mental Health / Mental Health Act 1983 / Part 1: Application of Act `}
       src={Part1Image}
-      backRoute="/"
-      amendmentButtonRoute="/eating-disorders"
+      backRoute="/mental-health-act-1983"
+      amendmentButtonRoute="/amendment-comparison-application-of-act"
     />
   );
 };

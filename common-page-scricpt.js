@@ -1,38 +1,36 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Define the base directory
-const baseDir = path.join(__dirname, 'src', 'app', '(pages)');
-const assetsDir = path.join(__dirname, 'src', 'assets');
+const baseDir = path.join(__dirname, "src", "app", "(pages)");
+const assetsDir = path.join(__dirname, "src", "assets");
 
 // List of pages to create
 const pages = [
-  "Amendment Comparison - Application of Act",
-  "Amendment Comparison",
-
+  "Amendment Comparison - Part 4A Treatment of community patients not recalled to Hospital ",
 ];
 
 // Convert to PascalCase
-const toPascalCase = str =>
+const toPascalCase = (str) =>
   str
-    .replace(/[^a-zA-Z0-9]+/g, ' ')
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join("");
 
 // Convert to kebab-case
-const toKebabCase = str =>
+const toKebabCase = (str) =>
   str
-    .replace(/[&/()]+/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/[&/()]+/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
     .toLowerCase()
-    .replace(/^-+|-+$/g, '');
+    .replace(/^-+|-+$/g, "");
 
 for (const title of pages) {
   const kebab = toKebabCase(title);
   const pascal = toPascalCase(title);
   const imageName = `${pascal}Image`;
- const svgFile = `${imageName}.svg`;
+  const svgFile = `${imageName}.svg`;
 
   // Create directory for the page
   const dir = path.join(baseDir, kebab);
@@ -55,10 +53,10 @@ const ${pascal}Page = () => {
 
 export default ${pascal}Page;
 `;
-  fs.writeFileSync(path.join(dir, 'page.tsx'), pageContent, 'utf8');
+  fs.writeFileSync(path.join(dir, "page.tsx"), pageContent, "utf8");
 
   // Append to existing index.tsx in assets
-  const indexTsxPath = path.join(assetsDir, 'index.tsx');
+  const indexTsxPath = path.join(assetsDir, "index.tsx");
   const imageExport = `export { default as ${imageName} } from "./${svgFile}";\n`;
   fs.appendFileSync(indexTsxPath, imageExport);
 }

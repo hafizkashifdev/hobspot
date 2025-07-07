@@ -7,10 +7,10 @@ const assetsDir = path.join(__dirname, "src", "assets");
 
 // List of pages to create
 const pages = [
-  "Introduction",
-  "Amendment Comparison - Introduction",
-  "Part (1) ",
-  "Amendment Comparison - Application of Act ",
+  "Guardians of Consent",
+  "Consent and Treatment Safeguards    ",
+  "Part 4A Treatment of community patients not recalled to Hospital",
+ 
 ];
 
 // Convert to PascalCase
@@ -51,8 +51,8 @@ const ${pascal}Page = () => {
     <AmendmentComparison
       pageTitle={\`Mental Health / Mental Health Act 1983 / ${title}\`}
       src={${imageName}}
-      backRoute="/"
-      amendmentButtonRoute="/eating-disorders"
+      backRoute="/mental-health-act-1983-part-iii"
+      amendmentButtonRoute="/chap-1-amendment-comparison"
     />
   );
 };

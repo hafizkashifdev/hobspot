@@ -1,4 +1,3 @@
-// components/amendment-comparison.tsx
 "use client";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import Image from "next/image";
@@ -57,14 +56,19 @@ const AmendmentComparison: React.FC<CommonPageProps> = ({
             fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }}
             fontWeight={{ md: 600, xs: 500 }}
             ml={{ md: 2, xs: 1 }}
-            sx={{ fontFamily: "inherit" }}
+            sx={{ fontFamily: "Outfit, inherit" }}
           >
             {pageTitle}
           </Typography>
         </Box>
+      </Stack>
 
-        {/* Right Section: Button */}
-        <Box ml={{ md: "auto" }} >
+      {/* Checkbox and Button Row */}
+      <Box mb={{ md: 4, sm: 3, xs: 2 }} display="flex" flexDirection={{md:'row',xs:'column'}}alignItems={{md:"center",xs:"left"}} justifyContent="space-between" gap={2}>
+        <Box flexGrow={1}>
+          <CheckboxForm onChange={onChange} />
+        </Box>
+        <Box>
           <Button
             variant="contained"
             onClick={onAmendmentButtonClick}
@@ -77,16 +81,13 @@ const AmendmentComparison: React.FC<CommonPageProps> = ({
               cursor: "pointer",
               fontSize: { xs: "0.7rem", sm: "0.9rem", md: "1rem" },
               padding: { xs: "6px 12px", md: "8px 16px" },
-                textTransform: "capitalize",
+              textTransform: "capitalize",
+              fontFamily: "Outfit, inherit",
             }}
           >
             Amendment Comparison
           </Button>
         </Box>
-      </Stack>
-
-      <Box mb={{ md: 4, sm: 3, xs: 2 }}>
-        <CheckboxForm onChange={onChange} />
       </Box>
       <Image
         src={src}
