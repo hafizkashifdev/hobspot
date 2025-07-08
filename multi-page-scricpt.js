@@ -8,11 +8,25 @@ const assetsDir = path.join(__dirname, 'src', 'assets');
 // List of pages with pageTitle, image counts, links, and per-image titles
 const pages = [
   {
-    title: "Mental Health Act 1983 - Part 6",
-    pageTitle: "Part VI Removal and Return of Patients Within United Kingdom, etc.",
-    imageCount: 6,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens","/Return of patients absent without leave","/General"],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,"Removal of alien patients."," Return of patients absent without leave","General"],
+    title: "FCA Application",
+    pageTitle: "FCA Application",
+    imageCount: 4,
+    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
+    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
+  },
+   {
+    title: "FCA Application",
+    pageTitle: "FCA Application",
+    imageCount: 4,
+    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
+    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
+  },
+   {
+    title: "FCA Application",
+    pageTitle: "FCA Application",
+    imageCount: 4,
+    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
+    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
   },
 ];
 
