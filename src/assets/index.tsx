@@ -215,3 +215,15 @@ export { default as img4MentalHealthAct1983Part8Image } from "./img4MentalHealth
 export { default as AcAcVisitingpatientsImg } from "./AcAcVisitingpatientsImg.svg";
 export { default as PartViiManagementOfPropertyAndAffairsOfPatientsImage } from "./PartViiManagementOfPropertyAndAffairsOfPatientsImage.svg";
 export { default as AmendmentComparisonPartViiManagementOfPropertyAndAffairsOfPatientsImage } from "./AmendmentComparisonPartViiManagementOfPropertyAndAffairsOfPatientsImage.svg";
+export { default as img1MentalHealthAct1983Part6Image } from "./img1MentalHealthAct1983Part6Image.svg";
+export { default as img2MentalHealthAct1983Part6Image } from "./img2MentalHealthAct1983Part6Image.svg";
+export { default as img3MentalHealthAct1983Part6Image } from "./img3MentalHealthAct1983Part6Image.svg";
+export { default as img4MentalHealthAct1983Part6Image } from "./img4MentalHealthAct1983Part6Image.svg";
+export { default as img5MentalHealthAct1983Part6Image } from "./img5MentalHealthAct1983Part6Image.svg";
+export { default as img6MentalHealthAct1983Part6Image } from "./img6MentalHealthAct1983Part6Image.svg";
+export { default as RemovalToAndFromScotlandImage } from "./RemovalToAndFromScotlandImage.svg";
+export { default as RemovalOfPatientsToChannelIslandsOrIsleOfManImage } from "./RemovalOfPatientsToChannelIslandsOrIsleOfManImage.svg";
+export { default as RemovalOfPatientsToNorthernIrelandImage } from "./RemovalOfPatientsToNorthernIrelandImage.svg";
+export { default as RemovalOfAliensImage } from "./RemovalOfAliensImage.svg";
+export { default as ReturnOfPatientsAbsentWithoutLeaveImage } from "./ReturnOfPatientsAbsentWithoutLeaveImage.svg";
+export { default as GeneralImage } from "./GeneralImage.svg";

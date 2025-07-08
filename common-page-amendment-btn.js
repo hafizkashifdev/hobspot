@@ -10,27 +10,27 @@ const pages = [
   
   {
     title: "Removal to and from Scotland",
-    backRoute: " Removal to and from Scotland AC",
+    ButtonRoute: " Removal to and from Scotland AC",
   },
    {
     title: "Removal of patients to Channel Islands or Isle of Man",
-    backRoute: "Removal of patients to Channel Islands or Isle of Man AC",
+    ButtonRoute: "Removal of patients to Channel Islands or Isle of Man AC",
   },
    {
     title: "Removal of patients to Northern Ireland",
-    backRoute: "Removal of patients to Northern Ireland AC",
+    ButtonRoute: "Removal of patients to Northern Ireland AC",
   },
    {
     title: "Removal of aliens",
-    backRoute: "Removal of aliens AC",
+    ButtonRoute: "Removal of aliens AC",
   },
    {
     title: " Return of patients absent without leave",
-    backRoute: " Return of patients absent without leave AC",
+    ButtonRoute: " Return of patients absent without leave AC",
   },
    {
     title: "General",
-    backRoute: " General AC",
+    ButtonRoute: " General AC",
   },
  
 
@@ -64,7 +64,7 @@ const toKebabRoute = (str) =>
 
 
 for (const page of pages) {
-  const { title, backRoute, amendmentButtonRoute } = page;
+  const { title, ButtonRoute } = page;
   if (!title || typeof title !== "string" || !title.trim()) {
     console.log("[SKIP] Invalid or empty page title. Skipping entry.");
     continue;
@@ -107,21 +107,22 @@ for (const page of pages) {
     console.log(`[SKIP] Directory already exists and was not created: ${dir}`);
   }
 
-  // Always kebab-case the backRoute and amendmentButtonRoute if present
-  const kebabBackRoute = backRoute ? `/${toKebabRoute(backRoute)}` : undefined;
-  const kebabAmendmentButtonRoute = amendmentButtonRoute ? `/${toKebabRoute(amendmentButtonRoute)}` : undefined;
+  // Always kebab-case the ButtonRoute for amendmentButtonRoute
+  const kebabAmendmentButtonRoute = ButtonRoute ? `/${toKebabRoute(ButtonRoute)}` : '';
 
   // Create page.tsx
   const pageContent = `import { ${imageName} } from "@/assets";
-import { CommonPage } from "@/components";
+
+import AmendmentComparison from "@/components/amendment-comparison";
 import React from "react";
 
 const ${pascal}Page = () => {
   return (
-    <CommonPage
-      pageTitle=\"/ ${title}\"
+    <AmendmentComparison
+      pageTitle={\`Mental Health / Mental Health  Act 1983 / Part VII / ${title}\`}
       src={${imageName}}
-      backRoute=\"${kebabBackRoute || ''}\"${amendmentButtonRoute ? `\n      amendmentButtonRoute=\"${kebabAmendmentButtonRoute}\"` : ''}
+      backRoute="/mental-health-act-1983"
+      amendmentButtonRoute="${kebabAmendmentButtonRoute}"
     />
   );
 };
