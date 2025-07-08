@@ -8,16 +8,34 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a name and a custom backRoute
 const pages = [
   {
-    name: "Part 10 - Miscellaneous and Supplementary AC",
-    backRoute: "/schedule-act-1964-misc-supplementary"
+    name: "Remands to hospital",
+    backRoute: "/Remands to hospital AC"
   },
   {
-    name: "Part 10 -Supplementary",
-    backRoute: "/schedule-act-1964-supplementary"
+    name: "Hospital and guardianship orders",
+    backRoute: "/Hospital and guardianship orders AC"
   },
-  // Add more objects as needed
+  {
+    name: "Restriction orders",
+    backRoute: "/Restriction orders AC"
+  },
+  {
+    name: "Hospital and limitation directions",
+    backRoute: "/Hospital and limitation directions AC"
+  },
+  {
+    name: "Detention during Her Majesty’s pleasure",
+    backRoute: "/Detention during Her Majesty’s pleasure AC"
+  },
+  {
+    name: "Transfer to hospital of prisoners, etc.",
+    backRoute: "/Transfer to hospital of prisoners, etc. AC"
+  },
+  {
+    name: "Supplemental",
+    backRoute: "/Supplemental AC"
+  }
 ];
-
 // Convert to PascalCase
 const toPascalCase = (str) =>
   str
@@ -36,7 +54,8 @@ const toKebabCase = (str) =>
     .replace(/^-+|-+$/g, "");
 
 for (const page of pages) {
-  const { name, backRoute } = page;
+  const { name } = page;
+  let { backRoute } = page;
   if (!name || typeof name !== "string" || !name.trim()) {
     console.log("[SKIP] Invalid or empty page name. Skipping entry.");
     continue;
@@ -49,6 +68,12 @@ for (const page of pages) {
   }
   const imageName = `${pascal}Image`;
   const svgFile = `${imageName}.svg`;
+
+  // Convert backRoute to kebab-case at runtime
+  if (backRoute && typeof backRoute === "string") {
+    backRoute = toKebabCase(backRoute);
+    backRoute = `/${backRoute.replace(/^\/+/, "")}`; // Ensure leading slash
+  }
 
   // Check for existing directory and create a unique one if needed
   let dir = path.join(baseDir, kebabBase);
@@ -87,7 +112,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <CommonPage
-      pageTitle=\"Amendment Comparison\"
+      pageTitle={\`FCA Application / FCA Guide to Payment Services and Electronic Money Regulation / ${name}\`}
       src={${imageName}}
       backRoute=\"${backRoute}\"
     />
@@ -129,6 +154,6 @@ export default ${pascal}Page;
     }
   }
 }
-}
 
 console.log("Pages and image exports have been created.");
+ 

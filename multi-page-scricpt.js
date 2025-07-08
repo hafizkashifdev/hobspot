@@ -8,11 +8,11 @@ const assetsDir = path.join(__dirname, 'src', 'assets');
 // List of pages with pageTitle, image counts, links, and per-image titles
 const pages = [
   {
-    title: "Mental Health Act 1983 - Part 6",
-    pageTitle: "Part VI Removal and Return of Patients Within United Kingdom, etc.",
-    imageCount: 6,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens","/Return of patients absent without leave","/General"],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,"Removal of alien patients."," Return of patients absent without leave","General"],
+    title: "Mental Health Act 1983 - Part III",
+    pageTitle: "Part III Patients Concerned in Criminal Proceedings or Under Sentence",
+    imageCount: 7,
+    links: ["/Remands to hospital", "/Hospital and guardianship orders","/Restriction orders","Hospital and limitation directions","/Detention during Her Majesty’s pleasure","/Transfer to hospital of prisoners, etc.","/Supplemental"],
+    titles: ["Remands to hospital", "Hospital and guardianship orders","Restriction orders","Hospital and limitation directions","Detention during Her Majesty’s pleasure","Transfer to hospital of prisoners, etc.","Supplemental"],
   },
 ];
 

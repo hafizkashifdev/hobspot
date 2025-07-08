@@ -8,22 +8,38 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a title and a custom amendmentButtonRoute
 const pages = [
   {
-    title: "Part VII Management of Property and Affairs of Patients",
-    amendmentButtonRoute: "/Amendment Comparison - Part VII Management of Property and Affairs of Patients"
+    name: "Remands to hospital",
+    backRoute: "/Remands to hospital AC"
   },
-//   {
-//     title: "Visiting patients",
-//     amendmentButtonRoute: "/AC Visiting Patients"
-//   },
-//   {
-//     title: "After care",
-//     amendmentButtonRoute: "/AC  After-care"
-//   },
-//  {
-//     title: "Functions of the Secretary of States",
-//     amendmentButtonRoute: "/AC Functions of the Secretary of State"
-//   },
-  
+  {
+    name: "Hospital and guardianship orders",
+    backRoute: "/Hospital and guardianship orders AC"
+  },
+  {
+    name: "Restriction orders",
+    backRoute: "/Restriction orders AC"
+  },
+  {
+    name: "Hospital and limitation directions",
+    backRoute: "/Hospital and limitation directions AC"
+  },
+  {
+    name: "Detention during Her Majesty’s pleasure",
+    backRoute: "/Detention during Her Majesty’s pleasure AC"
+  },
+  {
+    name: "Transfer to hospital of prisoners, etc.",
+    backRoute: "/Transfer to hospital of prisoners, etc. AC"
+  },
+  {
+    name: "Supplemental",
+    backRoute: "/Supplemental AC"
+  },
+  {
+    name: "Part VII Management of Property and Affairs of Patients",
+    backRoute: "/Part VII Management of Property and Affairs of Patients AC",
+    amendmentButtonRoute: "/Amendment Comparison - Part VII Management of Property and Affairs of Patients"
+  }
 ];
 
 // Convert to PascalCase
