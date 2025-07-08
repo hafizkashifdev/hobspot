@@ -12,26 +12,26 @@ const pages = [
     title: "FCA Overview",
     ButtonRoute: " Removal to and from Scotland AC",
   },
-  //  {
-  //   title: "Removal of patients to Channel Islands or Isle of Man",
-  //   ButtonRoute: "Removal of patients to Channel Islands or Isle of Man AC",
-  // },
-  //  {
-  //   title: "Removal of patients to Northern Ireland",
-  //   ButtonRoute: "Removal of patients to Northern Ireland AC",
-  // },
-  //  {
-  //   title: "Removal of aliens",
-  //   ButtonRoute: "Removal of aliens AC",
-  // },
-  //  {
-  //   title: " Return of patients absent without leave",
-  //   ButtonRoute: " Return of patients absent without leave AC",
-  // },
-  //  {
-  //   title: "General",
-  //   ButtonRoute: " General AC",
-  // },
+   {
+    title: "Removal of patients to Channel Islands or Isle of Man",
+    ButtonRoute: "Removal of patients to Channel Islands or Isle of Man AC",
+  },
+   {
+    title: "Removal of patients to Northern Ireland",
+    ButtonRoute: "Removal of patients to Northern Ireland AC",
+  },
+   {
+    title: "Removal of aliens",
+    ButtonRoute: "Removal of aliens AC",
+  },
+   {
+    title: " Return of patients absent without leave",
+    ButtonRoute: " Return of patients absent without leave AC",
+  },
+   {
+    title: "General",
+    ButtonRoute: " General AC",
+  },
  
 
 ];  

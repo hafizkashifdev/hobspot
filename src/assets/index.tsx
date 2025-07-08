@@ -8,3 +8,7 @@ export { default as img2PaymentServicesNewAuthorisationRegistrationImage } from 
 export { default as img3PaymentServicesNewAuthorisationRegistrationImage } from "./img1FcaApplicationImage.svg"; //dele
 export { default as img1EMoneyNewAuthorisationRegistrationImage } from "./img1EMoneyNewAuthorisationRegistrationImage.svg";
 export { default as img2EMoneyNewAuthorisationRegistrationImage } from "./img2EMoneyNewAuthorisationRegistrationImage.svg";
+// export { default as FcaApplicationPageImage1 } from "./FcaApplicationPageImage1.svg";
+// export { default as FcaApplicationPageImage2 } from "./FcaApplicationPageImage2.svg";
+// export { default as FcaApplicationPageImage3 } from "./FcaApplicationPageImage3.svg";
+// export { default as FcaApplicationPageImage4 } from "./FcaApplicationPageImage4.svg";
