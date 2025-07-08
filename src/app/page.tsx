@@ -1,29 +1,20 @@
-export const metadata = {
-  title: "Mental Health",
-  description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
-  openGraph: {
-    title: "Mental Health",
-    description: "Concise visual breakdowns and structured diagrams for clear, accessible insight.",
-    url: "https://courthearing.netlify.app/",
-    type: "website",
-    images: [
-      {
-        url: "https://courthearing.netlify.app/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Mental Health",
-      },
-    ],
-  },
-};
 
-import { HomeSection } from "@/features/home/home-section";
+
+import { Box, Typography } from "@mui/material";
 
 
 export default function Home() {
   return (
-    <>
-      <HomeSection />
-    </>
+   <Box>
+      
+      <Box sx={{ padding: { xs: "20px", sm: "40px", md: "60px" } }}>
+        <Typography variant="h4" sx={{ fontFamily: "Outfit, inherit", textAlign: "center" }}>
+          Welcome to FCA
+        </Typography>
+        <Typography variant="body1" sx={{ fontFamily: "Outfit, inherit", marginTop: "20px" }}>
+          Here you will find concise visual breakdowns and structured diagrams for clear, accessible insight.
+        </Typography>
+      </Box>
+   </Box>
   );
 }
