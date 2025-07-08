@@ -7,3 +7,12 @@ export { default as img4FcaApplicationImage } from "./img4FcaApplicationImage.sv
 // export { default as FcaApplicationPageImage2 } from "./FcaApplicationPageImage2.svg";
 // export { default as FcaApplicationPageImage3 } from "./FcaApplicationPageImage3.svg";
 // export { default as FcaApplicationPageImage4 } from "./FcaApplicationPageImage4.svg";
+export { default as Chapter11ComplaintsHandlingImage } from "./Chapter11ComplaintsHandlingImage.svg";
+export { default as Chapter12SupervisionImage } from "./Chapter12SupervisionImage.svg";
+export { default as Chapter13ReportingAndNotificationsImage } from "./Chapter13ReportingAndNotificationsImage.svg";
+export { default as Chapter14EnforcementImage } from "./Chapter14EnforcementImage.svg";
+export { default as Chapter15FeesImage } from "./Chapter15FeesImage.svg";
+export { default as Chapter16PaymentServiceProvidersAccessToPaymentAccountServicesImage } from "./Chapter16PaymentServiceProvidersAccessToPaymentAccountServicesImage.svg";
+export { default as Chapter18OperationalAndSecurityRisksImage } from "./Chapter18OperationalAndSecurityRisksImage.svg";
+export { default as Chapter19FinancialCrimeImage } from "./Chapter19FinancialCrimeImage.svg";
+export { default as Chapter20AuthenticationImage } from "./Chapter20AuthenticationImage.svg";
