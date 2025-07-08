@@ -7,27 +7,14 @@ const assetsDir = path.join(__dirname, 'src', 'assets');
 
 // List of pages with pageTitle, image counts, links, and per-image titles
 const pages = [
-  {
-    title: "FCA Application",
-    pageTitle: "FCA Application",
-    imageCount: 4,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
-  },
    {
-    title: "FCA Application",
-    pageTitle: "FCA Application",
-    imageCount: 4,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
+    title: "Payment Services New Authorisation / registration",
+    pageTitle: "Payment Services New Authorisation / registration",
+    imageCount: 3,
+    links: ["/PISP_API","/SPI","RAISP",],
+    titles: ["PISP_API", "PISP_SMALL Payment institution (SPI)","/Registration As An Account information Service Provider (RAISP)" ,],
   },
-   {
-    title: "FCA Application",
-    pageTitle: "FCA Application",
-    imageCount: 4,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
-  },
+
 ];
 
 // Convert to PascalCase
