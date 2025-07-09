@@ -11,6 +11,10 @@ const pages = [
     name: "Chapter 1. Introduction",
     backRoute: "/Payment Services and Electronic Money – Our Approach"
   },
+  // {
+  //   name: "Part 10 -Supplementary",
+  //   backRoute: "/schedule-act-1964-supplementary"
+  // },
   // Add more objects as needed
 ];
  
