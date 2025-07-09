@@ -7,3 +7,4 @@ export { default as img4FcaApplicationImage } from "./img4FcaApplicationImage.sv
 // export { default as FcaApplicationPageImage2 } from "./FcaApplicationPageImage2.svg";
 // export { default as FcaApplicationPageImage3 } from "./FcaApplicationPageImage3.svg";
 // export { default as FcaApplicationPageImage4 } from "./FcaApplicationPageImage4.svg";
+export { default as Chapter1IntroductionImage } from "./Chapter1IntroductionImage.svg";
