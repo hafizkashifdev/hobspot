@@ -8,13 +8,13 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a name and a custom backRoute
 const pages = [
   {
-    name: "Part 10 - Miscellaneous and Supplementary AC",
-    backRoute: "/schedule-act-1964-misc-supplementary"
+    name: "Chapter 12: Supervision",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
   },
-  {
-    name: "Part 10 -Supplementary",
-    backRoute: "/schedule-act-1964-supplementary"
-  },
+  // {
+  //   name: "Part 10 -Supplementary",
+  //   backRoute: "/schedule-act-1964-supplementary"
+  // },
   // Add more objects as needed
 ];
 
@@ -36,7 +36,8 @@ const toKebabCase = (str) =>
     .replace(/^-+|-+$/g, "");
 
 for (const page of pages) {
-  const { name, backRoute } = page;
+  const { name } = page;
+  let { backRoute } = page;
   if (!name || typeof name !== "string" || !name.trim()) {
     console.log("[SKIP] Invalid or empty page name. Skipping entry.");
     continue;
@@ -49,6 +50,12 @@ for (const page of pages) {
   }
   const imageName = `${pascal}Image`;
   const svgFile = `${imageName}.svg`;
+
+  // Convert backRoute to kebab-case at runtime
+  if (backRoute && typeof backRoute === "string") {
+    backRoute = toKebabCase(backRoute);
+    backRoute = `/${backRoute.replace(/^\/+/, "")}`; // Ensure leading slash
+  }
 
   // Check for existing directory and create a unique one if needed
   let dir = path.join(baseDir, kebabBase);
@@ -87,7 +94,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <CommonPage
-      pageTitle=\"Amendment Comparison\"
+      pageTitle={\`FCA Application / FCA Guide to Payment Services and Electronic Money Regulation / ${name}\`}
       src={${imageName}}
       backRoute=\"${backRoute}\"
     />
@@ -129,6 +136,6 @@ export default ${pascal}Page;
     }
   }
 }
-}
 
 console.log("Pages and image exports have been created.");
+ 
