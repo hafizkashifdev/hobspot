@@ -162,8 +162,8 @@ export { default as GuardiansOfConsentImage } from "./GuardiansOfConsentImage.sv
 export { default as ConsentAndTreatmentSafeguardsImage } from "./ConsentAndTreatmentSafeguardsImage.svg";
 export { default as Part4aTreatmentOfCommunityPatientsNotRecalledToHospitalImage } from "./Part4aTreatmentOfCommunityPatientsNotRecalledToHospitalImage.svg";
 export { default as AmendmentComparisonGuardiansOfConsentImage } from "./AmendmentComparisonGuardiansOfConsentImage.svg";
-// export { default as AmendmentComparisonConsentAndTreatmentSafeguardsImage } from "./AmendmentComparisonConsentAndTreatmentSafeguardsImage.svg";
-// export { default as AmendmentComparisonGuardiansOfConsentImagee } from "./AmendmentComparisonGuardiansOfConsentImagee.svg";
+export { default as AmendmentComparisonConsentAndTreatmentSafeguardsImage } from "./AmendmentComparisonConsentAndTreatmentSafeguardsImage.svg";
+export { default as AmendmentComparisonGuardiansOfConsentImagee } from "./AmendmentComparisonGuardiansOfConsentImagee.svg";
 export { default as AmendmentComparisonPart4aTreatmentOfCommunityPatientsNotRecalledToHospitalImage } from "./AmendmentComparisonPart4aTreatmentOfCommunityPatientsNotRecalledToHospitalImage.svg";
 export { default as AmendmentComparisonDurationOfDetentionOrGuardianshipAndDischargeImagetwo } from "./AmendmentComparisonDurationOfDetentionOrGuardianshipAndDischargeImagetwo.svg";
 export { default as img1CriminalProcedureInsanityAct1964Image } from "./img1CriminalProcedureInsanityAct1964Image.svg";
