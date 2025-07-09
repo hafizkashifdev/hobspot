@@ -57,11 +57,16 @@ const pages = [
 
 // === Main Page Generator ===
 for (const page of pages) {
-  const { title, imageRoutes, buttonTitles, buttonRoutes } = page;
+  const { title, pageTitle, backRoute, imageRoutes, buttonTitles, buttonRoutes } = page;
   const pascal = toPascalCase(title);
   const kebab = toKebabCase(title);
 
-  const imageNames = imageRoutes.map((_, i) => `${pascal}Image${i + 1}`);
+  // Convert imageRoutes to kebab-case at runtime if not already
+  const processedImageRoutes = imageRoutes.map(route => toKebabCase(route));
+  const imageNames = processedImageRoutes.map((_, i) => `${pascal}Image${i + 1}`);
+
+  // Convert buttonRoutes to kebab-case at runtime if not already
+  const processedButtonRoutes = buttonRoutes.map(route => toKebabCase(route));
 
   // === Create Unique Folder ===
   let dir = path.join(baseDir, kebab);
@@ -85,7 +90,7 @@ for (const page of pages) {
     )
     .join("\n");
 
-  const buttonProps = buttonRoutes
+  const buttonProps = processedButtonRoutes
     .map(
       (route, i) =>
         `      amendmentButtonRoute${
@@ -105,7 +110,8 @@ const ${pascal}Page = () => {
       images={[
 ${imageArray}
       ]}
-      pageTitle="${title}"
+      pageTitle="${pageTitle}"
+      backRoute="${backRoute}"
 ${buttonProps}
     />
   );
