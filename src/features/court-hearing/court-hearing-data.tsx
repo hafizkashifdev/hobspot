@@ -10,6 +10,7 @@ import {
   homeImg7,
   homeImg8,
   homeImg9,
+  CriminalProcedureImage
 } from "@/assets";
 
 export const courtHearingData = [
@@ -78,5 +79,11 @@ export const courtHearingData = [
     link: "/psychiatric-assessment-mental-health-disorders",
     title: "Psychiatric Assessment & Mental Health Disorders",
     icon: homeImg10,
+  },
+  {
+    key: "10",
+    link: "/mental-health",
+    title: "Mental Health Acts 1983 & Criminal Procedure 1964",
+    icon: CriminalProcedureImage,
   },
 ];

@@ -5,41 +5,36 @@ const path = require("path");
 const baseDir = path.join(__dirname, "src", "app", "(pages)");
 const assetsDir = path.join(__dirname, "src", "assets");
 
-// List of pages to create, each with a title and a custom amendmentButtonRoute
+// List of pages to create, each with a name and a custom amendmentButtonRoute
 const pages = [
   {
-    name: "Remands to hospital",
-    backRoute: "/Remands to hospital AC"
+    name: "Part 3 Remands to hospital",
+    amendmentButtonRoute: "/Remands to Part  III AC"
   },
   {
-    name: "Hospital and guardianship orders",
-    backRoute: "/Hospital and guardianship orders AC"
+    name: "Part 3 Hospital and guardianship orders",
+    amendmentButtonRoute: "/ Hospital and guardianship  Part  III AC"
   },
   {
-    name: "Restriction orders",
-    backRoute: "/Restriction orders AC"
+    name: "Part 3 Restriction orders",
+    amendmentButtonRoute: "/Restriction order  Part  III AC"
   },
   {
-    name: "Hospital and limitation directions",
-    backRoute: "/Hospital and limitation directions AC"
+    name: "Part 3 Hospital and limitation directions",
+    amendmentButtonRoute: "/Hospital and limitation Part  III AC"
   },
   {
-    name: "Detention during Her Majesty’s pleasure",
-    backRoute: "/Detention during Her Majesty’s pleasure AC"
+    name: "Part 3 Detention during Her Majesty’s pleasure",
+    amendmentButtonRoute: "/Detention during Part III AC"
   },
   {
-    name: "Transfer to hospital of prisoners, etc.",
-    backRoute: "/Transfer to hospital of prisoners, etc. AC"
+    name: "Part 3 Transfer to hospital of prisoners, etc.",
+    amendmentButtonRoute: "/Transfer  Part Part III AC"
   },
   {
-    name: "Supplemental",
-    backRoute: "/Supplemental AC"
+    name: "Part 3 Supplemental",
+    amendmentButtonRoute: "/Supplemental Part Part III AC"
   },
-  {
-    name: "Part VII Management of Property and Affairs of Patients",
-    backRoute: "/Part VII Management of Property and Affairs of Patients AC",
-    amendmentButtonRoute: "/Amendment Comparison - Part VII Management of Property and Affairs of Patients"
-  }
 ];
 
 // Convert to PascalCase
@@ -68,10 +63,10 @@ const toKebabRoute = (str) =>
     .replace(/^-+|-+$/g, "");
 
 
-
-for (const { title, amendmentButtonRoute } of pages) {
-  const kebab = toKebabCase(title);
-  const pascal = toPascalCase(title);
+// Changed 'title' to 'name' in destructuring
+for (const { name, amendmentButtonRoute } of pages) {
+  const kebab = toKebabCase(name); // Use 'name' here
+  const pascal = toPascalCase(name); // Use 'name' here
   const imageName = `${pascal}Image`;
   const svgFile = `${imageName}.svg`;
 
@@ -92,7 +87,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <AmendmentComparison
-      pageTitle={\`Mental Health / Mental Health  Act 1983 / Part VII / ${title}\`}
+      pageTitle={\`Mental Health / Mental Health  Act 1983 / Part VII / ${name}\`}
       src={${imageName}}
       backRoute="/schedule-act-1983"
       amendmentButtonRoute="${kebabAmendmentButtonRoute}"
