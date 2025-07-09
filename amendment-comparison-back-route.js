@@ -11,6 +11,34 @@ const pages = [
     name: "Chapter 1. Introduction",
     backRoute: "/Payment Services and Electronic Money – Our Approach"
   },
+  {
+    name: "Chapter 2. Scope",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
+  {
+    name: "Chapter 4. Changes in Circumstances of Authorisation or Registration",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
+  {
+    name: "Chapter 5: Appointment of agents and use of distributors",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
+  {
+    name: "Chapter 6: Temporary Permission Scheme",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
+  {
+    name: "Chapter 7: Status disclosure and use of the FCA logo",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
+  {
+    name: "Chapter 8: Conduct of business requirements ",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
+  {
+    name: "Chapter 10: Safeguarding ",
+    backRoute: "/Payment Services and Electronic Money – Our Approach"
+  },
   // {
   //   name: "Part 10 -Supplementary",
   //   backRoute: "/schedule-act-1964-supplementary"

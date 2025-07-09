@@ -8,3 +8,10 @@ export { default as img4FcaApplicationImage } from "./img4FcaApplicationImage.sv
 // export { default as FcaApplicationPageImage3 } from "./FcaApplicationPageImage3.svg";
 // export { default as FcaApplicationPageImage4 } from "./FcaApplicationPageImage4.svg";
 export { default as Chapter1IntroductionImage } from "./Chapter1IntroductionImage.svg";
+export { default as Chapter2ScopeImage } from "./Chapter2ScopeImage.svg";
+export { default as Chapter4ChangesInCircumstancesOfAuthorisationOrRegistrationImage } from "./Chapter4ChangesInCircumstancesOfAuthorisationOrRegistrationImage.svg";
+export { default as Chapter5AppointmentOfAgentsAndUseOfDistributorsImage } from "./Chapter5AppointmentOfAgentsAndUseOfDistributorsImage.svg";
+export { default as Chapter6TemporaryPermissionSchemeImage } from "./Chapter6TemporaryPermissionSchemeImage.svg";
+export { default as Chapter7StatusDisclosureAndUseOfTheFcaLogoImage } from "./Chapter7StatusDisclosureAndUseOfTheFcaLogoImage.svg";
+export { default as Chapter8ConductOfBusinessRequirementsImage } from "./Chapter8ConductOfBusinessRequirementsImage.svg";
+export { default as Chapter10SafeguardingImage } from "./Chapter10SafeguardingImage.svg";
