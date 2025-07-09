@@ -13,9 +13,9 @@ interface ImageItem {
 }
 
 interface CommonPageProps {
-  src?: any; // for backward compatibility
+  src?: any;
   images?: ImageItem[];
-  backRoute?: string;
+  backRoute: string;
   pageTitle: string;
   onChange?: (selectedValue: string, page: string) => void;
   amendmentButtonRoute1?: string;
@@ -27,7 +27,7 @@ interface CommonPageProps {
 const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
   src,
   images,
-  backRoute = "/",
+  backRoute,
   pageTitle,
   onChange,
   amendmentButtonRoute1 = "/amendment-comparison-1",
@@ -85,12 +85,12 @@ const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
         </Box>
       </Stack>
 
-      {/* Checkbox and Button Row */}
       <Box
         display="flex"
         flexDirection={{ lg: "row", xs: "column" }}
         alignItems={{ md: "center", xs: "left" }}
         justifyContent="space-between"
+        marginBottom={2}
         gap={0}
       >
         <Box flexGrow={1}>
@@ -136,26 +136,45 @@ const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
         </Box>
       </Box>
 
-      {/* Render multiple images if provided, else fallback to single src */}
       {Array.isArray(images) && images.length > 0 ? (
-        <Stack direction="column" spacing={0} alignItems="center">
-          {" "}
-          {/* Change spacing from 1 to 0 */}
+        <Stack
+          direction="column"
+          spacing={0}
+          alignItems="center"
+          useFlexGap
+        >
           {images.map((img, idx) => (
-            <Image
+            <Box
               key={img.route || idx}
-              src={img.src}
-              alt={img.alt || pageTitle}
-              style={{
+              sx={{
+                mt: 2,
+                p: 0,
                 width: "100%",
                 cursor: img.route ? "pointer" : undefined,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
               onClick={() => img.route && handleImageClick(img.route)}
-            />
+            >
+              <Image
+                src={img.src}
+                alt={img.alt || pageTitle}
+                style={{
+                  width: "100%",
+                  height: 'auto',
+                  display: 'block',
+                }}
+              />
+            </Box>
           ))}
         </Stack>
       ) : (
-        src && <Image src={src} alt={pageTitle} style={{ width: "100%" }} />
+        src && (
+          <Box sx={{ m: 0, p: 0, width: "100%", display: 'flex', justifyContent: 'center' }}>
+            <Image src={src} alt={pageTitle} style={{ width: "100%", height: 'auto', display: 'block' }} />
+          </Box>
+        )
       )}
     </Box>
   );

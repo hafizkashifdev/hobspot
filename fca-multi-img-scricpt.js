@@ -26,21 +26,34 @@ const toKebabCase = (str) =>
 const pages = [
   {
     title: "FCA Application Page",
-    imageRoutes: ["/img1-route", "/img2-route", "/img3-route", "/img4-route"],
+    pageTitle: "FCA Application Main", // Added pageTitle for the component
+    backRoute: "/dashboard", // Added backRoute
+    imageRoutes: ["/FCA Application - Img1", "/FCA Application - Img2", "/FCA Application - Img3", "/FCA Application - Img4"],
     buttonTitles: ["Psychiatrist", "Social Worker"],
-    buttonRoutes: ["/amendment-1", "/amendment-2"],
+    buttonRoutes: ["/amendment-psychiatrist", "/amendment-social-worker"],
   },
-  
-
+  {
+    title: "Mental Health Act Page",
+    pageTitle: "Mental Health Act Info",
+    backRoute: "/settings",
+    imageRoutes: ["/MHA-Image-A", "/MHA-Image-B"],
+    buttonTitles: ["Part 1", "Part 2"],
+    buttonRoutes: ["/mha-part-one", "/mha-part-two"],
+  },
 ];
 
 // === Main Page Generator ===
 for (const page of pages) {
-  const { title, imageRoutes, buttonTitles, buttonRoutes } = page;
+  const { title, pageTitle, backRoute, imageRoutes, buttonTitles, buttonRoutes } = page;
   const pascal = toPascalCase(title);
   const kebab = toKebabCase(title);
 
-  const imageNames = imageRoutes.map((_, i) => `${pascal}Image${i + 1}`);
+  // Convert imageRoutes to kebab-case at runtime if not already
+  const processedImageRoutes = imageRoutes.map(route => toKebabCase(route));
+  const imageNames = processedImageRoutes.map((_, i) => `${pascal}Image${i + 1}`);
+
+  // Convert buttonRoutes to kebab-case at runtime if not already
+  const processedButtonRoutes = buttonRoutes.map(route => toKebabCase(route));
 
   // === Create Unique Folder ===
   let dir = path.join(baseDir, kebab);
@@ -54,13 +67,13 @@ for (const page of pages) {
   const imageImports = imageNames.map((name) => `import { ${name} } from "@/assets";`).join("\n");
 
   const imageArray = imageNames
-    .map((name, i) => `        { src: ${name}, route: "${imageRoutes[i]}", alt: "Image ${i + 1}" },`)
+    .map((name, i) => `        { src: ${name}, route: "/${processedImageRoutes[i]}", alt: "Image ${i + 1}" },`)
     .join("\n");
 
-  const buttonProps = buttonRoutes
+  const buttonProps = processedButtonRoutes
     .map(
       (route, i) =>
-        `      amendmentButtonRoute${i + 1}="${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
+        `      amendmentButtonRoute${i + 1}="/${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
     )
     .join("\n");
 
@@ -75,7 +88,8 @@ const ${pascal}Page = () => {
       images={[
 ${imageArray}
       ]}
-      pageTitle="${title}"
+      pageTitle="${pageTitle}"
+      backRoute="${backRoute}"
 ${buttonProps}
     />
   );
