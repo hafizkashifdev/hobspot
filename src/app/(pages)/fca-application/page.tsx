@@ -22,6 +22,7 @@ const FcaApplicationPage = () => {
       amendmentButtonRoute2="/amendment-2"
       amendmentButtonTitle1="Psychiatrist"
       amendmentButtonTitle2="Social Worker"
+      backRoute=""
     />
   );
 };
