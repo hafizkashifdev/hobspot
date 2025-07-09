@@ -15,11 +15,11 @@ const pages = [
   //   titles: ["PISP_API", "PISP_SMALL Payment institution (SPI)","/Registration As An Account information Service Provider (RAISP)" ,],
   // },
    {
-    title: "E-Money New Authorisation / Registration",
-    pageTitle: "E-Money New Authorisation / Registration",
-    imageCount: 2,
-    links: ["/FCA Application / E-Money New Authorisation &  Registration / AEMI","SEMI"],
-    titles: ["AEMI – Authorised Electronic Money Institution", "Application for Registration as a Small Electronic Money  Institution (SEMI)"],
+    title: "Payment Services New Authorisation / registration",
+    pageTitle: "Payment Services New Authorisation / registration",
+    imageCount: 3,
+    links: ["/PISP_API","SEMI"],
+    titles: ["Reference Doc", "KEY TERMS"],
   },
 
 ];

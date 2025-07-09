@@ -25,13 +25,34 @@ const toKebabCase = (str) =>
 // === Data: Define All Pages Here ===
 const pages = [
   {
-    title: "FCA Application Page",
-    imageRoutes: ["/img1-route", "/img2-route", "/img3-route", "/img4-route"],
-    buttonTitles: ["Psychiatrist", "Social Worker"],
-    buttonRoutes: ["/amendment-1", "/amendment-2"],
+    title: "SEMI",
+    imageRoutes: [
+      "/Identification details and timings",
+      "/Identification details and timings 1",
+      "/Identification details and timings 2",
+      "/Identification details and timings 3",
+      "/SEMI",
+      "/SEMI1",
+      "/Conditions for registration 2",
+      "/Conditions for registration 1",
+      "/ Business plan",
+      "/Capital resources and requirements",
+      "/Capital resources and requirements 1",
+      "/Capital resources and requirements 2",
+      "/Safeguarding measures ",
+      "/Unrelated payment services",
+      "/Governance arrangements and risk management",
+      "/Qualifying holdings and close links",
+      "/Procedure to Monitor, Handle, and Follow Up on Security Incidents and Customer Complaints",
+      "/Process in place to file, monitor, track and restrict access to sensitive payment data",
+      "/The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
+      "/Security policy",
+      "/Fees and levies",
+      "/SEMI2"
+    ],
+    buttonTitles: ["Reference Doc"],
+    buttonRoutes: ["/SEMI"],
   },
-  
-
 ];
 
 // === Main Page Generator ===
@@ -51,16 +72,25 @@ for (const page of pages) {
   fs.mkdirSync(dir, { recursive: true });
 
   // === Create Page Content ===
-  const imageImports = imageNames.map((name) => `import { ${name} } from "@/assets";`).join("\n");
+  const imageImports = imageNames
+    .map((name) => `import { ${name} } from "@/assets";`)
+    .join("\n");
 
   const imageArray = imageNames
-    .map((name, i) => `        { src: ${name}, route: "${imageRoutes[i]}", alt: "Image ${i + 1}" },`)
+    .map(
+      (name, i) =>
+        `        { src: ${name}, route: "${imageRoutes[i]}", alt: "Image ${
+          i + 1
+        }" },`
+    )
     .join("\n");
 
   const buttonProps = buttonRoutes
     .map(
       (route, i) =>
-        `      amendmentButtonRoute${i + 1}="${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
+        `      amendmentButtonRoute${
+          i + 1
+        }="${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
     )
     .join("\n");
 

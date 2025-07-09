@@ -8,13 +8,86 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a name and a custom backRoute
 const pages = [
   {
-    name: "Part 10 - Miscellaneous and Supplementary AC",
-    backRoute: "/schedule-act-1964-misc-supplementary"
+    
+    name: "Identification details and timings 1",
+    backRoute: "/semi",
   },
   {
-    name: "Part 10 -Supplementary",
-    backRoute: "/schedule-act-1964-supplementary"
+    name: "Identification details and timings 1",
+    backRoute: "/semi",
   },
+  {
+    name: "Identification details and timings 2",
+    backRoute: "/semi",
+  },
+  {
+    name: "Identification details and timings 3",
+    backRoute: "/semi",
+  },
+  {
+    name: "SEMI",
+    backRoute: "/semi",
+  },
+  {
+    name: "Conditions for registration 2",
+    backRoute: "/semi",
+  },
+  {
+    name: "Conditions for registration 1",
+    backRoute: "/semi",
+  },
+  {
+    name: " Business plan",
+    backRoute: "/semi",
+  },
+  {
+    name: "Capital resources and requirements",
+    backRoute: "/semi",
+  },
+  {
+    name: "Capital resources and requirements 2",
+    backRoute: "/semi",
+  },
+  {
+    name: "Safeguarding measures ",
+    backRoute: "/semi",
+  },
+  {
+    name: "Unrelated payment services",
+    backRoute: "/semi",
+  },
+  {
+    name: "Governance arrangements and risk management",
+    backRoute: "/semi",
+  },
+  {
+    name: "Qualifying holdings and close links",
+    backRoute: "/semi",
+  },
+  {
+    name: "Procedure to Monitor, Handle, and Follow Up on Security Incidents and Customer Complaints",
+    backRoute: "/semi",
+  },
+  {
+    name: "Process in place to file, monitor, track and restrict access to sensitive payment data",
+    backRoute: "/semi",
+  },
+  {
+    name: "The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
+    backRoute: "/semi",
+  },
+  {
+    name: "Security policy",
+    backRoute: "/semi",
+  },
+  {
+    name: "Fees and levies",
+    backRoute: "/semi",
+  },
+  // {
+  //   name: "Part 10 -Supplementary",
+  //   backRoute: "/schedule-act-1964-supplementary"
+  // },
   // Add more objects as needed
 ];
 
@@ -44,7 +117,9 @@ for (const page of pages) {
   const kebabBase = toKebabCase(name);
   const pascal = toPascalCase(name);
   if (!kebabBase || !pascal) {
-    console.log(`[SKIP] Could not generate valid names for name: '${name}'. Skipping.`);
+    console.log(
+      `[SKIP] Could not generate valid names for name: '${name}'. Skipping.`
+    );
     continue;
   }
   const imageName = `${pascal}Image`;
@@ -61,11 +136,15 @@ for (const page of pages) {
     dirSuffix++;
   }
   if (dirSuffix >= maxTries) {
-    console.log(`[ERROR] Too many duplicate directories for '${name}'. Skipping.`);
+    console.log(
+      `[ERROR] Too many duplicate directories for '${name}'. Skipping.`
+    );
     continue;
   }
   if (finalKebab !== kebabBase) {
-    console.log(`Directory for page '${name}' already exists. Created: ${finalKebab}`);
+    console.log(
+      `Directory for page '${name}' already exists. Created: ${finalKebab}`
+    );
   }
   if (!fs.existsSync(dir)) {
     try {
@@ -87,7 +166,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <CommonPage
-      pageTitle=\"Amendment Comparison\"
+      pageTitle={\`${name}\`}
       src={${imageName}}
       backRoute=\"${backRoute}\"
     />
@@ -113,7 +192,9 @@ export default ${pascal}Page;
       const indexContent = fs.readFileSync(indexTsxPath, "utf8");
       if (indexContent.includes(imageExport.trim())) {
         shouldWriteExport = false;
-        console.log(`Export for image '${imageName}' already exists in index.tsx. Skipping export.`);
+        console.log(
+          `Export for image '${imageName}' already exists in index.tsx. Skipping export.`
+        );
       }
     } catch (err) {
       console.log(`[ERROR] Failed to read index.tsx:`, err.message);
@@ -128,7 +209,6 @@ export default ${pascal}Page;
       console.log(`[ERROR] Failed to append export to index.tsx:`, err.message);
     }
   }
-}
 }
 
 console.log("Pages and image exports have been created.");
