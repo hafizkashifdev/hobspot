@@ -11,23 +11,10 @@ const pages = [
     title: "FCA Application",
     pageTitle: "FCA Application",
     imageCount: 4,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
+    links: ["/FCA Overview","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
+    titles: ["FCA Overview", "Payment Services New Authorisation  Registration","E-Money New Authorisation / Registration" ,"Payment Services and Electronic Money – Our Approach",],
   },
-   {
-    title: "FCA Application",
-    pageTitle: "FCA Application",
-    imageCount: 4,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
-  },
-   {
-    title: "FCA Application",
-    pageTitle: "FCA Application",
-    imageCount: 4,
-    links: ["/Removal to and from Scotland","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["Removal to and from Scotland", "Removal of patients to Northern Ireland.","After-Removal of patients to Channel Islands or Isle of Man." ,],
-  },
+ 
 ];
 
 // Convert to PascalCase
@@ -156,7 +143,7 @@ const ${pascal}Page = () => {
     <MultiPathPage
       arrayData={${pascal}PageData}
       pageTitle="${pageTitle}"
-      backRoute="/mental-health-act-1983"
+      backRoute="/FCA Sequence Diagram"
     />
   );
 };
