@@ -82,6 +82,7 @@ const MultiPathPage: React.FC<MultiPathPageProps> = ({
                   textAlign: "center",
                   boxShadow: "none",
                   p: 4,
+                  alignContent:"center"
                 }}
               >
                 <Image
