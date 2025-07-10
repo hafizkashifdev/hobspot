@@ -25,6 +25,7 @@ const RaispRegistrationAccountInformationServiceProvider = () => {
             amendmentButtonRoute2="/terms-in-application-pack"
             amendmentButtonTitle1="Reference Doc"
             amendmentButtonTitle2="KEY TERMS"
+            backRoute='/'
         />
     )
 }

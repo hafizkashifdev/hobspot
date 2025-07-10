@@ -23,6 +23,7 @@ const PispSpiPage = () => {
             amendmentButtonRoute2="/spi-final-terms-in-application-pack"
             amendmentButtonTitle1="Reference Doc"
             amendmentButtonTitle2="KEY TERMS"
+            backRoute="/"
         />
     );
 };

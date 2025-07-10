@@ -1,3 +1,4 @@
+// FcaApplicationPagePage.tsx
 "use client";
 import React from "react";
 import { FcaOverviewImage } from "@/assets";
@@ -13,6 +14,7 @@ const FcaApplicationPagePage = () => {
         { src: FcaOverviewImage, route: "/img4-route", alt: "Image 4" },
       ]}
       pageTitle="FCA Application Page"
+      backRoute="/some-fca-back-route" 
       amendmentButtonRoute1="/amendment-1"
       amendmentButtonTitle1="Psychiatrist"
       amendmentButtonRoute2="/amendment-2"
