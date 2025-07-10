@@ -31,13 +31,28 @@ const pages = [
     imageRoutes: [
       "/PISP_API",
       "/PISP_API  Filling in the Form",
-      "/FCA Application - Img3",
-      "/FCA Application - Img4",
+      "/PISP_API  Section 1: Identification Details and Timings",
+      "/PISP_API  Section 2: Programme of Operations",
+      "/PISP_API  Section 3:  Business Plan ",
+      "/PISP_API  Section 4:  Structural organisation ",
+      "/PISP_API Section 5:  Evidence of initial capital ",
+      "/PISP_API  Section 6:  Measures to safeguard the funds of payment service users",
+      "/PISP_API Section 7:  Procedure to monitor, handle and follow up on a  security incident and security related customer complaints",
+      "/PISP_API Section 8:  Procedure to monitor, handle and follow up on a  security incident and security related customer complaints. ",
+      "/PISP_API Process in place to file, monitor, track and restrict access to sensitive payment data",
+      "/PISP_API  Business continuity arrangements",
+      "/PISP_API The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
+      "/PISP_API Security policy document",
+      "/PPISP_API Internal control mechanisms to comply with obligations in relation to money laundering and terrorist financing",
+      "/PISP_API Section 14",
+      "/PISP_API Section 15",
+      "/PISP_API Section 16 Professional indemnity insurance (PII) or comparable guarantee",
+      "/PISP_API Section 17 Professional indemnity insurance (PII) or comparable guarantee",
+      "/PISP_API Section 18 Fees and levies",
     ],
     buttonTitles: ["Reference Doc", "KEY TERMS"],
     buttonRoutes: ["/PISP_API", "/PISP_API  TERMS IN APPLICATION PACK"],
   },
- 
 ];
 
 // === Main Page Generator ===
@@ -105,7 +120,7 @@ const ${pascal}Page = () => {
 ${imageArray}
       ]}
       pageTitle="${pageTitle}"
-      backRoute="${backRoute}"
+    backRoute="${kebabBackRoute}"
 ${buttonProps}
     />
   );

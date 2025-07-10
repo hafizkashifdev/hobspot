@@ -82,3 +82,26 @@ export { default as PispApiSection2ProgrammeOfOperationsImage } from "./PispApiS
 export { default as PispApiBusinessContinuityArrangementsImage } from "./PispApiBusinessContinuityArrangementsImage.svg";
 export { default as PpispApiInternalControlMechanismsToComplyWithObligationsInRelationToMoneyLaunderingAndTerroristFinancingImage } from "./PpispApiInternalControlMechanismsToComplyWithObligationsInRelationToMoneyLaunderingAndTerroristFinancingImage.svg";
 export { default as PispApiSection17ProfessionalIndemnityInsurancePiiOrComparableGuaranteeImage } from "./PispApiSection17ProfessionalIndemnityInsurancePiiOrComparableGuaranteeImage.svg";
+export { default as FcaApplicationPageImage5 } from "./FcaApplicationPageImage5.svg";
+export { default as FcaApplicationPageImage6 } from "./FcaApplicationPageImage6.svg";
+export { default as FcaApplicationPageImage7 } from "./FcaApplicationPageImage7.svg";
+export { default as FcaApplicationPageImage8 } from "./FcaApplicationPageImage8.svg";
+export { default as FcaApplicationPageImage9 } from "./FcaApplicationPageImage9.svg";
+export { default as FcaApplicationPageImage10 } from "./FcaApplicationPageImage10.svg";
+export { default as FcaApplicationPageImage11 } from "./FcaApplicationPageImage11.svg";
+export { default as FcaApplicationPageImage12 } from "./FcaApplicationPageImage12.svg";
+export { default as FcaApplicationPageImage13 } from "./FcaApplicationPageImage13.svg";
+export { default as FcaApplicationPageImage14 } from "./FcaApplicationPageImage14.svg";
+export { default as FcaApplicationPageImage15 } from "./FcaApplicationPageImage15.svg";
+export { default as FcaApplicationPageImage16 } from "./FcaApplicationPageImage16.svg";
+export { default as FcaApplicationPageImage17 } from "./FcaApplicationPageImage17.svg";
+export { default as FcaApplicationPageImage18 } from "./FcaApplicationPageImage18.svg";
+export { default as FcaApplicationPageImage19 } from "./FcaApplicationPageImage19.svg";
+export { default as FcaApplicationPageImage20 } from "./FcaApplicationPageImage20.svg";
+
+export { default as FcaApplicationPageImageone} from "./FcaApplicationPageImageone.svg";
+export { default as FcaApplicationPageImagetwo } from "./FcaApplicationPageImagetwo.svg";
+export { default as FcaApplicationPageImagethree } from "./FcaApplicationPageImagethree.svg";
+export { default as FcaApplicationPageImagefour } from "./FcaApplicationPageImagefour.svg";
+
+
