@@ -19,11 +19,12 @@ const PispSpiPage = () => {
                 { src: pispSpiImage10, route: "/fees-and-levies", alt: "Image 10" },
             ]}
             pageTitle="FCA Application / Payment Services New Authorisation & Registration / SPI"
-            amendmentButtonRoute1="/amendment-1"
             amendmentButtonRoute2="/spi-final-terms-in-application-pack"
             amendmentButtonTitle1="Reference Doc"
             amendmentButtonTitle2="KEY TERMS"
-            backRoute="/"
+            backRoute="/payment-service-new-authorisation-registration"
+            downloadUrl="https://www.fca.org.uk/publication/forms/psd-spi-registration-application-form.doc"
+            downloadFileName="psd-spi-registration-application-form.doc"
         />
     );
 };
