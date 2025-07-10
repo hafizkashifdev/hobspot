@@ -8,17 +8,83 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a name and a custom backRoute
 const pages = [
   {
-    name: "Chapter 12: Supervision",
-    backRoute: "/Payment Services and Electronic Money – Our Approach"
+    name: "PISP_API  Section 3:  Business Plan ",
+    backRoute: "/PISP_API"
   },
-  // {
-  //   name: "Part 10 -Supplementary",
-  //   backRoute: "/schedule-act-1964-supplementary"
-  // },
-  // Add more objects as needed
+   {
+    name: "PISP_API  Section 4:  Structural organisation ",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API Section 5:  Evidence of initial capital ",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API Section 8:  Procedure to monitor, handle and follow up on a  security incident and security related customer complaints.",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API Section 14",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API Section 15",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API Section 18 Fees and levies",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API  Filling in the Form",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API  Section 6:  Measures to safeguard the funds of payment service users",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API Section 7:  Procedure to monitor, handle and follow up on a  security incident and security related customer complaints",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API  Section 1: Identification Details and Timings",
+    backRoute: "/PISP_API"
+  },
+  {
+    name: "PISP_API Process in place to file, monitor, track and restrict access to sensitive payment data",
+    backRoute: "/PISP_API"
+  },
+  {
+    name: "PISP_API Security policy document",
+    backRoute: "/PISP_API"
+  },
+  {
+    name: "PISP_API Section 16 Professional indemnity insurance (PII) or comparable guarantee",
+    backRoute: "/PISP_API"
+  },
+   {
+    name: "PISP_API  Section 2: Programme of Operations",
+    backRoute: "/PISP_API"
+  },
+  {
+    name: "PISP_API  Business continuity arrangements",
+    backRoute: "/PISP_API"
+  },
+  {
+    name: "PPISP_API Internal control mechanisms to comply with obligations in relation to money laundering and terrorist financing",
+    backRoute: "/PISP_API"
+  },
+    {
+    name: "PISP_API Section 17 Professional indemnity insurance (PII) or comparable guarantee",
+    backRoute: "/PISP_API"
+  },
 ];
 
-// Convert to PascalCase
 const toPascalCase = (str) =>
   str
     .replace(/[^a-zA-Z0-9]+/g, " ")
@@ -94,7 +160,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <CommonPage
-      pageTitle={\`FCA Application / FCA Guide to Payment Services and Electronic Money Regulation / ${name}\`}
+      pageTitle={"TERMS IN APPLICATION PACK"}
       src={${imageName}}
       backRoute=\"${backRoute}\"
     />

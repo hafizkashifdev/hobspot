@@ -26,34 +26,41 @@ const toKebabCase = (str) =>
 const pages = [
   {
     title: "FCA Application Page",
-    pageTitle: "FCA Application Main", // Added pageTitle for the component
-    backRoute: "/dashboard", // Added backRoute
-    imageRoutes: ["/FCA Application - Img1", "/FCA Application - Img2", "/FCA Application - Img3", "/FCA Application - Img4"],
-    buttonTitles: ["Psychiatrist", "Social Worker"],
-    buttonRoutes: ["/amendment-psychiatrist", "/amendment-social-worker"],
+    pageTitle: "FCA Application Main",
+    backRoute: "/FCA Sequence Diagram",
+    imageRoutes: [
+      "/PISP_API",
+      "/PISP_API  Filling in the Form",
+      "/FCA Application - Img3",
+      "/FCA Application - Img4",
+    ],
+    buttonTitles: ["Reference Doc", "KEY TERMS"],
+    buttonRoutes: ["/PISP_API", "/PISP_API  TERMS IN APPLICATION PACK"],
   },
-  {
-    title: "Mental Health Act Page",
-    pageTitle: "Mental Health Act Info",
-    backRoute: "/settings",
-    imageRoutes: ["/MHA-Image-A", "/MHA-Image-B"],
-    buttonTitles: ["Part 1", "Part 2"],
-    buttonRoutes: ["/mha-part-one", "/mha-part-two"],
-  },
+ 
 ];
 
 // === Main Page Generator ===
 for (const page of pages) {
-  const { title, pageTitle, backRoute, imageRoutes, buttonTitles, buttonRoutes } = page;
+  const {
+    title,
+    pageTitle,
+    backRoute,
+    imageRoutes,
+    buttonTitles,
+    buttonRoutes,
+  } = page;
   const pascal = toPascalCase(title);
   const kebab = toKebabCase(title);
 
   // Convert imageRoutes to kebab-case at runtime if not already
-  const processedImageRoutes = imageRoutes.map(route => toKebabCase(route));
-  const imageNames = processedImageRoutes.map((_, i) => `${pascal}Image${i + 1}`);
+  const processedImageRoutes = imageRoutes.map((route) => toKebabCase(route));
+  const imageNames = processedImageRoutes.map(
+    (_, i) => `${pascal}Image${i + 1}`
+  );
 
   // Convert buttonRoutes to kebab-case at runtime if not already
-  const processedButtonRoutes = buttonRoutes.map(route => toKebabCase(route));
+  const processedButtonRoutes = buttonRoutes.map((route) => toKebabCase(route));
 
   // === Create Unique Folder ===
   let dir = path.join(baseDir, kebab);
@@ -64,16 +71,25 @@ for (const page of pages) {
   fs.mkdirSync(dir, { recursive: true });
 
   // === Create Page Content ===
-  const imageImports = imageNames.map((name) => `import { ${name} } from "@/assets";`).join("\n");
+  const imageImports = imageNames
+    .map((name) => `import { ${name} } from "@/assets";`)
+    .join("\n");
 
   const imageArray = imageNames
-    .map((name, i) => `        { src: ${name}, route: "/${processedImageRoutes[i]}", alt: "Image ${i + 1}" },`)
+    .map(
+      (name, i) =>
+        `        { src: ${name}, route: "/${
+          processedImageRoutes[i]
+        }", alt: "Image ${i + 1}" },`
+    )
     .join("\n");
 
   const buttonProps = processedButtonRoutes
     .map(
       (route, i) =>
-        `      amendmentButtonRoute${i + 1}="/${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
+        `      amendmentButtonRoute${
+          i + 1
+        }="/${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
     )
     .join("\n");
 
