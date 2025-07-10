@@ -4,7 +4,7 @@ export { default as raispSpiImage2 } from "./raispSpiImage2.svg";
 export { default as raispSpiImage3 } from "./raispSpiImage3.svg";
 export { default as raispSpiImage4 } from "./raispSpiImage4.svg";
 export { default as raispSpiImage5 } from "./raispSpiImage5.svg";
-export { default as raispSpiImage6} from "./raispSpiImage6.svg";
+export { default as raispSpiImage6 } from "./raispSpiImage6.svg";
 export { default as raispSpiImage7 } from "./raispSpiImage7.svg";
 export { default as raispSpiImage8 } from "./raispSpiImage8.svg";
 export { default as raispSpiImage9 } from "./raispSpiImage9.svg";

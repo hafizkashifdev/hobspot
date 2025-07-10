@@ -22,6 +22,8 @@ interface CommonPageProps {
   amendmentButtonRoute2?: string;
   amendmentButtonTitle1?: string;
   amendmentButtonTitle2?: string;
+    downloadUrl?: string;
+    downloadFileName?: string;
 }
 
 const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
@@ -34,6 +36,8 @@ const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
   amendmentButtonRoute2 = "/amendment-comparison-2",
   amendmentButtonTitle1 = "Amendment Comparison 1",
   amendmentButtonTitle2 = "Amendment Comparison 2",
+   downloadUrl,
+    downloadFileName,
 }) => {
   const router = useRouter();
 
@@ -41,9 +45,23 @@ const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
     router.push(backRoute);
   }, [router, backRoute]);
 
-  const onAmendmentButtonClick1 = useCallback(() => {
-    router.push(amendmentButtonRoute1);
-  }, [router, amendmentButtonRoute1]);
+    const onAmendmentButtonClick1 = useCallback(() => {
+        if (downloadUrl && downloadFileName) {
+            const link = document.createElement("a");
+            link.href = downloadUrl;
+            link.download = downloadFileName;
+            link.click();
+        } else if (amendmentButtonRoute1) {
+            router.push(amendmentButtonRoute1);
+        } else {
+            console.warn("No action available");
+        }
+    }, [downloadUrl, downloadFileName, amendmentButtonRoute1, router]);
+
+
+  // const onAmendmentButtonClick1 = useCallback(() => {
+  //   router.push(amendmentButtonRoute1);
+  // }, [router, amendmentButtonRoute1]);
 
   const onAmendmentButtonClick2 = useCallback(() => {
     router.push(amendmentButtonRoute2);
