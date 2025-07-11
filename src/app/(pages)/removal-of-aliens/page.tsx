@@ -6,7 +6,7 @@ import React from "react";
 const RemovalOfAliensPage = () => {
   return (
     <AmendmentComparison
-      pageTitle={`Mental Health / Mental Health  Act 1983 / Part VII / Removal of aliens`}
+      pageTitle={`Mental Health / Mental Health  Act 1983 / Part VI / Removal of aliens`}
       src={RemovalOfAliensImage}
       backRoute="/mental-health-act-1983"
       amendmentButtonRoute="/removal-of-aliens-ac"

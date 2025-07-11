@@ -7,7 +7,7 @@ const AmendmentComparisonPart4aTreatmentOfCommunityPatientsNotRecalledToHospital
     <CommonPage
       pageTitle={`Mental Health / Mental Health Act 1983 / Amendment Comparison - Part 4A Treatment of community patients not recalled to Hospital `}
       src={AmendmentComparisonPart4aTreatmentOfCommunityPatientsNotRecalledToHospitalImage}
-      backRoute="/"
+      backRoute="/part-4a-treatment-of-community-patients-not-recalled-to-hospital"
     />
   );
 };
