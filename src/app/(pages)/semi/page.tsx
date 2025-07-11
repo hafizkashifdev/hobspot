@@ -22,11 +22,12 @@ import { SemiImage18 } from "@/assets";
 import { SemiImage19 } from "@/assets";
 import { SemiImage20 } from "@/assets";
 import { SemiImage21 } from "@/assets";
-import MultiImagesAmendmentComparisonBtn from "@/components/common-page-multi-images-two-amendment-btn";
+// import MultiImagesAmendmentComparisonBtn from "@/components/common-page-multi-images-two-amendment-btn";
+import MultiImagesAmendmentComparisonBtnOne from "@/components/common-page-one-btn";
 
 const SemiPage = () => {
   return (
-    <MultiImagesAmendmentComparisonBtn
+    <MultiImagesAmendmentComparisonBtnOne
       images={[
         { src: SemiImag0, route: "/semi", alt: "Image" },
         { src: SemiImage1, route: "/identification-details-and-timings", alt: "Image 1" },
@@ -49,8 +50,9 @@ const SemiPage = () => {
         { src: SemiImage18, route: "/the-principles-and-definitions-applicable-to-the-collection-of-statistical-data-on-performance-transactions-and-fraud", alt: "Image 18" },
         { src: SemiImage19, route: "/security-policy", alt: "Image 19" },
         { src: SemiImage20, route: "/fees-and-levies", alt: "Image 20" },
+
+        // { src: SemiImage21, route: "/Fees and levies", alt: "Image 21" },
         
-        { src: SemiImage21, route: "/Fees and levies", alt: "Image 21" },
         // { src: SemiImage22, route: "/SEMI2", alt: "Image 22" },
       ]}
       pageTitle="FCA Application/E-Money New Authorisation &  Registration/SEMI"

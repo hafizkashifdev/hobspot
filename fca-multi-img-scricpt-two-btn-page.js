@@ -27,7 +27,7 @@ const pages = [
   {
     title: "SEMI",
     imageRoutes: [
-      "/Identification details and timings",
+      "/FCA Application / E-Money New Authorisation &  Registration / AEMI",
       "/Identification details and timings 1",
       "/Identification details and timings 2",
       "/Identification details and timings 3",
@@ -50,8 +50,8 @@ const pages = [
       "/Fees and levies",
       "/SEMI2"
     ],
-    buttonTitles: ["Reference Doc"],
-    buttonRoutes: ["/SEMI"],
+    buttonTitles: ["Reference Doc","KEY TERMS"],
+    buttonRoutes: ["/FCA Application / E-Money New Authorisation &  Registration / AEMI","/TERMS IN APPLICATION PACK"],
   },
 ];
 
