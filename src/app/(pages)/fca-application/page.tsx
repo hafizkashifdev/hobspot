@@ -40,7 +40,7 @@ const FcaApplicationPage = () => {
     <MultiPathPage
       arrayData={FcaApplicationPageData}
       pageTitle="FCA Application"
-      backRoute="/fca-sequence-diagram"
+      backRoute="/"
     />
   );
 };
