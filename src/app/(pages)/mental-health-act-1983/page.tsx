@@ -64,7 +64,7 @@ const MentalHealthAct1983PageData = [
     key: "mental-8",
     link: "/mental-health-act-1983-part-6",
     icon: img8MentalHealthAct1983Image,
-    title: "Part VI Removal and Return of Patients Within United Kingdom, etc.",
+    title: "Part VIII Miscellaneous Functions of Local Authorities and the Secretary of State",
   },
   {
     key: "mental-9",
@@ -74,7 +74,7 @@ const MentalHealthAct1983PageData = [
   },
   {
     key: "mental-10",
-    link: "/mental-health-act-1983-part-6",
+    link: "/mental-health-act-1983-part-8",
     icon: img10MentalHealthAct1983Image,
   title: "Part VIII Miscellaneous Functions of Local Authorities and the Secretary of State",
   },
@@ -86,13 +86,13 @@ const MentalHealthAct1983PageData = [
   },
   {
     key: "mental-12",
-    link: "/part-10",
+    link: "/mental-health-act-1983-part-9",
     icon: img12MentalHealthAct1983Image,
     title: "Part X Miscellaneous and Supplementary",
   },
   {
     key: "mental-13",
-    link: "/Schedule",
+    link: "/schedule-act-1983",
     icon: img13MentalHealthAct1983Image,
     title: "Schedule",
   }
@@ -103,7 +103,7 @@ const MentalHealthAct1983Page = () => {
     <MultiPathPage
       arrayData={MentalHealthAct1983PageData}
       pageTitle="Mental Health Act 1983"
-      backRoute="/court-hearing"
+      backRoute="/mental-health"
     />
   );
 };

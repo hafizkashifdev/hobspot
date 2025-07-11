@@ -7,7 +7,7 @@ import React from "react";
 const Part10SupplementaryPage = () => {
   return (
     <AmendmentComparison
-      pageTitle={`Mental Health / Act 1983 / SCHEDULE Part 10 -Supplementary`}
+      pageTitle={`Mental Health / Mental Health Act 1983 / Part X / Supplementary`}
       src={Part10SupplementaryImageACc}
       backRoute="/mental-health-act-1983-part-9"
       amendmentButtonRoute="/part-10-supplementary-ac"

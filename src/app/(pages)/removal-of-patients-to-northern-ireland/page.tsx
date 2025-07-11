@@ -8,7 +8,7 @@ const RemovalOfPatientsToNorthernIrelandPage = () => {
     <AmendmentComparison
       pageTitle={`Mental Health / Mental Health  Act 1983 / Part VI / Removal of patients to Northern Ireland`}
       src={RemovalOfPatientsToNorthernIrelandImage}
-      backRoute="/mental-health-act-1983"
+      backRoute="/mental-health-act-1983-part-6"
       amendmentButtonRoute="/removal-of-patients-to-northern-ireland-ac"
     />
   );

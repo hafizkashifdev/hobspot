@@ -8,7 +8,7 @@ const RemovalToAndFromScotlandPage = () => {
     <AmendmentComparison
       pageTitle={`Mental Health / Mental Health  Act 1983 / Part VI / Removal to and from Scotland`}
       src={RemovalToAndFromScotlandImage}
-      backRoute="/mental-health-act-1983"
+      backRoute="/mental-health-act-1983-part-6"
       amendmentButtonRoute="/removal-to-and-from-scotland-ac"
     />
   );

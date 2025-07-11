@@ -8,7 +8,7 @@ const GeneralPage = () => {
     <AmendmentComparison
       pageTitle={`Mental Health / Mental Health  Act 1983 / Part VI / General`}
       src={GeneralImage}
-      backRoute="/mental-health-act-1983"
+      backRoute="/mental-health-act-1983-part-6"
       amendmentButtonRoute="/general-ac"
     />
   );

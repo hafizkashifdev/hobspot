@@ -7,9 +7,9 @@ import React from "react";
 const ScheduleAct1983Schedule5Page = () => {
   return (
     <AmendmentComparison
-      pageTitle={`Mental Health / Act 1983 / SCHEDULE Schedule Act 1983 Schedule 5`}
+      pageTitle={`Mental Health / Act 1983 / SCHEDULE / Schedule 5`}
       src={ScheduleAct1983Schedule5Image}
-      backRoute="/schedule-act-1983-schedule-5"
+      backRoute="/schedule-act-1983"
      amendmentButtonRoute="/schedule-act-1983-schedule-5-amendment-comparison"
     />
   );

@@ -8,7 +8,7 @@ const RemovalOfAliensPage = () => {
     <AmendmentComparison
       pageTitle={`Mental Health / Mental Health  Act 1983 / Part VI / Removal of aliens`}
       src={RemovalOfAliensImage}
-      backRoute="/mental-health-act-1983"
+      backRoute="/mental-health-act-1983-part-6"
       amendmentButtonRoute="/removal-of-aliens-ac"
     />
   );

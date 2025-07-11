@@ -22,7 +22,7 @@ const ScheduleAct1964PageData = [
   },
   {
     key: "schedule-3",
-    link: "schedule-1",
+    link: "schedule-2",
     icon: img3ScheduleAct1964Image,
     title: "SCHEDULE 2 Amendments relating to Courts-Martial",
   }
