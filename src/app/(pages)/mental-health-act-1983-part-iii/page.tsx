@@ -50,7 +50,7 @@ const MentalHealthAct1983PartIiiPageData = [
   },
   {
     key: "mental-7",
-    link: "/supplemental",
+    link: "/supplemental-1",
     icon: img7MentalHealthAct1983PartIiiImage,
     title: "Supplemental",
   }

@@ -38,7 +38,7 @@ const MentalHealthAct1983PageData = [
   },
   {
     key: "mental-4",
-    link: "/",
+    link: "/mental-health-act-1983-part-iii",
     icon: img4MentalHealthAct1983Image,
     title: "Part III Patients Concerned in Criminal Proceedings",
   },
