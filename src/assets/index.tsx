@@ -115,10 +115,14 @@ export { default as FcaApplicationPageImage17 } from "./FcaApplicationPageImage1
 export { default as FcaApplicationPageImage18 } from "./FcaApplicationPageImage18.svg";
 export { default as FcaApplicationPageImage19 } from "./FcaApplicationPageImage19.svg";
 export { default as FcaApplicationPageImage20 } from "./FcaApplicationPageImage20.svg";
-
 export { default as FcaApplicationPageImageone} from "./FcaApplicationPageImageone.svg";
 export { default as FcaApplicationPageImagetwo } from "./FcaApplicationPageImagetwo.svg";
 export { default as FcaApplicationPageImagethree } from "./FcaApplicationPageImagethree.svg";
 export { default as FcaApplicationPageImagefour } from "./FcaApplicationPageImagefour.svg";
+export { default as mainSection } from "./mainSection.svg";
+export { default as colorLegends } from "./colorLegends.svg";
+
+export { default as fcalogo } from "./fcalogo.svg";
+
 
 
