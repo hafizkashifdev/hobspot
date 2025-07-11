@@ -15,7 +15,7 @@ interface ImageItem {
 interface CommonPageProps {
   src?: any;
   images?: ImageItem[];
-  backRoute: string;
+  backRoute: any;
   pageTitle: string;
   onChange?: (selectedValue: string, page: string) => void;
   amendmentButtonRoute1?: string;

@@ -8,78 +8,6 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a name and a custom backRoute
 const pages = [
   {
-    name: "Identification details and timings 1",
-    backRoute: "/semi",
-  },
-  {
-    name: "Identification details and timings 1",
-    backRoute: "/semi",
-  },
-  {
-    name: "Identification details and timings 2",
-    backRoute: "/semi",
-  },
-  {
-    name: "Identification details and timings 3",
-    backRoute: "/semi",
-  },
-  {
-    name: "SEMI",
-    backRoute: "/semi",
-  },
-  {
-    name: "Conditions for registration 2",
-    backRoute: "/semi",
-  },
-  {
-    name: "Conditions for registration 1",
-    backRoute: "/semi",
-  },
-  {
-    name: " Business plan",
-    backRoute: "/semi",
-  },
-  {
-    name: "Capital resources and requirements",
-    backRoute: "/semi",
-  },
-  {
-    name: "Capital resources and requirements 2",
-    backRoute: "/semi",
-  },
-  {
-    name: "Safeguarding measures ",
-    backRoute: "/semi",
-  },
-  {
-    name: "Unrelated payment services",
-    backRoute: "/semi",
-  },
-  {
-    name: "Governance arrangements and risk management",
-    backRoute: "/semi",
-  },
-  {
-    name: "Qualifying holdings and close links",
-    backRoute: "/semi",
-  },
-  {
-    name: "Procedure to Monitor, Handle, and Follow Up on Security Incidents and Customer Complaints",
-    backRoute: "/semi",
-  },
-  {
-    name: "Process in place to file, monitor, track and restrict access to sensitive payment data",
-    backRoute: "/semi",
-  },
-  {
-    name: "The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
-    backRoute: "/semi",
-  },
-  {
-    name: "Security policy",
-    backRoute: "/semi",
-  },
-  {
     name: "Fees and levies",
     backRoute: "/semi",
   },
@@ -172,7 +100,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <CommonPage
-      pageTitle={\`${name}\`}
+      pageTitle="Fees and levies"
       src={${imageName}}
       backRoute=\"${backRoute}\"
     />
@@ -218,4 +146,3 @@ export default ${pascal}Page;
 }
 
 console.log("Pages and image exports have been created.");
- 
