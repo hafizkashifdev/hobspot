@@ -25,48 +25,64 @@ const toKebabCase = (str) =>
 // === Data: Define All Pages Here ===
 const pages = [
   {
-    title: "SEMI",
+    title: "FCA Application / E-Money New Authorisation &  Registration / AEMI",
     imageRoutes: [
       "/FCA Application / E-Money New Authorisation &  Registration / AEMI",
-      "/Identification details and timings 1",
-      "/Identification details and timings 2",
-      "/Identification details and timings 3",
-      "/SEMI",
-      "/SEMI1",
-      "/Conditions for registration 2",
-      "/Conditions for registration 1",
-      "/ Business plan",
-      "/Capital resources and requirements",
-      "/Capital resources and requirements 1",
-      "/Capital resources and requirements 2",
-      "/Safeguarding measures ",
-      "/Unrelated payment services",
-      "/Governance arrangements and risk management",
-      "/Qualifying holdings and close links",
-      "/Procedure to Monitor, Handle, and Follow Up on Security Incidents and Customer Complaints",
-      "/Process in place to file, monitor, track and restrict access to sensitive payment data",
-      "/The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
-      "/Security policy",
-      "/Fees and levies",
-      "/SEMI2"
+      "/Identification details and timings",
+      "/Other names ",
+      "/Addresses ",
+      "/Timings for this application",
+      "/Details of professional advisers",
+      "/Programme of operations ",
+      "/Unrelated payment services ",
+      "/Business Plan Attachments ",
+      "/ Structural organisation ",
+      "/Evidence of initial capital ",
+      "/Measures to safeguard the funds of Payment service users  ",
+      "/Unrelated payment services  ",
+      "/Governance arrangements and internal control mechanisms ",
+      "/Regulatory returns – RegData ",
+      "/Procedure to Monitor, Handle, and Follow Up on Security Incidents and Complaints ",
+      "/Procedure to Monitor, Handle, and Follow Up on Security Incidents and Complaints ",
+      "/Business continuity arrangements ",
+      "/Principles and Definitions for Statistical Data Collection",
+      "/Security policy document ",
+      "/Internal Control Mechanisms for Money Laundering and Terrorist Financing Compliance",
+      "/Identity and suitability assessment of persons with qualifying holdings in the applicant ",
+      "/Identity and Suitability Assessment of Persons with Qualifying Holdings",
+      "/Identity of statutory auditors and audit firms ",
+      "/Professional indemnity insurance or comparable guarantee ",
+      "/Fees and levies ",
     ],
-    buttonTitles: ["Reference Doc","KEY TERMS"],
-    buttonRoutes: ["/FCA Application / E-Money New Authorisation &  Registration / AEMI","/TERMS IN APPLICATION PACK"],
+    buttonTitles: ["Reference Doc", "KEY TERMS"],
+    buttonRoutes: [
+      "/FCA Application / E-Money New Authorisation &  Registration / AEMI",
+      "/TERMS IN APPLICATION PACK",
+    ],
   },
 ];
 
 // === Main Page Generator ===
 for (const page of pages) {
-  const { title, pageTitle, backRoute, imageRoutes, buttonTitles, buttonRoutes } = page;
+  const {
+    title,
+    pageTitle,
+    backRoute,
+    imageRoutes,
+    buttonTitles,
+    buttonRoutes,
+  } = page;
   const pascal = toPascalCase(title);
   const kebab = toKebabCase(title);
 
   // Convert imageRoutes to kebab-case at runtime if not already
-  const processedImageRoutes = imageRoutes.map(route => toKebabCase(route));
-  const imageNames = processedImageRoutes.map((_, i) => `${pascal}Image${i + 1}`);
+  const processedImageRoutes = imageRoutes.map((route) => toKebabCase(route));
+  const imageNames = processedImageRoutes.map(
+    (_, i) => `${pascal}Image${i + 1}`
+  );
 
   // Convert buttonRoutes to kebab-case at runtime if not already
-  const processedButtonRoutes = buttonRoutes.map(route => toKebabCase(route));
+  const processedButtonRoutes = buttonRoutes.map((route) => toKebabCase(route));
 
   // === Create Unique Folder ===
   let dir = path.join(baseDir, kebab);

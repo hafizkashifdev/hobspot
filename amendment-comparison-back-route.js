@@ -8,8 +8,8 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // List of pages to create, each with a name and a custom backRoute
 const pages = [
   {
-    name: "Fees and levies",
-    backRoute: "/semi",
+    name: "TERMS IN APPLICATION PACK sec3",
+    backRoute: "fca-application-e-money-new-authorisation-registration-aemi",
   },
   // {
   //   name: "Part 10 -Supplementary",
@@ -100,7 +100,7 @@ import React from "react";
 const ${pascal}Page = () => {
   return (
     <CommonPage
-      pageTitle="Fees and levies"
+      pageTitle="TERMS IN APPLICATION PACK"
       src={${imageName}}
       backRoute=\"${backRoute}\"
     />
