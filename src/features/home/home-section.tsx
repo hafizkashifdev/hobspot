@@ -1,22 +1,220 @@
 "use client";
 
-import Link from "next/link";
-import { colorLegends, fcalogo } from "@/assets";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { useRouter } from "next/navigation";
+import { colorLegends, fcalogo } from "@/assets";
+
+const PlayCircleRoundedSVG = `<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>`;
+const StopCircleRoundedSVG = `<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-4 14V8h8v8H8z"/>`;
+const NotesRoundedSVG = `<path d="M4 14h6v-2H4v2zm0-5h9V7H4v2zm0 10h9v-2H4v2zm13-1l-4 4V8l4 4h-3l3 3V9l-3-3h3l-3-3h3l3 3V6.5l3-3.5L22 4.5V20l-3 3-3-3h3zm-4 4z"/>`;
+
+const audioHotspots = [
+  {
+    id: "applicantAccessPortal",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Applicant-Accesses-FCA-Connect-Portal.mp4",
+    x: 1288.0,
+    y: 936.73,
+    width: 179.54,
+    height: 163.92,
+    title: "Applicant Access FCA Connect Portal Audio",
+  },
+  {
+    id: "startApplication",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Start-an-Application.mp4",
+    x: 1194.33,
+    y: 1202.14,
+    width: 163.92,
+    height: 132.7,
+    title: "Start an application Audio",
+  },
+  {
+    id: "completeApplication",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Complete-the-application-with-contact-details-fee-payment-declaration-and-upload-required-documents.mp4",
+    x: 1218.05,
+    y: 1952.47,
+    width: 125.38,
+    height: 134.34,
+    title: "Complete the Application Audio",
+  },
+  {
+    id: "checkCompleteness",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Check-for-completeness.mp4",
+    x: 2435.50,
+    y: 2443.31,
+    width: 140.50,
+    height: 124.89,
+    title: "Check the completeness",
+  },
+  {
+    id: "completenessCheckResult",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Completeness-Check-Result.mp4",
+    x: 3583.00,
+    y: 2724.33,
+    width: 140.50,
+    height: 124.89,
+    title: "Completeness Check Result",
+  },
+  {
+    id: "requestFurtherInformation",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Request-further-information.mp4",
+    x: 1288.00,
+    y: 3122.44,
+    width: 132.70,
+    height: 117.09,
+    title: "Request Further Information",
+  },
+  {
+    id: "provideAdditionalData",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Provide-additional-data.mp4",
+    x: 1225.55,
+    y: 3348.81,
+    width: 140.50,
+    height: 117.09,
+    title: "Provide Additional Data",
+  },
+  {
+    id: "revalidateProvidedData",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Revalidate-provided-data.mp4",
+    x: 2443.31,
+    y: 3450.29,
+    width: 101.47,
+    height: 132.70,
+    title: "Revalidate Provided Data",
+  },
+  {
+    id: "fitnessAndProprietyAssessment",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Fitness-and-Propriety-Assessment.mp4",
+    x: 3684.48,
+    y: 4066.98,
+    width: 140.50,
+    height: 140.50,
+    title: "Fitness & Properiert Assessment",
+  },
+  {
+    id: "assessmentResult",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Assessment-Result.mp4",
+    x: 3504.94,
+    y: 4379.22,
+    width: 148.31,
+    height: 124.89,
+    title: "Assessment Results",
+  },
+  {
+    id: "decisionApproveReject",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Decision-Approve-Reject.mp4",
+    x: 1241.17,
+    y: 4566.57,
+    width: 179.54,
+    height: 124.89,
+    title: "Decision Approve & Reject",
+  },
+  {
+    id: "ifApprovedRegisterFirmAndPublish",
+    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/If-Approved-Register-firm-&-publish.mp4",
+    x: 2458.92,
+    y: 4871.01,
+    width: 124.89,
+    height: 148.31,
+    title: "If Approved Register firm & publish",
+  },
+];
+
+const internalLinks = [
+  {
+    href: "/pisp-api",
+    x: 366.88,
+    y: 1592.44,
+    width: 1085.04,
+    height: 288.82,
+    title: "Complete the Application",
+  },
+  {
+    href: "/pisp_spi",
+    x: 850.86,
+    y: 1896.88,
+    width: 187.34,
+    height: 70.25,
+    title: "SPI",
+  },
+  {
+    href: "/raisp",
+    x: 819.64,
+    y: 1998.36,
+    width: 234.18,
+    height: 54.64,
+    title: "RAISP",
+  },
+  {
+    href: "/fca-application-e-money-new-authorisation-registration-aemi",
+    x: 835.25,
+    y: 2084.23,
+    width: 195.15,
+    height: 70.25,
+    title: "AEMI",
+  },
+  {
+    href: "/semi",
+    x: 850.86,
+    y: 2193.51,
+    width: 171.73,
+    height: 78.06,
+    title: "SEMI",
+  },
+  {
+    href: "/fca-application",
+    x: 6401.0,
+    y: 335.66,
+    width: 960.15,
+    height: 171.73,
+    title: "FCA Application Process",
+  },
+  {
+    href: "/payment-services-and-electronic-money-our-approach",
+    x: 6393.2,
+    y: 530.81,
+    width: 944.53,
+    height: 132.7,
+    title: "Payment Services & E-Money",
+  },
+  {
+    href: "https://connect.fca.org.uk/portal/s/",
+    x: 538.62,
+    y: 944.53,
+    width: 686.93,
+    height: 179.54,
+    title: "Applicant Access FCA Connect Portal",
+    target: "_blank",
+  },
+  {
+    href: "https://connect.fca.org.uk/firms/aupo_applicationselection",
+    x: 468.36,
+    y: 1225.55,
+    width: 569.84,
+    height: 101.47,
+    title: "Start an application",
+    target: "_blank",
+  },
+];
+
+
+const renderSvgIcon = (path: string, color: string) => (
+  <svg width={24} height={24} viewBox="0 0 24 24" fill={color}>
+    <g dangerouslySetInnerHTML={{ __html: path }} />
+  </svg>
+);
 
 export const HomeSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const legendRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
+  const [playingAudioId, setPlayingAudioId] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const toggleDropdown = (e: React.MouseEvent) => {
+  const toggleDropdown = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     setIsOpen((prev) => !prev);
-  };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -30,177 +228,139 @@ export const HomeSection = () => {
         setIsOpen(false);
       }
     };
-
     document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  const handlePlayAudio = useCallback((src: string, id: string) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    if (playingAudioId === id) {
+      setPlayingAudioId(null);
+      audioRef.current = null;
+    } else {
+      const audio = new Audio(src);
+      audioRef.current = audio;
+      audio.play();
+      setPlayingAudioId(id);
+      audio.onended = () => {
+        setPlayingAudioId(null);
+        audioRef.current = null;
+      };
+    }
+  }, [playingAudioId]);
+
+  useEffect(() => {
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+        audioRef.current = null;
+      }
     };
   }, []);
 
   return (
     <Box sx={{ p: 3, position: "relative" }}>
-      <Stack flexDirection={"row"} alignItems={"center"} mt={{ md: 2, xs: 1 }}>
+      <Stack flexDirection="row" alignItems="center" mt={{ md: 2, xs: 1 }}>
         <img src={fcalogo.src} alt="FCA Logo" width={98} height={31} />
-
-        <Typography
-          variant="h5"
-          color="#5A5867"
-          fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }}
-          fontWeight={{ md: 600, xs: 500 }}
-          ml={{ md: 2, xs: 1 }}
-          sx={{ fontFamily: "inherit" }}
-        >
+        <Typography variant="h5" color="#5A5867" fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }} fontWeight={{ md: 600, xs: 500 }} ml={{ md: 2, xs: 1 }}>
           FCA Application Process
         </Typography>
       </Stack>
 
-      <Stack
-      flexDirection="row"
-      alignItems="center"
-      justifyContent="space-between"
-      flexWrap="wrap"
-      mt={{ md: 2, xs: 1 }}
-      sx={{ width: "100%" }}
-    >
-      <Typography
-        variant="h3"
-        my={3}
-        color="#5A5867"
-        fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
-        fontWeight={600}
-        ml={{ xs: 2, sm: 2 }}
-        sx={{ minWidth: 0, flexShrink: 1 }}
+      <Stack flexDirection="row" justifyContent="space-between" mt={2}>
+        <Typography variant="h3" color="#5A5867" fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }} fontWeight={600} ml={2}>
+          Sequence Diagram
+        </Typography>
+
+        <Typography variant="h3" fontWeight={600} ml={2} display="flex" alignItems="center">
+          <Typography component="span" fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.8rem" }} fontWeight={600} color="#5A5867" sx={{ mr: 1 }}>
+            Colour Legend
+          </Typography>
+          <span ref={iconRef}>
+            <KeyboardArrowDownIcon onClick={toggleDropdown} sx={{ fontSize: { xs: 28, md: 30 }, color:"#5A5867",border: "2px solid", borderRadius: "40px", cursor: "pointer" }} />
+          </span>
+        </Typography>
+      </Stack>
+
+      <svg
+        viewBox="0 0 7440 6020"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        style={{ width: "100%" }}
       >
-        Sequence Diagram
-      </Typography>
-
-      <Typography
-        variant="h3"
-        my={3}
-        color="#5A5867"
-        fontWeight={600}
-        textTransform="uppercase"
-        ml={{ xs: 2, sm: 2 }}
-        sx={{
-          minWidth: 0,
-          flexShrink: 1,
-          display: "flex", 
-          alignItems: "center", 
-          
-        }}
-      >
-        <Typography
-          component="span"
-          fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.8rem" }} 
-          fontWeight={600} 
-          color="inherit"
-          sx={{ mr: 1 }} 
-        >
-          Colour Legend
-        </Typography>{" "}
-        <span ref={iconRef}>
-          <KeyboardArrowDownIcon
-            sx={{
-              fontSize: { xs:"28px", md: "30px" }, 
-              border: "2px solid",
-              borderRadius: "40px",
-              cursor: "pointer",
-            }}
-            onClick={toggleDropdown}
-          />
-        </span>
-      </Typography>
-    </Stack>
-
-      <Box>
-        <Box
-          dangerouslySetInnerHTML={{
-            __html: `
-<svg style="width:100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 7440 6020">
-  <style>
-    .image-mapper-shape {
-      fill: rgba(0, 0, 0, 0);
-    }
-    g:hover .image-mapper-shape {
-      stroke: white;
-      stroke-width: 2px;
-      opacity: 20%;
-    }
-  </style>
-  <image xlink:href="Request Section hdn (2).png" style="width: 7440px;" />
-
-  <!-- External FCA Links -->
-  <a xlink:href="https://connect.fca.org.uk/portal/s/" target="_blank" xlink:title="Applicant Access FCA Connect Portal">
-    <g><rect x="538.62" y="944.53" width="686.93" height="179.54" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://connect.fca.org.uk/firms/aupo_applicationselection" target="_blank" xlink:title="Start an application">
-    <g><rect x="468.36" y="1225.55" width="569.84" height="101.47" class="image-mapper-shape" /></g>
-  </a>
-
-  <!-- Internal FCA Video Links -->
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Applicant-Accesses-FCA-Connect-Portal.mp4" target="_blank" xlink:title="Applicant Access FCA Connect Portal Audio">
-    <g><rect x="1288.00" y="936.73" width="179.54" height="163.92" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Start-an-Application.mp4" target="_blank" xlink:title="Start an application Audio">
-    <g><rect x="1194.33" y="1202.14" width="163.92" height="132.70" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Complete-the-application-with-contact-details-fee-payment-declaration-and-upload-required-documents.mp4" target="_blank" xlink:title="Complete the Application Audio">
-    <g><rect x="1218.05" y="1952.47" width="125.38" height="134.34" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/pisp-api" target="_parent" xlink:title="Complete the Application">
-    <g><rect x="366.88" y="1592.44" width="1085.04" height="288.82" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/pisp_spi" target="_parent" xlink:title="SPI">
-    <g><rect x="850.86" y="1896.88" width="187.34" height="70.25" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/raisp" target="_parent" xlink:title="RAISP">
-    <g><rect x="819.64" y="1998.36" width="234.18" height="54.64" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/fca-application-e-money-new-authorisation-registration-aemi" target="_parent" xlink:title="AEMI">
-    <g><rect x="835.25" y="2084.23" width="195.15" height="70.25" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/semi" target="_parent" xlink:title="SEMI">
-    <g><rect x="850.86" y="2193.51" width="171.73" height="78.06" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/fca-application" target="_parent" xlink:title="FCA Application Process">
-    <g><rect x="6401.00" y="335.66" width="960.15" height="171.73" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="/payment-services-and-electronic-money-our-approach" target="_parent" xlink:title="Payment Services & E-Money">
-    <g><rect x="6393.20" y="530.81" width="944.53" height="132.70" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Check-for-completeness.mp4" target="_blank" xlink:title="Check the completeness">
-    <g><rect x="2435.50" y="2443.31" width="140.50" height="124.89" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Completeness-Check-Result.mp4" target="_blank" xlink:title="Completeness Check Result">
-    <g><rect x="3583.00" y="2724.33" width="140.50" height="124.89" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Request-further-information.mp4" target="_blank" xlink:title="Request Further Information">
-    <g><rect x="1288.00" y="3122.44" width="132.70" height="117.09" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Provide-additional-data.mp4" target="_blank" xlink:title="Provide Additional Data">
-    <g><rect x="1225.55" y="3348.81" width="140.50" height="117.09" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Revalidate-provided-data.mp4" target="_blank" xlink:title="Revalidate Provided Data">
-    <g><rect x="2443.31" y="3450.29" width="101.47" height="132.70" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Fitness-and-Propriety-Assessment.mp4" target="_blank" xlink:title="Fitness & Properiert Assessment">
-    <g><rect x="3684.48" y="4066.98" width="140.50" height="140.50" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Assessment-Result.mp4" target="_blank" xlink:title="Assessment Results">
-    <g><rect x="3504.94" y="4379.22" width="148.31" height="124.89" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/Decision-Approve-Reject.mp4" target="_blank" xlink:title="Decision Approve & Reject">
-    <g><rect x="1241.17" y="4566.57" width="179.54" height="124.89" class="image-mapper-shape" /></g>
-  </a>
-  <a xlink:href="https://orcalo.blob.core.windows.net/locofy/FCA/If-Approved-Register-firm-&-publish.mp4" target="_blank" xlink:title="If Approved Register firm & publish">
-    <g><rect x="2458.92" y="4871.01" width="124.89" height="148.31" class="image-mapper-shape" /></g>
-  </a>
-</svg>
+        <style>{`
+          .image-mapper-shape { fill: rgba(0, 0, 0, 0); }
+          g:hover .image-mapper-shape { stroke: white; stroke-width: 2px; opacity: 20%; }
+        `}</style>
+        <image xlinkHref="/Request Section hdn (2).png" width="7440" />
+{internalLinks.map((link, idx) => (
+  <g
+    key={`link-${idx}`}
+    onClick={(e) => {
+      e.stopPropagation();
+      if (link.href.startsWith("http")) {
+        window.open(link.href, link.target || "_blank");
+      } else {
+        window.location.href = link.href;
+      }
+    }}
+    style={{ cursor: "pointer" }}
+  >
+    <rect
+      x={link.x}
+      y={link.y}
+      width={link.width}
+      height={link.height}
+      fill="rgba(0,0,0,0)"
+    />
+    <title>{link.title}</title>
+  </g>
+))}
 
 
-            `,
-          }}
-        />
+        {audioHotspots.map((hotspot) => {
+          const iconSize = 24;
+          const x = hotspot.x + hotspot.width / 2 - iconSize / 2;
+          const y = hotspot.y + hotspot.height / 2 - iconSize / 2;
+
+          let icon = PlayCircleRoundedSVG;
+          let color = "#008000";
+
+          if (playingAudioId === hotspot.id) {
+            icon = StopCircleRoundedSVG;
+            color = "#FF0000";
+          } else if (playingAudioId !== null) {
+            icon = NotesRoundedSVG;
+            color = "#808080";
+          }
+
+          return (
+            <g
+              key={hotspot.id}
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePlayAudio(hotspot.audioSrc, hotspot.id);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <rect
+                x={hotspot.x}
+                y={hotspot.y}
+                width={hotspot.width}
+                height={hotspot.height}
+                className="image-mapper-shape audio-hotspot"
+              />
+              <foreignObject x={x} y={y} width={iconSize} height={iconSize}>
+                {renderSvgIcon(icon, color)}
+              </foreignObject>
+            </g>
+          );
+        })}
+      </svg>
 
         {isOpen && (
           <>
@@ -241,6 +401,6 @@ export const HomeSection = () => {
           </>
         )}
       </Box>
-    </Box>
+    
   );
 };
