@@ -55,53 +55,62 @@ export const HomeSection = () => {
       </Stack>
 
       <Stack
-        flexDirection="row"
-        alignItems="center"
-        justifyContent="space-between"
-        flexWrap="wrap"
-        mt={{ md: 2, xs: 1 }}
-        sx={{ width: "100%" }}
+      flexDirection="row"
+      alignItems="center"
+      justifyContent="space-between"
+      flexWrap="wrap"
+      mt={{ md: 2, xs: 1 }}
+      sx={{ width: "100%" }}
+    >
+      <Typography
+        variant="h3"
+        my={3}
+        color="#5A5867"
+        fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+        fontWeight={600}
+        ml={{ xs: 2, sm: 2 }}
+        sx={{ minWidth: 0, flexShrink: 1 }}
+      >
+        Sequence Diagram
+      </Typography>
+
+      <Typography
+        variant="h3"
+        my={3}
+        color="#5A5867"
+        fontWeight={600}
+        textTransform="uppercase"
+        ml={{ xs: 2, sm: 2 }}
+        sx={{
+          minWidth: 0,
+          flexShrink: 1,
+          display: "flex", 
+          alignItems: "center", 
+          
+        }}
       >
         <Typography
-          variant="h3"
-          my={3}
-          color="#5A5867"
-          fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
-          fontWeight={600}
-          ml={{ xs: 2, sm: 2 }}
-          sx={{ minWidth: 0, flexShrink: 1 }}
+          component="span"
+          fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.8rem" }} 
+          fontWeight={600} 
+          color="inherit"
+          sx={{ mr: 1 }} 
         >
-          Sequence Diagram
-        </Typography>
-
-        <Typography
-          variant="h3"
-          my={3}
-          color="#5A5867"
-          fontSize={{ xs: "1rem", sm: "1.5rem", md: "1.8rem" }}
-          fontWeight={600}
-          textTransform="uppercase"
-          ml={{ xs: 2, sm: 2 }}
-          sx={{
-            minWidth: 0,
-            flexShrink: 1,
-            textAlign: { xs: "right", sm: "left" },
-          }}
-        >
-          Colour Legend{" "}
-          <span ref={iconRef}>
-            <KeyboardArrowDownIcon
-              sx={{
-                fontSize: "25px",
-                border: "2px solid",
-                borderRadius: "40px",
-                cursor: "pointer",
-              }}
-              onClick={toggleDropdown}
-            />
-          </span>
-        </Typography>
-      </Stack>
+          Colour Legend
+        </Typography>{" "}
+        <span ref={iconRef}>
+          <KeyboardArrowDownIcon
+            sx={{
+              fontSize: { xs:"28px", md: "30px" }, 
+              border: "2px solid",
+              borderRadius: "40px",
+              cursor: "pointer",
+            }}
+            onClick={toggleDropdown}
+          />
+        </span>
+      </Typography>
+    </Stack>
 
       <Box>
         <Box
