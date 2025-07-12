@@ -210,6 +210,22 @@ export const HomeSection = () => {
   const iconRef = useRef<HTMLDivElement>(null);
   const [playingAudioId, setPlayingAudioId] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const preloadedAudiosRef = useRef<{ [id: string]: HTMLAudioElement }>({});
+  useEffect(() => {
+  audioHotspots.forEach((hotspot) => {
+    const audio = new Audio(hotspot.audioSrc);
+    audio.preload = "auto"; // load in background
+    preloadedAudiosRef.current[hotspot.id] = audio;
+  });
+
+  return () => {
+    // Cleanup
+    Object.values(preloadedAudiosRef.current).forEach((audio) => {
+      audio.pause();
+      audio.src = "";
+    });
+  };
+}, []);
 
   const toggleDropdown = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
@@ -233,24 +249,38 @@ export const HomeSection = () => {
   }, []);
 
   const handlePlayAudio = useCallback((src: string, id: string) => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-    if (playingAudioId === id) {
+  const existingAudio = preloadedAudiosRef.current[id];
+
+  if (audioRef.current) {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+  }
+
+  if (playingAudioId === id) {
+    setPlayingAudioId(null);
+    audioRef.current = null;
+  } else if (existingAudio) {
+    audioRef.current = existingAudio;
+    existingAudio.currentTime = 0;
+    existingAudio.play();
+    setPlayingAudioId(id);
+    existingAudio.onended = () => {
       setPlayingAudioId(null);
       audioRef.current = null;
-    } else {
-      const audio = new Audio(src);
-      audioRef.current = audio;
-      audio.play();
-      setPlayingAudioId(id);
-      audio.onended = () => {
-        setPlayingAudioId(null);
-        audioRef.current = null;
-      };
-    }
-  }, [playingAudioId]);
+    };
+  } else {
+    // fallback
+    const fallback = new Audio(src);
+    audioRef.current = fallback;
+    fallback.play();
+    setPlayingAudioId(id);
+    fallback.onended = () => {
+      setPlayingAudioId(null);
+      audioRef.current = null;
+    };
+  }
+}, [playingAudioId]);
+
 
   useEffect(() => {
     return () => {
