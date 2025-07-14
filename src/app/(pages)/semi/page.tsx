@@ -58,7 +58,7 @@ const SemiPage = () => {
       pageTitle="FCA Application/E-Money New Authorisation &  Registration/SEMI"
       amendmentButtonRoute1="/semi"
       amendmentButtonTitle1="Reference Doc"
-      backRoute="/"
+      backRoute="/e-money-new-authorisation-registration"
     />
   );
 };
