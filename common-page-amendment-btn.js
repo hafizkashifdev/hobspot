@@ -8,6 +8,7 @@ const assetsDir = path.join(__dirname, "src", "assets");
 // ✅ Corrected: Use "title" instead of "tile"
 const pages = [
   {
+<<<<<<< HEAD
     title: "Part IV Guardians of Consent AC",
     ButtonRoute: "Part IV Guardians of Consent",
   },
@@ -17,6 +18,15 @@ const pages = [
   },
  
 ];
+=======
+    title: "FCA Overview",
+    ButtonRoute: " Removal to and from Scotland AC",
+  },
+  
+ 
+
+];  
+>>>>>>> 5f0979b5d0f361da60ffe34c4df737afdcaf73f1
 
 // Convert to PascalCase
 const toPascalCase = (str) =>
@@ -108,7 +118,7 @@ const ${pascal}Page = () => {
     <AmendmentComparison
       pageTitle={\`Mental Health / Mental Health  Act 1983 / Part V / ${title}\`}
       src={${imageName}}
-      backRoute="/mental-health-act-1983"
+      backRoute="/"
       amendmentButtonRoute="${kebabAmendmentButtonRoute}"
     />
   );
