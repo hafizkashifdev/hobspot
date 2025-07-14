@@ -18,7 +18,8 @@ export default function Home() {
       >
         <Container maxWidth="md">
           <Typography variant="h3" component="h1" gutterBottom sx={{ color: "#003366" }}>
-            Welcome to the Care Quality Commission
+            Welcome to the starter template Locofy
+
           </Typography>
           <Typography variant="h6" sx={{ color: "#555" }}>
             Your trusted platform for care service oversight and reporting.
