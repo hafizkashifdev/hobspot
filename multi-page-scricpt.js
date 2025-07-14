@@ -7,21 +7,14 @@ const assetsDir = path.join(__dirname, 'src', 'assets');
 
 // List of pages with pageTitle, image counts, links, and per-image titles
 const pages = [
-  //  {
-  //   title: "Payment Services New Authorisation / registration",
-  //   pageTitle: "Payment Services New Authorisation / registration",
-  //   imageCount: 3,
-  //   links: ["/PISP_API","/SPI","RAISP",],
-  //   titles: ["PISP_API", "PISP_SMALL Payment institution (SPI)","/Registration As An Account information Service Provider (RAISP)" ,],
-  // },
-   {
-    title: "Payment Services New Authorisation / registration",
-    pageTitle: "Payment Services New Authorisation / registration",
-    imageCount: 3,
-    links: ["/PISP_API","SEMI"],
-    titles: ["Reference Doc", "KEY TERMS"],
+  {
+    title: "FCA Application",
+    pageTitle: "FCA Application",
+    imageCount: 4,
+    links: ["/FCA Overview","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
+    titles: ["FCA Overview", "Payment Services New Authorisation  Registration","E-Money New Authorisation / Registration" ,"Payment Services and Electronic Money – Our Approach",],
   },
-
+ 
 ];
 
 // Convert to PascalCase
@@ -150,7 +143,7 @@ const ${pascal}Page = () => {
     <MultiPathPage
       arrayData={${pascal}PageData}
       pageTitle="${pageTitle}"
-      backRoute="/mental-health-act-1983"
+      backRoute="/FCA Sequence Diagram"
     />
   );
 };

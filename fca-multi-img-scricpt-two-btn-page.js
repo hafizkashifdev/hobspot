@@ -25,40 +25,33 @@ const toKebabCase = (str) =>
 // === Data: Define All Pages Here ===
 const pages = [
   {
-    title: "FCA Application / E-Money New Authorisation &  Registration / AEMI",
+    title: "FCA Application Page",
+    pageTitle: "FCA Application Main",
+    backRoute: "/FCA Sequence Diagram",
     imageRoutes: [
-      "/FCA Application / E-Money New Authorisation &  Registration / AEMI",
-      "/Identification details and timings",
-      "/Other names ",
-      "/Addresses ",
-      "/Timings for this application",
-      "/Details of professional advisers",
-      "/Programme of operations ",
-      "/Unrelated payment services ",
-      "/Business Plan Attachments ",
-      "/ Structural organisation ",
-      "/Evidence of initial capital ",
-      "/Measures to safeguard the funds of Payment service users  ",
-      "/Unrelated payment services  ",
-      "/Governance arrangements and internal control mechanisms ",
-      "/Regulatory returns – RegData ",
-      "/Procedure to Monitor, Handle, and Follow Up on Security Incidents and Complaints ",
-      "/Procedure to Monitor, Handle, and Follow Up on Security Incidents and Complaints ",
-      "/Business continuity arrangements ",
-      "/Principles and Definitions for Statistical Data Collection",
-      "/Security policy document ",
-      "/Internal Control Mechanisms for Money Laundering and Terrorist Financing Compliance",
-      "/Identity and suitability assessment of persons with qualifying holdings in the applicant ",
-      "/Identity and Suitability Assessment of Persons with Qualifying Holdings",
-      "/Identity of statutory auditors and audit firms ",
-      "/Professional indemnity insurance or comparable guarantee ",
-      "/Fees and levies ",
+      "/PISP_API",
+      "/PISP_API  Filling in the Form",
+      "/PISP_API  Section 1: Identification Details and Timings",
+      "/PISP_API  Section 2: Programme of Operations",
+      "/PISP_API  Section 3:  Business Plan ",
+      "/PISP_API  Section 4:  Structural organisation ",
+      "/PISP_API Section 5:  Evidence of initial capital ",
+      "/PISP_API  Section 6:  Measures to safeguard the funds of payment service users",
+      "/PISP_API Section 7:  Procedure to monitor, handle and follow up on a  security incident and security related customer complaints",
+      "/PISP_API Section 8:  Procedure to monitor, handle and follow up on a  security incident and security related customer complaints. ",
+      "/PISP_API Process in place to file, monitor, track and restrict access to sensitive payment data",
+      "/PISP_API  Business continuity arrangements",
+      "/PISP_API The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud",
+      "/PISP_API Security policy document",
+      "/PPISP_API Internal control mechanisms to comply with obligations in relation to money laundering and terrorist financing",
+      "/PISP_API Section 14",
+      "/PISP_API Section 15",
+      "/PISP_API Section 16 Professional indemnity insurance (PII) or comparable guarantee",
+      "/PISP_API Section 17 Professional indemnity insurance (PII) or comparable guarantee",
+      "/PISP_API Section 18 Fees and levies",
     ],
     buttonTitles: ["Reference Doc", "KEY TERMS"],
-    buttonRoutes: [
-      "/FCA Application / E-Money New Authorisation &  Registration / AEMI",
-      "/TERMS IN APPLICATION PACK",
-    ],
+    buttonRoutes: ["/PISP_API", "/PISP_API  TERMS IN APPLICATION PACK"],
   },
 ];
 
@@ -100,9 +93,9 @@ for (const page of pages) {
   const imageArray = imageNames
     .map(
       (name, i) =>
-        `        { src: ${name}, route: "${imageRoutes[i]}", alt: "Image ${
-          i + 1
-        }" },`
+        `        { src: ${name}, route: "/${
+          processedImageRoutes[i]
+        }", alt: "Image ${i + 1}" },`
     )
     .join("\n");
 
@@ -111,7 +104,7 @@ for (const page of pages) {
       (route, i) =>
         `      amendmentButtonRoute${
           i + 1
-        }="${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
+        }="/${route}"\n      amendmentButtonTitle${i + 1}="${buttonTitles[i]}"`
     )
     .join("\n");
 
@@ -127,7 +120,7 @@ const ${pascal}Page = () => {
 ${imageArray}
       ]}
       pageTitle="${pageTitle}"
-      backRoute="${backRoute}"
+    backRoute="${kebabBackRoute}"
 ${buttonProps}
     />
   );

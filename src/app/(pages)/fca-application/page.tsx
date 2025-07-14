@@ -1,27 +1,46 @@
 "use client";
 import { MultiPathPage } from "@/components";
 import {
-  FcaOverviewImage,
-  img4FcaApplicationImage,
+  img1FcaApplicationImage,
+  img2FcaApplicationImage,
+  img3FcaApplicationImage,
+  img4FcaApplicationImage
 } from "@/assets";
 import React from "react";
 
-import MultiImagesAmendmentComparisonBtn from "@/components/common-page-multi-images-two-amendment-btn";
+const FcaApplicationPageData = [
+  {
+    key: "fca-1",
+    link: "/fca-overview",
+    icon: img1FcaApplicationImage,
+    title: "FCA Overview",
+  },
+  {
+    key: "fca-2",
+    link: "/removal-of-patients-to-channel-islands-or-isle-of-man",
+    icon: img2FcaApplicationImage,
+    title: "Payment Services New Authorisation  Registration",
+  },
+  {
+    key: "fca-3",
+    link: "/removal-of-patients-to-northern-ireland",
+    icon: img3FcaApplicationImage,
+    title: "E-Money New Authorisation / Registration",
+  },
+  {
+    key: "fca-4",
+    link: "/removal-of-aliens",
+    icon: img4FcaApplicationImage,
+    title: "Payment Services and Electronic Money – Our Approach",
+  }
+];
 
 const FcaApplicationPage = () => {
   return (
-    <MultiImagesAmendmentComparisonBtn
-      images={[
-        { src: FcaOverviewImage, route: "/img1-route", alt: "Image 1" },
-        { src: FcaOverviewImage, route: "/img2-route", alt: "Image 2" },
-        { src: FcaOverviewImage, route: "/img3-route", alt: "Image 3" },
-        { src: img4FcaApplicationImage, route: "/img4-route", alt: "Image 4" },
-      ]}
+    <MultiPathPage
+      arrayData={FcaApplicationPageData}
       pageTitle="FCA Application"
-      amendmentButtonRoute1="/amendment-1"
-      amendmentButtonRoute2="/amendment-2"
-      amendmentButtonTitle1="Psychiatrist"
-      amendmentButtonTitle2="Social Worker"
+      backRoute="/"
     />
   );
 };
