@@ -37,7 +37,6 @@ const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
   amendmentButtonTitle1 = "Amendment Comparison 1",
   amendmentButtonTitle2 = "Amendment Comparison 2",
    downloadUrl,
-    downloadFileName,
 }) => {
   const router = useRouter();
 
@@ -45,18 +44,20 @@ const MultiImagesAmendmentComparisonBtn: React.FC<CommonPageProps> = ({
     router.push(backRoute);
   }, [router, backRoute]);
 
-    const onAmendmentButtonClick1 = useCallback(() => {
-        if (downloadUrl && downloadFileName) {
-            const link = document.createElement("a");
-            link.href = downloadUrl;
-            link.download = downloadFileName;
-            link.click();
-        } else if (amendmentButtonRoute1) {
-            router.push(amendmentButtonRoute1);
-        } else {
-            console.warn("No action available");
-        }
-    }, [downloadUrl, downloadFileName, amendmentButtonRoute1, router]);
+   const onAmendmentButtonClick1 = useCallback(() => {
+  const targetUrl = downloadUrl || amendmentButtonRoute1;
+
+  if (targetUrl) {
+    const newTab = window.open(targetUrl, "_blank");
+    if (!newTab) {
+      alert("Popup blocked! Please allow popups for this site.");
+    }
+  } else {
+    console.warn("No valid URL provided.");
+  }
+}, [downloadUrl, amendmentButtonRoute1]);
+
+
 
 
   // const onAmendmentButtonClick1 = useCallback(() => {

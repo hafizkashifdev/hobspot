@@ -22,9 +22,9 @@ const PispSpiPage = () => {
             amendmentButtonRoute2="/spi-final-terms-in-application-pack"
             amendmentButtonTitle1="Reference Doc"
             amendmentButtonTitle2="KEY TERMS"
-            backRoute="/payment-service-new-authorisation-registration"
-            downloadUrl="https://www.fca.org.uk/publication/forms/psd-spi-registration-application-form.doc"
-            downloadFileName="psd-spi-registration-application-form.doc"
+           backRoute="/payment-service-new-authorisation-registration"
+  downloadUrl="https://www.fca.org.uk/publication/forms/psd-spi-registration-application-form.doc"
+//   downloadFileName="psd-spi-registration-application-form.doc"
         />
     );
 };

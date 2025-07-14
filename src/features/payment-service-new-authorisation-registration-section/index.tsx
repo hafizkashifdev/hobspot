@@ -10,7 +10,7 @@ export const PaymentServiceNewAuthorisationRegistrationSection = () => {
     <Box sx={{ p: 3 }}>
       <MultiPathPage
         pageTitle="Payment Services New Authorisation / registration"
-        backRoute="/"
+        backRoute="/fca-application"
         arrayData={paymentServiceData}
       />
     </Box>

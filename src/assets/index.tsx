@@ -223,8 +223,11 @@ export { default as FcaApplicationPageImagethree } from "./FcaApplicationPageIma
 export { default as FcaApplicationPageImagefour } from "./FcaApplicationPageImagefour.svg";
 export { default as mainSection } from "./mainSection.svg";
 export { default as colorLegends } from "./colorLegends.svg";
-
 export { default as fcalogo } from "./fcalogo.svg";
+export { default as FACAPPlicationMainImageone} from "./FACAPPlicationMainImageone.svg";
+export { default as FACAPPlicationMainImagetwo } from "./FACAPPlicationMainImagetwo.svg";
+export { default as FACAPPlicationMainImagethree } from "./FACAPPlicationMainImagethree.svg";
+export { default as FcaApplicationMainImagefour } from "./FcaApplicationMainImagefour.svg";
 
 
 

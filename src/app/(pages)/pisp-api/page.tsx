@@ -47,12 +47,13 @@ const FcaApplicationPagePage = () => {
         { src: FcaApplicationPageImage19, route: "/pisp-api-section-17-professional-indemnity-insurance-pii-or-comparable-guarantee", alt: "Image 19" },
         { src: FcaApplicationPageImage20, route: "/pisp-api-section-18-fees-and-levies", alt: "Image 20" },
       ]}
-      pageTitle="FCA Application Main"
-      backRoute="/payment-service-new-authorisation-registration"
-      amendmentButtonRoute1="/pisp-api"
-      amendmentButtonTitle1="Reference Doc"
-      amendmentButtonRoute2="/pisp-api-terms-in-application-pack"
-      amendmentButtonTitle2="KEY TERMS"
+      pageTitle="FCA Application / Payment Services New Authorisation / registration / PISP_API"
+  backRoute="/payment-service-new-authorisation-registration"
+  amendmentButtonTitle1="Reference Doc"
+  amendmentButtonTitle2="KEY TERMS"
+  amendmentButtonRoute2="/pisp-api-terms-in-application-pack"
+  downloadUrl="https://orcalo-my.sharepoint.com/:b:/g/personal/muhammad-rutab_sohail_consultancyoutfit_co_uk/EbTYOfv4Xv9FnRSzgJnvU4UB4AbqCar-GmVjJx2NksxqTw?e=wb80Vr"
+  downloadFileName="FCA_Reference_Doc.pdf"
     />
   );
 };
