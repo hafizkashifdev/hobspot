@@ -8,19 +8,11 @@ const assetsDir = path.join(__dirname, 'src', 'assets');
 // List of pages with pageTitle, image counts, links, and per-image titles
 const pages = [
   {
-<<<<<<< HEAD
-    title: "Mental Health Act 1983 - Part III",
-    pageTitle: "Part III Patients Concerned in Criminal Proceedings or Under Sentence",
-    imageCount: 7,
-    links: ["/Remands to hospital", "/Hospital and guardianship orders","/Restriction orders","Hospital and limitation directions","/Detention during Her Majesty’s pleasure","/Transfer to hospital of prisoners, etc.","/Supplemental"],
-    titles: ["Remands to hospital", "Hospital and guardianship orders","Restriction orders","Hospital and limitation directions","Detention during Her Majesty’s pleasure","Transfer to hospital of prisoners, etc.","Supplemental"],
-=======
-    title: "FCA Application",
-    pageTitle: "FCA Application",
-    imageCount: 4,
-    links: ["/FCA Overview","/Removal of patients to Channel Islands or Isle of Man","/Removal of patients to Northern Ireland","/Removal of aliens",],
-    titles: ["FCA Overview", "Payment Services New Authorisation  Registration","E-Money New Authorisation / Registration" ,"Payment Services and Electronic Money – Our Approach",],
->>>>>>> 5f0979b5d0f361da60ffe34c4df737afdcaf73f1
+    title: "Scope of registration",
+    pageTitle: "Scope of registration",
+    imageCount: 3,
+    links: ["/How the Process Works?","/Who Needs to Register?","What Needs to Be Registered?",],
+    titles: ["How the Process Works?", "Who Needs to Register?h","What Needs to Be Registered?",],
   },
  
 ];
@@ -37,10 +29,13 @@ const toPascalCase = str =>
 // Convert to kebab-case
 const toKebabCase = str =>
   str
-    .replace(/[&/()]+/g, '')                // Remove &, /, (, )
-    .replace(/[^a-zA-Z0-9]+/g, '-')         // Replace other non-alphanumeric chars with -
+    .normalize("NFKD")
+    .replace(/[’'"“”‘’]+/g, "")
+    .replace(/[&/\\?#!()\[\],.:]+/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
     .toLowerCase()
-    .replace(/^-+|-+$/g, '');               // Trim leading/trailing dashes
+    .replace(/--+/g, "-")
+    .replace(/^-+|-+$/g, "");            // Trim leading/trailing dashes
 
 for (const { title, pageTitle, imageCount = 2, links = [], titles = [] } of pages) {
   if (!title || typeof title !== 'string' || !title.trim()) {
