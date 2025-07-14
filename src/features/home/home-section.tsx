@@ -214,7 +214,7 @@ export const HomeSection = () => {
   useEffect(() => {
   audioHotspots.forEach((hotspot) => {
     const audio = new Audio(hotspot.audioSrc);
-    audio.preload = "auto"; // load in background
+    audio.preload = "auto"; 
     preloadedAudiosRef.current[hotspot.id] = audio;
   });
 
@@ -358,7 +358,7 @@ export const HomeSection = () => {
           const y = hotspot.y + hotspot.height / 2 - iconSize / 2;
 
           let icon = PlayCircleRoundedSVG;
-          let color = "#008000";
+          let color = "#000";
 
           if (playingAudioId === hotspot.id) {
             icon = StopCircleRoundedSVG;
