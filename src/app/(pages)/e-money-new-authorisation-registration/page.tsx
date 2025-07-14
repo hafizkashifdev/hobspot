@@ -26,7 +26,7 @@ const EMoneyNewAuthorisationRegistrationPage = () => {
     <MultiPathPage
       arrayData={EMoneyNewAuthorisationRegistrationPageData}
       pageTitle="E-Money New Authorisation / Registration"
-      backRoute="/mental-health-act-1983"
+      backRoute="/"
     />
   );
 };

@@ -102,7 +102,7 @@ const ${pascal}Page = () => {
     <AmendmentComparison
       pageTitle={\`Mental Health / Mental Health  Act 1983 / Part VII / ${title}\`}
       src={${imageName}}
-      backRoute="/mental-health-act-1983"
+      backRoute="/"
       amendmentButtonRoute="${kebabAmendmentButtonRoute}"
     />
   );
