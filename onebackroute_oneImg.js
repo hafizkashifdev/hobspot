@@ -7,7 +7,6 @@ const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
   { name: "Cross-Sector Inspections", backRoute: "/ Care Quality Commission" },
- 
 ];
 
 const toPascalCase = (str) =>
@@ -48,7 +47,7 @@ for (const page of pages) {
     dirSuffix++;
     finalKebab = `${kebabBase}-section${dirSuffix}`;
     dir = path.join(baseDir, finalKebab);
-    imageIndex = String(dirSuffix); 
+    imageIndex = String(dirSuffix);
   }
 
   if (dirSuffix >= 100) {

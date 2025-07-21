@@ -1,10 +1,8 @@
 import { Box, Typography, Container } from "@mui/material";
-import { HomeSection } from "@/features/home/home-section";
 
 export default function Home() {
   return (
     <>
-      {/* Welcome to the Home Page Component */}
       <Box
         sx={{
           backgroundColor: "#f0f4f8",
@@ -17,15 +15,17 @@ export default function Home() {
         }}
       >
         <Container maxWidth="md">
-          <Typography variant="h3" component="h1" gutterBottom sx={{ color: "#003366" }}>
+          <Typography
+            variant="h3"
+            component="h1"
+            gutterBottom
+            sx={{ color: "#003366" }}
+          >
             Welcome to the starter template Locofy
-
           </Typography>
           <Typography variant="h6" sx={{ color: "#555" }}>
             Your trusted platform for care service oversight and reporting.
           </Typography>
-
-          {/* <HomeSection /> */}
         </Container>
       </Box>
     </>

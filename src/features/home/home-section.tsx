@@ -12,7 +12,8 @@ const NotesRoundedSVG = `<path d="M4 14h6v-2H4v2zm0-5h9V7H4v2zm0 10h9v-2H4v2zm13
 const audioHotspots = [
   {
     id: "applicantAccessPortal",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Applicant-Accesses-FCA-Connect-Portal.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Applicant-Accesses-FCA-Connect-Portal.mp4",
     x: 1288.0,
     y: 936.73,
     width: 179.54,
@@ -21,7 +22,8 @@ const audioHotspots = [
   },
   {
     id: "startApplication",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Start-an-Application.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Start-an-Application.mp4",
     x: 1194.33,
     y: 1202.14,
     width: 163.92,
@@ -30,7 +32,8 @@ const audioHotspots = [
   },
   {
     id: "completeApplication",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Complete-the-application-with-contact-details-fee-payment-declaration-and-upload-required-documents.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Complete-the-application-with-contact-details-fee-payment-declaration-and-upload-required-documents.mp4",
     x: 1218.05,
     y: 1952.47,
     width: 125.38,
@@ -39,61 +42,68 @@ const audioHotspots = [
   },
   {
     id: "checkCompleteness",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Check-for-completeness.mp4",
-    x: 2435.50,
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Check-for-completeness.mp4",
+    x: 2435.5,
     y: 2443.31,
-    width: 140.50,
+    width: 140.5,
     height: 124.89,
     title: "Check the completeness",
   },
   {
     id: "completenessCheckResult",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Completeness-Check-Result.mp4",
-    x: 3583.00,
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Completeness-Check-Result.mp4",
+    x: 3583.0,
     y: 2724.33,
-    width: 140.50,
+    width: 140.5,
     height: 124.89,
     title: "Completeness Check Result",
   },
   {
     id: "requestFurtherInformation",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Request-further-information.mp4",
-    x: 1288.00,
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Request-further-information.mp4",
+    x: 1288.0,
     y: 3122.44,
-    width: 132.70,
+    width: 132.7,
     height: 117.09,
     title: "Request Further Information",
   },
   {
     id: "provideAdditionalData",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Provide-additional-data.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Provide-additional-data.mp4",
     x: 1225.55,
     y: 3348.81,
-    width: 140.50,
+    width: 140.5,
     height: 117.09,
     title: "Provide Additional Data",
   },
   {
     id: "revalidateProvidedData",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Revalidate-provided-data.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Revalidate-provided-data.mp4",
     x: 2443.31,
     y: 3450.29,
     width: 101.47,
-    height: 132.70,
+    height: 132.7,
     title: "Revalidate Provided Data",
   },
   {
     id: "fitnessAndProprietyAssessment",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Fitness-and-Propriety-Assessment.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Fitness-and-Propriety-Assessment.mp4",
     x: 3684.48,
     y: 4066.98,
-    width: 140.50,
-    height: 140.50,
+    width: 140.5,
+    height: 140.5,
     title: "Fitness & Properiert Assessment",
   },
   {
     id: "assessmentResult",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Assessment-Result.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Assessment-Result.mp4",
     x: 3504.94,
     y: 4379.22,
     width: 148.31,
@@ -102,7 +112,8 @@ const audioHotspots = [
   },
   {
     id: "decisionApproveReject",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/Decision-Approve-Reject.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/Decision-Approve-Reject.mp4",
     x: 1241.17,
     y: 4566.57,
     width: 179.54,
@@ -111,7 +122,8 @@ const audioHotspots = [
   },
   {
     id: "ifApprovedRegisterFirmAndPublish",
-    audioSrc: "https://orcalo.blob.core.windows.net/locofy/FCA/If-Approved-Register-firm-&-publish.mp4",
+    audioSrc:
+      "https://orcalo.blob.core.windows.net/locofy/FCA/If-Approved-Register-firm-&-publish.mp4",
     x: 2458.92,
     y: 4871.01,
     width: 124.89,
@@ -197,7 +209,6 @@ const internalLinks = [
   },
 ];
 
-
 const renderSvgIcon = (path: string, color: string) => (
   <svg width={24} height={24} viewBox="0 0 24 24" fill={color}>
     <g dangerouslySetInnerHTML={{ __html: path }} />
@@ -212,20 +223,20 @@ export const HomeSection = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const preloadedAudiosRef = useRef<{ [id: string]: HTMLAudioElement }>({});
   useEffect(() => {
-  audioHotspots.forEach((hotspot) => {
-    const audio = new Audio(hotspot.audioSrc);
-    audio.preload = "auto"; 
-    preloadedAudiosRef.current[hotspot.id] = audio;
-  });
-
-  return () => {
-    // Cleanup
-    Object.values(preloadedAudiosRef.current).forEach((audio) => {
-      audio.pause();
-      audio.src = "";
+    audioHotspots.forEach((hotspot) => {
+      const audio = new Audio(hotspot.audioSrc);
+      audio.preload = "auto";
+      preloadedAudiosRef.current[hotspot.id] = audio;
     });
-  };
-}, []);
+
+    return () => {
+      // Cleanup
+      Object.values(preloadedAudiosRef.current).forEach((audio) => {
+        audio.pause();
+        audio.src = "";
+      });
+    };
+  }, []);
 
   const toggleDropdown = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
@@ -248,39 +259,41 @@ export const HomeSection = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  const handlePlayAudio = useCallback((src: string, id: string) => {
-  const existingAudio = preloadedAudiosRef.current[id];
+  const handlePlayAudio = useCallback(
+    (src: string, id: string) => {
+      const existingAudio = preloadedAudiosRef.current[id];
 
-  if (audioRef.current) {
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0;
-  }
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
 
-  if (playingAudioId === id) {
-    setPlayingAudioId(null);
-    audioRef.current = null;
-  } else if (existingAudio) {
-    audioRef.current = existingAudio;
-    existingAudio.currentTime = 0;
-    existingAudio.play();
-    setPlayingAudioId(id);
-    existingAudio.onended = () => {
-      setPlayingAudioId(null);
-      audioRef.current = null;
-    };
-  } else {
-    // fallback
-    const fallback = new Audio(src);
-    audioRef.current = fallback;
-    fallback.play();
-    setPlayingAudioId(id);
-    fallback.onended = () => {
-      setPlayingAudioId(null);
-      audioRef.current = null;
-    };
-  }
-}, [playingAudioId]);
-
+      if (playingAudioId === id) {
+        setPlayingAudioId(null);
+        audioRef.current = null;
+      } else if (existingAudio) {
+        audioRef.current = existingAudio;
+        existingAudio.currentTime = 0;
+        existingAudio.play();
+        setPlayingAudioId(id);
+        existingAudio.onended = () => {
+          setPlayingAudioId(null);
+          audioRef.current = null;
+        };
+      } else {
+        // fallback
+        const fallback = new Audio(src);
+        audioRef.current = fallback;
+        fallback.play();
+        setPlayingAudioId(id);
+        fallback.onended = () => {
+          setPlayingAudioId(null);
+          audioRef.current = null;
+        };
+      }
+    },
+    [playingAudioId],
+  );
 
   useEffect(() => {
     return () => {
@@ -296,22 +309,55 @@ export const HomeSection = () => {
     <Box sx={{ p: 3, position: "relative" }}>
       <Stack flexDirection="row" alignItems="center" mt={{ md: 2, xs: 1 }}>
         <img src={appLogo.src} alt="FCA Logo" width={98} height={31} />
-        <Typography variant="h5" color="#5A5867" fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }} fontWeight={{ md: 600, xs: 500 }} ml={{ md: 2, xs: 1 }}>
+        <Typography
+          variant="h5"
+          color="#5A5867"
+          fontSize={{ xs: "0.8rem", sm: "18px", md: "22px" }}
+          fontWeight={{ md: 600, xs: 500 }}
+          ml={{ md: 2, xs: 1 }}
+        >
           FCA Application Process
         </Typography>
       </Stack>
 
       <Stack flexDirection="row" justifyContent="space-between" mt={2}>
-        <Typography variant="h3" color="#5A5867" fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }} fontWeight={600} ml={2}>
+        <Typography
+          variant="h3"
+          color="#5A5867"
+          fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+          fontWeight={600}
+          ml={2}
+        >
           Sequence Diagram
         </Typography>
 
-        <Typography variant="h3" fontWeight={600} ml={2} display="flex" alignItems="center">
-          <Typography component="span" fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.8rem" }} fontWeight={600} color="#5A5867" sx={{ mr: 1 }}>
+        <Typography
+          variant="h3"
+          fontWeight={600}
+          ml={2}
+          display="flex"
+          alignItems="center"
+        >
+          <Typography
+            component="span"
+            fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.8rem" }}
+            fontWeight={600}
+            color="#5A5867"
+            sx={{ mr: 1 }}
+          >
             Colour Legend
           </Typography>
           <span ref={iconRef}>
-            <KeyboardArrowDownIcon onClick={toggleDropdown} sx={{ fontSize: { xs: 28, md: 30 }, color:"#5A5867",border: "2px solid", borderRadius: "40px", cursor: "pointer" }} />
+            <KeyboardArrowDownIcon
+              onClick={toggleDropdown}
+              sx={{
+                fontSize: { xs: 28, md: 30 },
+                color: "#5A5867",
+                border: "2px solid",
+                borderRadius: "40px",
+                cursor: "pointer",
+              }}
+            />
           </span>
         </Typography>
       </Stack>
@@ -327,30 +373,29 @@ export const HomeSection = () => {
           g:hover .image-mapper-shape { stroke: white; stroke-width: 2px; opacity: 20%; }
         `}</style>
         <image xlinkHref="/Request Section hdn (2).png" width="7440" />
-{internalLinks.map((link, idx) => (
-  <g
-    key={`link-${idx}`}
-    onClick={(e) => {
-      e.stopPropagation();
-      if (link.href.startsWith("http")) {
-        window.open(link.href, link.target || "_blank");
-      } else {
-        window.location.href = link.href;
-      }
-    }}
-    style={{ cursor: "pointer" }}
-  >
-    <rect
-      x={link.x}
-      y={link.y}
-      width={link.width}
-      height={link.height}
-      fill="rgba(0,0,0,0)"
-    />
-    <title>{link.title}</title>
-  </g>
-))}
-
+        {internalLinks.map((link, idx) => (
+          <g
+            key={`link-${idx}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              if (link.href.startsWith("http")) {
+                window.open(link.href, link.target || "_blank");
+              } else {
+                window.location.href = link.href;
+              }
+            }}
+            style={{ cursor: "pointer" }}
+          >
+            <rect
+              x={link.x}
+              y={link.y}
+              width={link.width}
+              height={link.height}
+              fill="rgba(0,0,0,0)"
+            />
+            <title>{link.title}</title>
+          </g>
+        ))}
 
         {audioHotspots.map((hotspot) => {
           const iconSize = 24;
@@ -392,45 +437,44 @@ export const HomeSection = () => {
         })}
       </svg>
 
-        {isOpen && (
-          <>
-            <Box
-              sx={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                width: "100vw",
-                height: "100vh",
-                background: "rgba(0,0,0,0.3)",
-                zIndex: 1200,
-              }}
-              onClick={() => setIsOpen(false)}
+      {isOpen && (
+        <>
+          <Box
+            sx={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100vw",
+              height: "100vh",
+              background: "rgba(0,0,0,0.3)",
+              zIndex: 1200,
+            }}
+            onClick={() => setIsOpen(false)}
+          />
+          <Box
+            ref={legendRef}
+            sx={{
+              position: "absolute",
+              top: "150px",
+              right: "50px",
+              background: "#fff",
+              borderRadius: "10px",
+              boxShadow: 3,
+              p: 1,
+              zIndex: 1300,
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={colorLegends.src}
+              alt="Color Legend"
+              width={40}
+              height={40}
+              style={{ width: "100%", height: "100%" }}
             />
-            <Box
-              ref={legendRef}
-              sx={{
-                position: "absolute",
-                top: "150px",
-                right: "50px",
-                background: "#fff",
-                borderRadius: "10px",
-                boxShadow: 3,
-                p: 1,
-                zIndex: 1300,
-              }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={colorLegends.src}
-                alt="Color Legend"
-                width={40}
-                height={40}
-                style={{ width: "100%", height: "100%" }}
-              />
-            </Box>
-          </>
-        )}
-      </Box>
-    
+          </Box>
+        </>
+      )}
+    </Box>
   );
 };
