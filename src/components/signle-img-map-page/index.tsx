@@ -2,7 +2,7 @@
 
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface AreaItem {
@@ -11,6 +11,9 @@ interface AreaItem {
   href: string;
   coords: string;
   shape: string;
+  type?: "link" | "audio";
+  audioSrc?: string;
+  target?: string;
 }
 
 interface SinglePageProps {
@@ -37,45 +40,73 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
   downloadUrl,
   downloadFileName,
   image,
-  target = "_self",
+  target,
   areas = [],
 }) => {
   const router = useRouter();
   const mapRef = useRef<HTMLMapElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [currentAudioSrc, setCurrentAudioSrc] = useState<string | null>(null);
 
+  // Resize image map
   useEffect(() => {
-    const resizeMap = async () => {
-      if (typeof window !== "undefined" && mapRef.current) {
-        const mod = await import("image-map-resizer");
-        mod.default(); // run the default export function
-      }
-    };
-    resizeMap();
+    if (typeof window !== "undefined" && mapRef.current) {
+      import("image-map-resizer").then((mod) => mod.default());
+    }
   }, [areas, image]);
 
-  const onAmendmentButtonClick1 = useCallback(() => {
-    if (downloadUrl && downloadFileName) {
+  // Handle amendment buttons
+  const handleButtonClick = (route?: string, isDownload = false) => {
+    if (isDownload && downloadUrl && downloadFileName) {
       const link = document.createElement("a");
       link.href = downloadUrl;
       link.download = downloadFileName;
       link.click();
-    } else if (amendmentButtonRoute1) {
-      router.push(amendmentButtonRoute1);
-    } else {
-      console.warn("No action available");
+    } else if (route) {
+      router.push(route);
     }
-  }, [downloadUrl, downloadFileName, amendmentButtonRoute1, router]);
+  };
 
-  const onAmendmentButtonClick2 = useCallback(() => {
-    if (amendmentButtonRoute2) router.push(amendmentButtonRoute2);
-  }, [router, amendmentButtonRoute2]);
+  // Handle image map click
+  const handleAreaClick = (e: React.MouseEvent, area: AreaItem) => {
+    e.preventDefault();
 
-  const onAmendmentButtonClick3 = useCallback(() => {
-    if (amendmentButtonRoute3) router.push(amendmentButtonRoute3);
-  }, [router, amendmentButtonRoute3]);
+    if (area.type === "audio" && area.audioSrc) {
+      const isSameAudio = currentAudioSrc === area.audioSrc;
+
+      if (isSameAudio && audioRef.current) {
+        if (audioRef.current.paused) {
+          audioRef.current.play();
+        } else {
+          audioRef.current.pause();
+        }
+      } else {
+        // Stop previous audio
+        if (audioRef.current) {
+          audioRef.current.pause();
+          audioRef.current = null;
+        }
+
+        const newAudio = new Audio(area.audioSrc);
+        newAudio.play().catch(console.warn);
+
+        audioRef.current = newAudio;
+        setCurrentAudioSrc(area.audioSrc);
+      }
+    }
+
+    if (area.type === "link") {
+      if (area.target === "_blank") {
+        window.open(area.href, "_blank");
+      } else {
+        window.location.href = area.href;
+      }
+    }
+  };
 
   return (
     <Box px={{ md: 3, xs: 2 }}>
+      {/* Amendment buttons */}
       <Box
         display="flex"
         flexDirection={{ lg: "row", xs: "column" }}
@@ -88,17 +119,8 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
           {amendmentButtonTitle1 && (
             <Button
               variant="contained"
-              onClick={onAmendmentButtonClick1}
-              sx={{
-                backgroundColor: "#5A5867",
-                color: "#FFFFFF",
-                "&:hover": { backgroundColor: "#4A4857" },
-                cursor: "pointer",
-                fontSize: { xs: "0.7rem", sm: "0.9rem", md: "1rem" },
-                padding: { xs: "6px 12px", md: "8px 16px" },
-                textTransform: "capitalize",
-                fontFamily: "Outfit, inherit",
-              }}
+              onClick={() => handleButtonClick(amendmentButtonRoute1, true)}
+              sx={buttonStyle}
             >
               {amendmentButtonTitle1}
             </Button>
@@ -106,17 +128,8 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
           {amendmentButtonTitle2 && (
             <Button
               variant="contained"
-              onClick={onAmendmentButtonClick2}
-              sx={{
-                backgroundColor: "#5A5867",
-                color: "#FFFFFF",
-                "&:hover": { backgroundColor: "#4A4857" },
-                cursor: "pointer",
-                fontSize: { xs: "0.7rem", sm: "0.9rem", md: "1rem" },
-                padding: { xs: "6px 12px", md: "8px 16px" },
-                textTransform: "capitalize",
-                fontFamily: "Outfit, inherit",
-              }}
+              onClick={() => handleButtonClick(amendmentButtonRoute2)}
+              sx={buttonStyle}
             >
               {amendmentButtonTitle2}
             </Button>
@@ -124,17 +137,8 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
           {amendmentButtonTitle3 && (
             <Button
               variant="contained"
-              onClick={onAmendmentButtonClick3}
-              sx={{
-                backgroundColor: "#5A5867",
-                color: "#FFFFFF",
-                "&:hover": { backgroundColor: "#4A4857" },
-                cursor: "pointer",
-                fontSize: { xs: "0.7rem", sm: "0.9rem", md: "1rem" },
-                padding: { xs: "6px 12px", md: "8px 16px" },
-                textTransform: "capitalize",
-                fontFamily: "Outfit, inherit",
-              }}
+              onClick={() => handleButtonClick(amendmentButtonRoute3)}
+              sx={buttonStyle}
             >
               {amendmentButtonTitle3}
             </Button>
@@ -142,12 +146,13 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
         </Box>
       </Box>
 
+      {/* Image and map */}
       {image && (
         <>
           <Image
             src={image}
             alt="crypto"
-            useMap={areas && areas.length > 0 ? "#image-map" : undefined}
+            useMap={areas.length > 0 ? "#image-map" : undefined}
             width={200}
             height={200}
             style={{ width: "100%", height: "auto" }}
@@ -155,17 +160,18 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
               import("image-map-resizer").then((mod) => mod.default());
             }}
           />
-          {areas && areas.length > 0 && (
+          {areas.length > 0 && (
             <map name="image-map" ref={mapRef}>
               {areas.map((area, index) => (
                 <area
                   key={index}
-                  target={target}
                   alt={area.alt}
                   title={area.title}
-                  href={area.href}
                   coords={area.coords}
                   shape={area.shape}
+                  href={area.type === "link" ? area.href : "#"}
+                  target={area.target || "_self"}
+                  onClick={(e) => handleAreaClick(e, area)}
                 />
               ))}
             </map>
@@ -176,4 +182,16 @@ const SingleImgMapPage: React.FC<SinglePageProps> = ({
   );
 };
 
-export default SingleImgMapPage;
+// Reusable button styling
+const buttonStyle = {
+  backgroundColor: "#5A5867",
+  color: "#FFFFFF",
+  "&:hover": { backgroundColor: "#4A4857" },
+  cursor: "pointer",
+  fontSize: { xs: "0.7rem", sm: "0.9rem", md: "1rem" },
+  padding: { xs: "6px 12px", md: "8px 16px" },
+  textTransform: "capitalize",
+  fontFamily: "Outfit, inherit",
+};
+
+export default SingleImgMapPage
