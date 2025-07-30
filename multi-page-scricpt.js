@@ -1,30 +1,30 @@
 const fs = require("fs");
 const path = require("path");
 
-// Define the base directory
 const baseDir = path.join(__dirname, "src", "app", "(pages)");
 const assetsDir = path.join(__dirname, "src", "assets");
 
-// List of pages with pageTitle, image counts, links, and per-image titles
 const pages = [
   {
     title: "Scope of registration",
     pageTitle: "Scope of registration",
     imageCount: 3,
-    links: [
-      "/How the Process Works?",
-      "/Who Needs to Register?",
-      "What Needs to Be Registered?",
-    ],
-    titles: [
-      "How the Process Works?",
-      "Who Needs to Register?h",
-      "What Needs to Be Registered?",
-    ],
+    links: ["item-one", "item-two"],
+    titles: ["First Item", "Second Item"],
+    backRoute: "some-previous-page", 
   },
+  {
+    title: "Another Main Section",
+    pageTitle: "Another Overview Page",
+    imageCount: 2,
+    links: ["item-one", "item-two"],
+    titles: ["First Item", "Second Item"],
+    backRoute: "helo see sample page ",
+  },
+  
+ 
 ];
 
-// Convert to PascalCase
 const toPascalCase = (str) =>
   str
     .replace(/[^a-zA-Z0-9]+/g, " ")
@@ -33,7 +33,6 @@ const toPascalCase = (str) =>
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join("");
 
-// Convert to kebab-case
 const toKebabCase = (str) =>
   str
     .normalize("NFKD")
@@ -42,7 +41,7 @@ const toKebabCase = (str) =>
     .replace(/[^a-zA-Z0-9]+/g, "-")
     .toLowerCase()
     .replace(/--+/g, "-")
-    .replace(/^-+|-+$/g, ""); // Trim leading/trailing dashes
+    .replace(/^-+|-+$/g, "");
 
 for (const {
   title,
@@ -50,6 +49,7 @@ for (const {
   imageCount = 2,
   links = [],
   titles = [],
+  backRoute = "/",
 } of pages) {
   if (!title || typeof title !== "string" || !title.trim()) {
     console.log("[SKIP] Invalid or empty page title. Skipping entry.");
@@ -65,7 +65,6 @@ for (const {
     continue;
   }
 
-  // Check for existing directory and create a unique one if needed
   let dir = path.join(baseDir, kebabBase);
   let dirSuffix = 1;
   let finalKebab = kebabBase;
@@ -98,7 +97,6 @@ for (const {
     console.log(`[SKIP] Directory already exists and was not created: ${dir}`);
   }
 
-  // Generate arrayData for all images/links/titles for this page
   const arrayData = [];
   const itemCount = links.length || imageCount || 2;
   for (let i = 0; i < itemCount; i++) {
@@ -116,7 +114,6 @@ for (const {
       title: itemTitle,
     });
 
-    // Append to existing index.tsx in assets
     const indexTsxPath = path.join(assetsDir, "index.tsx");
     const imageExport = `export { default as ${imageName} } from "./${svgFile}";\n`;
     let shouldWriteExport = true;
@@ -147,7 +144,14 @@ for (const {
     }
   }
 
-  // Create page.tsx content for this page (all items in one array)
+  let finalBackRoute;
+  if (backRoute === "") {
+    finalBackRoute = '""'; 
+  } else {
+    const kebabBackRoute = toKebabCase(backRoute);
+    finalBackRoute = `"${kebabBackRoute.startsWith('/') ? kebabBackRoute : '/' + kebabBackRoute}"`;
+  }
+
   const uniqueIcons = Array.from(new Set(arrayData.map((item) => item.icon)));
   const pageContent = `"use client";
 import { MultiPathPage } from "@/components";
@@ -174,7 +178,7 @@ const ${pascal}Page = () => {
     <MultiPathPage
       arrayData={${pascal}PageData}
       pageTitle="${pageTitle}"
-      backRoute="/FCA Sequence Diagram"
+      backRoute=${finalBackRoute}
     />
   );
 };
