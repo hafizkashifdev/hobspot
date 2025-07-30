@@ -196,5 +196,5 @@ export default ${pascal}Page;
 }
 
 console.log(
-  "Dynamic MultiPath pages with fixed image names, titles, links, and image exports have been created.",
+  "Dynamic MultiPath pages with  image names, titles, links, and image exports have been created.",
 );
