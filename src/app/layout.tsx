@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { FRONTEND_SALE_SITE_BASE_URL } from "@/Config";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -8,9 +9,9 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 export const metadata: Metadata = {
-  title: "Financial Conduct Authority",
+  title: "Meta Title",
   description:
-    "Understand the primary goals of the Financial Conduct Authority, illustrated through a clear and concise diagram.",
+    "Meta Description",
   icons: {
     icon: [
       { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
@@ -35,18 +36,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Financial Conduct Authority",
+    title: "Meta Title",
     description:
-      "Understand the primary goals of the Financial Conduct Authority, illustrated through a clear and concise diagram.",
-    url: "/",
+      "Meta Description",
+    url: `${FRONTEND_SALE_SITE_BASE_URL}`,
     type: "website",
     images: [
       {
-        url: "/og.png",
+        url: `${FRONTEND_SALE_SITE_BASE_URL}/og.png`,
         type: "image/png",
         width: 1200,
         height: 630,
-        alt: "Financial Conduct Authority",
+        alt: "Railsr",
       },
     ],
   },
