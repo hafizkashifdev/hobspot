@@ -105,7 +105,7 @@ const areas = [
   }
 ];
 
-const MobileSdkPage = () => {
+const MYourPreferencesPage = () => {
   return (
     <HubspotFeaturePage
       imageSrc={SettingsYourPreferencesImage}
@@ -118,4 +118,4 @@ const MobileSdkPage = () => {
   );
 };
 
-export default MobileSdkPage;
+export default MYourPreferencesPage;
