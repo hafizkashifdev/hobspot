@@ -6,7 +6,16 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-  { name: "Cross-Sector Inspections", backRoute: "/ Care Quality Commission" },
+  { name: "Settings Profile 1", backRoute: "/settings-your-preferences" },
+  { name: "Settings Email", backRoute: "/settings-your-preferences" },
+  { name: "Settings Calling ", backRoute: "/settings-your-preferences" },
+  { name: "Settings Calendar", backRoute: "/settings-your-preferences" },
+  { name: "Settings Tasks", backRoute: "/settings-your-preferences" },
+  { name: "Settings Security", backRoute: "/settings-your-preferences" },
+  { name: "Settings Security Email", backRoute: "/settings-your-preferences" },
+  { name: "Settings Security Desktop", backRoute: "/settings-your-preferences" },
+  { name: "Settings Security Other Apps", backRoute: "/settings-your-preferences" },
+  { name: "Settings Security Mobile Apps", backRoute: "/settings-your-preferences" },
 ];
 
 const toPascalCase = (str) =>
