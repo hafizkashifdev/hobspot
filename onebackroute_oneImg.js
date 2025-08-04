@@ -7,109 +7,19 @@ const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
   {
-    name: "Library 01",
-    backRoute: "/Library",
-    title: "Document",
+    name: "1 Hubspot Workspace _ Sales",
+    backRoute: "/Workspace _ Sales",
+    title: "Workspace _ Sales",
   },
   {
-    name: "Library 02",
-    backRoute: "/Library",
-    title: "Create New Folder",
+    name: "1 Hubspot Workspace _ Helpdesk",
+    backRoute: "/Workspace _ HelpDesk",
+    title: "Workspace _ Helpdesk",
   },
   {
-    name: "Library 03",
-    backRoute: "/Library",
-    title: "Upload Document",
-  },
-  {
-    name: "Library 04",
-    backRoute: "/Library",
-    title: "Grid View",
-  },
-  {
-    name: "Library 05",
-    backRoute: "/Library",
-    title: "Playbooks",
-  },
-  {
-    name: "Library 06",
-    backRoute: "/Library",
-    title: "Snippets",
-  },
-  {
-    name: "Library 07",
-    backRoute: "/Library",
-    title: "Coaching Playlists ",
-  },
-  {
-    name: "Library 08",
-    backRoute: "/Library",
-    title: "Find Recording",
-  },
-  {
-    name: "Library 09",
-    backRoute: "/Library",
-    title: "Recorded Calls",
-  },
-  {
-    name: "Library 10",
-    backRoute: "/Library",
-    title: "All Calls",
-  },
-  {
-    name: "Library 11",
-    backRoute: "/Library",
-    title: "Create New Folder",
-  },
-  {
-    name: "Library 12",
-    backRoute: "/Library",
-    title: "Create New Folder",
-  },
-  {
-    name: "Library 13",
-    backRoute: "/Library",
-    title: "Create Playbook",
-  },
-  {
-    name: "Library 14",
-    backRoute: "/Library",
-    title: "Create snippet",
-  },
-  {
-    name: "Library 15",
-    backRoute: "/Library",
-    title: "Grid View",
-  },
-  {
-    name: "Library 16",
-    backRoute: "/Library",
-    title: "Grid View",
-  },
-  {
-    name: "Library 17",
-    backRoute: "/Library",
-    title: "Email",
-  },
-  {
-    name: "Library 18",
-    backRoute: "/Library",
-    title: "Meeting Scheduler",
-  },
-  {
-    name: "Library 19",
-    backRoute: "/Library",
-    title: "Files & Folder",
-  },
-  {
-    name: "Library 20",
-    backRoute: "/Library",
-    title: "Stock Images",
-  },
-  {
-    name: "Library 21",
-    backRoute: "/Library",
-    title: "Whatsapp",
+    name: "2 Hubspot Workspace _ Helpdesk_Detailed Ticket View Screen",
+    backRoute: "/Workspace _ HelpDesk",
+    title: "Detailed Ticket View Screen",
   },
 ];
 
