@@ -6,7 +6,7 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-  { name: "Payment Automation & Integration", backRoute: "/commerce-payment" },
+  { name: "Create Chat flow_Step 4: Details (Create Survey) - Display Tab", backRoute: "/chatflows-main" },
 ];
 
 const toPascalCase = (str) =>

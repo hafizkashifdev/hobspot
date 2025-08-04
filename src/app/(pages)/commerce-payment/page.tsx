@@ -1,9 +1,14 @@
 "use client";
-import React from "react";
-import { Box, Tooltip } from "@mui/material";
+import React, { useCallback } from "react";
+import { Box, Tooltip, Typography } from "@mui/material";
 import { paymentImages } from "@/assets"; // Import your payment image
+import Image from "next/image";
+import { CommonBackIcon } from "@/assets/common-assets";
+import { useRouter } from "next/navigation";
+const PaymentMethodsPage = ({
+    backRoute = "/hubspot-commerce",
+}) => {
 
-const PaymentMethodsPage = () => {
     const areas = [
         {
             id: 1,
@@ -37,8 +42,34 @@ const PaymentMethodsPage = () => {
         },
     ];
 
+    const router = useRouter();
+    const onBackIconClick = useCallback(() => {
+        router.push(backRoute);
+    }, [router, backRoute]);
     return (
-        <Box sx={{ width: "100%", position: "relative" }}>
+        <Box sx={{ width: "100%", position: "relative", p: 3 }}>
+            <Box sx={{ display: 'flex' }}>
+                <Image
+                    src={CommonBackIcon}
+                    alt={'Payment'}
+                    width={48}
+                    height={48}
+                    onClick={onBackIconClick}
+                    style={{ cursor: "pointer" }}
+                />
+            </Box>
+            <Box sx={{ my: '34px' }}>
+                <Typography
+                    variant="h5"
+                    color="#5A5867"
+                    fontSize={{ xs: "20", sm: "26px", md: "32px" }}
+                    fontWeight={{ md: 600, xs: 500 }}
+                    sx={{ fontFamily: "inherit", lineHeight: '1.25' }}
+                >
+                    {'Payment'}
+                </Typography>
+            </Box>
+
             <svg
                 style={{ width: "100%" }}
                 xmlns="http://www.w3.org/2000/svg"

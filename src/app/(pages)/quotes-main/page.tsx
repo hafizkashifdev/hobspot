@@ -1,59 +1,58 @@
 "use client";
 import React, { useCallback } from "react";
 import { Box, Tooltip, Typography } from "@mui/material";
-import { breezeImage } from "@/assets"; // Import your image
+import { quotesImage } from "@/assets"; // Import your quotes image
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { CommonBackIcon } from "@/assets/common-assets";
 
-const BreezePage = ({
-    backRoute = "/hubspot-commerce",
+const QuotesPage = ({
+    backRoute = "/hubspot-commerce"
 }) => {
     const areas = [
         {
             id: 1,
-            x: 10.51,
-            y: 66.58,
-            width: 571.20,
-            height: 112.14,
-            href: "/overview-main-ai-components",
-            title: "Breeze Overview",
+            x: 12.28,
+            y: 115.83,
+            width: 375.57,
+            height: 87.75,
+            href: "/creating-a-quote",
+            title: "Creating a Quote",
             target: "_self"
         },
         {
             id: 2,
-            x: 10.51,
-            y: 492.48,
-            width: 350.43,
-            height: 101.62,
-            href: "/agent-creation",
-            title: "Features",
+            x: 36.85,
+            y: 442.26,
+            width: 498.42,
+            height: 126.36,
+            href: "/sharing-customer-review",
+            title: "Quote Customization",
             target: "_self"
         },
         {
             id: 3,
-            x: 795.47,
-            y: 455.56,
-            width: 502.86,
-            height: 110.38,
-            href: "/general-information-setup",
-            title: "Integration",
+            x: 1000.34,
+            y: 445.77,
+            width: 535.27,
+            height: 105.30,
+            href: "/customer-acceptance-payment",
+            title: "Quote Approval",
             target: "_self"
         },
         {
             id: 4,
-            x: 42.05,
-            y: 784.96,
-            width: 592.22,
-            height: 141.92,
-            href: "/content-knowledge-base-setup",
-            title: "Documentation",
+            x: 29.83,
+            y: 740.60,
+            width: 554.58,
+            height: 161.46,
+            href: "/quote-tracking-automation",
+            title: "Quote Tracking & Automation",
             target: "_self"
         },
     ];
 
     const router = useRouter();
-
     const onBackIconClick = useCallback(() => {
         router.push(backRoute);
     }, [router, backRoute]);
@@ -63,7 +62,7 @@ const BreezePage = ({
             <Box sx={{ display: 'flex' }}>
                 <Image
                     src={CommonBackIcon}
-                    alt={'Breeze'}
+                    alt={'Quotes'}
                     width={48}
                     height={48}
                     onClick={onBackIconClick}
@@ -78,15 +77,15 @@ const BreezePage = ({
                     fontWeight={{ md: 600, xs: 500 }}
                     sx={{ fontFamily: "inherit", lineHeight: '1.25' }}
                 >
-                    {'Breeze'}
+                    {'Quotes'}
                 </Typography>
             </Box>
             <svg
                 style={{ width: "100%" }}
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1845 1195"
+                viewBox="0 0 1848 1175"
                 role="img"
-                aria-label="Breeze Platform Overview"
+                aria-label="Quotes Management System"
             >
                 <style>
                     {`
@@ -104,9 +103,9 @@ const BreezePage = ({
                 </style>
 
                 <image
-                    href={breezeImage.src}
-                    width="1845"
-                    height="1195"
+                    href={quotesImage.src}
+                    width="1848"
+                    height="1175"
                 />
 
                 <g>
@@ -135,4 +134,4 @@ const BreezePage = ({
     );
 };
 
-export default BreezePage;
+export default QuotesPage;
