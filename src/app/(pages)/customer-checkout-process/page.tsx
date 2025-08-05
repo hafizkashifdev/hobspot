@@ -7,7 +7,7 @@ const CustomerCheckoutProcessPage = () => {
     <CommonPage
       pageTitle={`Customer Checkout Process`}
       src={CustomerCheckoutProcessImage}
-      backRoute="/invoice-main"
+      backRoute="/payment-links-main"
     />
   );
 };
