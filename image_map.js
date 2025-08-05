@@ -6,7 +6,7 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-  { name: "AQSE Overview", backRoute: "/" },
+  { name: "CRM Tasks", backRoute: "/Hubspot CRM" },
 ];
 
 const toPascalCase = (str) =>

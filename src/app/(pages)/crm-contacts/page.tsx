@@ -1,0 +1,96 @@
+import { CrmContactsImage } from "@/assets";
+import CommonImgMapPage from "@/components/common-img-map-page";
+import React from "react";
+
+const areas = [
+  {
+    alt: "CRM Contacts 11",
+    title: "CRM Contacts 11",
+    href: "/crm-contacts-11",
+    coords: "39,44,344,91",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 10",
+    title: "CRM Contacts 10",
+    href: "/crm-contacts-10",
+    coords: "65,302,683,353",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 9",
+    title: "CRM Contacts 9",
+    href: "/crm-contacts-09",
+    coords: "65,632,742,683",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 8",
+    title: "CRM Contacts 8",
+    href: "/crm-contacts-08",
+    coords: "33,1095,226,1146",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 7",
+    title: "CRM Contacts 7",
+    href: "/crm-contacts-07",
+    coords: "35,1413,340,1465",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 6",
+    title: "CRM Contacts 6",
+    href: "/crm-contacts-06",
+    coords: "33,1952,195,2008",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 5",
+    title: "CRM Contacts 5",
+    href: "/crm-contacts-05",
+    coords: "32,2260,191,2320",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 4",
+    title: "CRM Contacts 4",
+    href: "/crm-contacts-04",
+    coords: "28,2573,253,2634",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 3",
+    title: "CRM Contacts 3",
+    href: "/crm-contacts-03",
+    coords: "49,2664,362,2722",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 2",
+    title: "CRM Contacts 2",
+    href: "/crm-contacts-02",
+    coords: "614,2669,902,2727",
+    shape: "rect",
+  },
+  {
+    alt: "CRM Contacts 1",
+    title: "CRM Contacts 1",
+    href: "/crm-contacts-01",
+    coords: "618,2915,948,2964",
+    shape: "rect",
+  },
+];
+
+const CrmContactsPage = () => {
+  return (
+    <CommonImgMapPage
+      pageTitle={`CRM Contacts`}
+      image={CrmContactsImage}
+      backRoute="/hubspot-crm"
+      areas={areas}
+    />
+  );
+};
+
+export default CrmContactsPage;
