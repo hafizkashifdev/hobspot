@@ -330,3 +330,78 @@ export { default as AccountManagementAiImage } from "./AccountManagementAiImage.
 export { default as AccountManagementAccessImage } from "./AccountManagementAccessImage.svg";
 export { default as AccountManagementDataSourcesImage } from "./AccountManagementDataSourcesImage.svg";
 export { default as AccountManagementCommerceAccountsImage } from "./AccountManagementCommerceAccountsImage.svg";
+
+
+export { default as ContentWebsitePages1Image } from "./ContentWebsitePages1Image.svg";
+export { default as ContentLandingPages2Image } from "./ContentLandingPages2Image.svg";
+export { default as ContentBlog3Image } from "./ContentBlog3Image.svg";
+export { default as ContentPodcasts4Image } from "./ContentPodcasts4Image.svg";
+export { default as ContentCaseStudies5Image } from "./ContentCaseStudies5Image.svg";
+export { default as ContentEmbeds6Image } from "./ContentEmbeds6Image.svg";
+export { default as ContentKnowledgeBase7Image } from "./ContentKnowledgeBase7Image.svg";
+export { default as ContentSetupKnowledgeBase8Image } from "./ContentSetupKnowledgeBase8Image.svg";
+export { default as ContentCustomerPortal9Image } from "./ContentCustomerPortal9Image.svg";
+export { default as ContentGeneral10Image } from "./ContentGeneral10Image.svg";
+export { default as ContentTemplate11Image } from "./ContentTemplate11Image.svg";
+export { default as ContentHubdb12Image } from "./ContentHubdb12Image.svg";
+export { default as ContentRemix13Image } from "./ContentRemix13Image.svg";
+export { default as ContentSeo14Image } from "./ContentSeo14Image.svg";
+export { default as ContentMembershipCreateAccessGroup15Image } from "./ContentMembershipCreateAccessGroup15Image.svg";
+export { default as ContentDesignManager16Image } from "./ContentDesignManager16Image.svg";
+export { default as ContentImage } from "./ContentImage.svg";
+
+
+export { default as DashboardImage } from "./DashboardImage.svg";
+export { default as DashboardsViewDashboard1Image } from "./DashboardsViewDashboard1Image.svg";
+export { default as DashboardsViewReport2Image } from "./DashboardsViewReport2Image.svg";
+export { default as DashboardsManageDashboard3Image } from "./DashboardsManageDashboard3Image.svg";
+export { default as DashboardsActions4Image } from "./DashboardsActions4Image.svg";
+export { default as DashboardsShare5Image } from "./DashboardsShare5Image.svg";
+export { default as DashboardsAddReport6Image } from "./DashboardsAddReport6Image.svg";
+export { default as DashboardsCreateDashboard7Image } from "./DashboardsCreateDashboard7Image.svg";
+export { default as DashboardsCreateDashboardFromScratch8Image } from "./DashboardsCreateDashboardFromScratch8Image.svg";
+export { default as DashboardsCreateDashboardFromTemplates9Image } from "./DashboardsCreateDashboardFromTemplates9Image.svg";
+
+
+export { default as ReportingImage } from "./ReportingImage.svg";
+export { default as ReportsMyReports1Image } from "./ReportsMyReports1Image.svg";
+export { default as ReportsTabs2Image } from "./ReportsTabs2Image.svg";
+export { default as ReportsFilters3Image } from "./ReportsFilters3Image.svg";
+export { default as ReportsReportGrid4Image } from "./ReportsReportGrid4Image.svg";
+export { default as ReportsReportActions5Image } from "./ReportsReportActions5Image.svg";
+export { default as ReportsReportView6Image } from "./ReportsReportView6Image.svg";
+export { default as ReportsCreateReport7Image } from "./ReportsCreateReport7Image.svg";
+export { default as ReportsCreateReportFromScratch8Image } from "./ReportsCreateReportFromScratch8Image.svg";
+export { default as ReportsSingleObject9Image } from "./ReportsSingleObject9Image.svg";
+export { default as ReportsAiReportGenerator10Image } from "./ReportsAiReportGenerator10Image.svg";
+export { default as ReportsCustomReportBuilder11Image } from "./ReportsCustomReportBuilder11Image.svg";
+export { default as ReportsChooseMyOwnDataSources12Image } from "./ReportsChooseMyOwnDataSources12Image.svg";
+export { default as ReportsStartWithADataset13Image } from "./ReportsStartWithADataset13Image.svg";
+export { default as ReportsAiReportGenerator14Image } from "./ReportsAiReportGenerator14Image.svg";
+export { default as ReportsConfigure15Image } from "./ReportsConfigure15Image.svg";
+export { default as ReportsAttribution16Image } from "./ReportsAttribution16Image.svg";
+export { default as ReportsContactCreateAttribution17Image } from "./ReportsContactCreateAttribution17Image.svg";
+export { default as ReportsConfigure18Image } from "./ReportsConfigure18Image.svg";
+export { default as ReportsFilters19Image } from "./ReportsFilters19Image.svg";
+export { default as ReportsFunnels20Image } from "./ReportsFunnels20Image.svg";
+export { default as ReportsDataSourceContactsDealsCompaniesLeads21Image } from "./ReportsDataSourceContactsDealsCompaniesLeads21Image.svg";
+export { default as ReportsTimeline22Image } from "./ReportsTimeline22Image.svg";
+export { default as ReportsChooseAnEvent23Image } from "./ReportsChooseAnEvent23Image.svg";
+export { default as ReportsFunnelType24Image } from "./ReportsFunnelType24Image.svg";
+export { default as ReportsChooseMyOwnDataSources25Image } from "./ReportsChooseMyOwnDataSources25Image.svg";
+export { default as ReportsCustomize26Image } from "./ReportsCustomize26Image.svg";
+export { default as ReportsAnalyticsSuite27Image } from "./ReportsAnalyticsSuite27Image.svg";
+export { default as ReportsMarketingAnalyticsSuite28Image } from "./ReportsMarketingAnalyticsSuite28Image.svg";
+export { default as ReportsReadyMadeReports29Image } from "./ReportsReadyMadeReports29Image.svg";
+export { default as ReportsSalesAnalyticsSuite30Image } from "./ReportsSalesAnalyticsSuite30Image.svg";
+export { default as ReportsServiceAnalyticsSuite31Image } from "./ReportsServiceAnalyticsSuite31Image.svg";
+export { default as ReportsReadyMadeReports32Image } from "./ReportsReadyMadeReports32Image.svg";
+ 
+export { default as ForecastForecastMainScreen1Image } from "./ForecastForecastMainScreen1Image.svg";
+export { default as ForecastGoalMainScreen2Image } from "./ForecastGoalMainScreen2Image.svg";
+export { default as ForecastViewGoal3Image } from "./ForecastViewGoal3Image.svg";
+export { default as ForecastCreateGoalSetupStage4Image } from "./ForecastCreateGoalSetupStage4Image.svg";
+export { default as ForecastCreateGoalPerformance5Image } from "./ForecastCreateGoalPerformance5Image.svg";
+export { default as ForecastCreateGoalNotificationSettings6Image } from "./ForecastCreateGoalNotificationSettings6Image.svg";
+export { default as ForecastEditGoal7Image } from "./ForecastEditGoal7Image.svg";
+export { default as ForecastImage } from "./ForecastImage.svg";
