@@ -11,7 +11,7 @@ interface ChatflowsPageProps {
 }
 
 const ChatflowsPage: React.FC<ChatflowsPageProps> = ({
-    backRoute = "/hubspot-commerce"
+    backRoute = "/hubspot-automations"
 }) => {
     const router = useRouter();
     const areas = [

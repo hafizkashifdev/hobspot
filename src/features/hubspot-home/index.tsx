@@ -27,7 +27,7 @@ const cardsData = [
   { key: '7', title: 'Reporting', href: '/hubspot-reporting', icon: HubspotHome7 },
   { key: '8', title: 'Data Management', href: '/hubspot-data-management', icon: HubspotHome8 },
   { key: '9', title: 'Library', href: '/library', icon: HubspotHome9 },
-  { key: '10', title: 'Breeze', href: '/breeze', icon: HubspotHome10 },
+  { key: '10', title: 'Breeze', href: '/breeze-main', icon: HubspotHome10 },
   { key: '11', title: 'Settings ', href: '/hubspot-settings', icon: HubspotHome11 },
 ]
 

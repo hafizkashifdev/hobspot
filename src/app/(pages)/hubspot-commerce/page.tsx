@@ -15,12 +15,12 @@ import Link from "next/link";
 
 
 const cardsData = [
-  { key: '1', title: 'Payments', href: '/payment', icon: CommerceImage1 },
-  { key: '2', title: 'Invoices', href: '/invoices', icon: CommerceImage2 },
-  { key: '3', title: 'Payment Links', href: '/payment-links', icon: CommerceImage3 },
-  { key: '4', title: 'Quotes', href: '/quotes', icon: CommerceImage4 },
-  { key: '5', title: 'Products', href: '/products', icon: CommerceImage5 },
-  { key: '6', title: 'Subscription', href: '/subscription', icon: CommerceImage6 }
+  { key: '1', title: 'Payments', href: '/commerce-payment', icon: CommerceImage1 },
+  { key: '2', title: 'Invoices', href: '/invoice-main', icon: CommerceImage2 },
+  { key: '3', title: 'Payment Links', href: '/payment-links-main', icon: CommerceImage3 },
+  { key: '4', title: 'Quotes', href: '/quotes-main', icon: CommerceImage4 },
+  { key: '5', title: 'Products', href: '/products-main', icon: CommerceImage5 },
+  { key: '6', title: 'Subscription', href: '/subscriptions-main', icon: CommerceImage6 }
 ]
 
 export default function HubspotCommercePage() {

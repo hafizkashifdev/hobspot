@@ -7,7 +7,7 @@ import Image from "next/image";
 import { CommonBackIcon } from "@/assets/common-assets";
 
 const BreezePage = ({
-    backRoute = "/hubspot-commerce",
+    backRoute = "/hubspot-automations",
 }) => {
     const areas = [
         {

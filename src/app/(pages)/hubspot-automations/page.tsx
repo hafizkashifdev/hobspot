@@ -13,9 +13,9 @@ import Link from "next/link";
 
 
 const cardsData = [
-  { key: '1', title: 'Workflows', href: '/workflows', icon: AutomationsImage1 },
-  { key: '2', title: 'Chatflows', href: '/chatflows', icon: AutomationsImage2 },
-  { key: '3', title: 'Surveys', href: '/surveys', icon: AutomationsImage3 },
+  { key: '1', title: 'Workflows', href: '/workflows-main', icon: AutomationsImage1 },
+  { key: '2', title: 'Chatflows', href: '/chatflows-main', icon: AutomationsImage2 },
+  { key: '3', title: 'Surveys', href: '/surveys-main', icon: AutomationsImage3 },
 ]
 
 export default function HubspotCommercePage() {
