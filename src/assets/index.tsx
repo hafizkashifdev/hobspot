@@ -65,3 +65,18 @@ export { default as CreateChatFlowStep4DetailsCreateSurveyBuildTabImage } from "
 export { default as CreateChatFlowStep4DetailsCreateSurveyOptionsImage } from "./CreateChatFlowStep4DetailsCreateSurveyOptionsImage.svg";
 export { default as CreateChatFlowStep4DetailsCreateSurveyTargetTabImage } from "./CreateChatFlowStep4DetailsCreateSurveyTargetTabImage.svg";
 export { default as CreateChatFlowStep4DetailsCreateSurveyDisplayTabImage } from "./CreateChatFlowStep4DetailsCreateSurveyDisplayTabImage.svg";
+export { default as surveysImage } from "./surveysImage.svg";
+
+export { default as CreateASurveyToCollectFeedbackImage } from "./CreateASurveyToCollectFeedbackImage.svg";
+export { default as FeedbackSurveyManageImage } from "./FeedbackSurveyManageImage.svg";
+export { default as FeedbackSurveyAllResponsesImage } from "./FeedbackSurveyAllResponsesImage.svg";
+export { default as FeedbackSurveyResponseTagsImage } from "./FeedbackSurveyResponseTagsImage.svg";
+export { default as CreateSurveyHowItWorksImage } from "./CreateSurveyHowItWorksImage.svg";
+export { default as CreateSurveyPreviewImage } from "./CreateSurveyPreviewImage.svg";
+export { default as CreateSurveyDeliveryMethodImage } from "./CreateSurveyDeliveryMethodImage.svg";
+export { default as CustomiseSurveyImage } from "./CustomiseSurveyImage.svg";
+export { default as CustomiseThankyouImage } from "./CustomiseThankyouImage.svg";
+export { default as CustomiseEmailImage } from "./CustomiseEmailImage.svg";
+export { default as CustomiseRecipientImage } from "./CustomiseRecipientImage.svg";
+export { default as CustomiseAutomationImage } from "./CustomiseAutomationImage.svg";
+export { default as IndustryStandardSurveyImage } from "./IndustryStandardSurveyImage.svg";

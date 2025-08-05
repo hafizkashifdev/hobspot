@@ -6,7 +6,19 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-  { name: "Create Chat flow_Step 4: Details (Create Survey) - Display Tab", backRoute: "/chatflows-main" },
+  { name: "Create a Survey to Collect Feedback", backRoute: "/surveys-main" },
+  { name: "Feedback Survey _ Manage", backRoute: "/surveys-main" },
+  { name: "Feedback Survey _ All Responses", backRoute: "/surveys-main" },
+  { name: "Feedback Survey _ Response Tags", backRoute: "/surveys-main" },
+  { name: "Create  Survey _ How it works", backRoute: "/surveys-main" },
+  { name: "Create  Survey _ Preview", backRoute: "/surveys-main" },
+  { name: "Create  Survey _ Delivery Method", backRoute: "/surveys-main" },
+  { name: "Customise _ Survey", backRoute: "/surveys-main" },
+  { name: "Customise _ Thankyou", backRoute: "/surveys-main" },
+  { name: "Customise _ Email", backRoute: "/surveys-main" },
+  { name: "Customise _ Recipient", backRoute: "/surveys-main" },
+  { name: "Customise _ Automation", backRoute: "/surveys-main" },
+  { name: "Industry Standard Survey", backRoute: "/surveys-main" },
 ];
 
 const toPascalCase = (str) =>
