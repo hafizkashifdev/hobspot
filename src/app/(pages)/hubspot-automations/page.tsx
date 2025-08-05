@@ -40,7 +40,7 @@ export default function HubspotCommercePage() {
             <Typography
               variant="h3"
               color="#0246BC"
-              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+              fontSize={"70px"}
               fontWeight={600}
             >
               Automations
@@ -52,6 +52,7 @@ export default function HubspotCommercePage() {
               alt={'Fa Global'}
               width={300}
               height={150}
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
           </Box>
 
