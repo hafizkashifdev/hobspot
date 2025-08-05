@@ -1,0 +1,313 @@
+import { SettingsDataManagementImage } from "@/assets";
+import CommonImgMapPage from "@/components/common-img-map-page";
+import React from "react";
+
+const areas = [
+  {
+    alt: "Create Properties",
+    title: "Create Properties",
+    href: "/settings-data-management-33",
+    coords: "58,95,379,152",
+    shape: "rect",
+  },
+  {
+    alt: "Details",
+    title: "Details",
+    href: "/settings-data-management-34",
+    coords: "86,180,278,229",
+    shape: "rect",
+  },
+  {
+    alt: "Conditional Logic",
+    title: "Conditional Logic",
+    href: "/settings-data-management-37",
+    coords: "56,837,386,894",
+    shape: "rect",
+  },
+  {
+    alt: "Object Library",
+    title: "Object Library",
+    href: "/settings-data-management-10",
+    coords: "21,1123,319,1183",
+    shape: "rect",
+  },
+  {
+    alt: "Field Type",
+    title: "Field Type",
+    href: "/settings-data-management-35",
+    coords: "478,492,709,548",
+    shape: "rect",
+  },
+  {
+    alt: "Manage Access to",
+    title: "Manage Access to",
+    href: "/settings-data-management-36",
+    coords: "1147,495,1496,555",
+    shape: "rect",
+  },
+  {
+    alt: "Groups",
+    title: "Groups",
+    href: "/settings-data-management-02",
+    coords: "670,835,869,894",
+    shape: "rect",
+  },
+  {
+    alt: "Archived",
+    title: "Archived",
+    href: "/settings-data-management-09",
+    coords: "1281,834,1502,899",
+    shape: "rect",
+  },
+  {
+    alt: "Configure Object Settings",
+    title: "Configure Object Settings",
+    href: "/settings-data-management-14",
+    coords: "657,1213,1110,1271",
+    shape: "rect",
+  },
+  {
+    alt: "Enable or Disable Objects",
+    title: "Enable or Disable Objects",
+    href: "/settings-data-management-12",
+    coords: "51,1214,504,1269",
+    shape: "rect",
+  },
+  {
+    alt: "Objects",
+    title: "Objects",
+    href: "/settings-data-management-08",
+    coords: "30,1581,215,1634",
+    shape: "rect",
+  },
+  {
+    alt: "Contacts",
+    title: "Contacts",
+    href: "/settings-data-management-15",
+    coords: "53,1659,257,1722",
+    shape: "rect",
+  },
+  {
+    alt: "Companies",
+    title: "Companies",
+    href: "/settings-data-management-11",
+    coords: "53,1999,301,2060",
+    shape: "rect",
+  },
+  {
+    alt: "Leads",
+    title: "Leads",
+    href: "/settings-data-management-13",
+    coords: "55,2353,231,2415",
+    shape: "rect",
+  },
+  {
+    alt: "Deals",
+    title: "Deals",
+    href: "/settings-data-management-03",
+    coords: "51,2744,217,2806",
+    shape: "rect",
+  },
+  {
+    alt: "Deal Configuration Options",
+    title: "Deal Configuration Options",
+    href: "/settings-data-management-16",
+    coords: "69,2829,564,2889",
+    shape: "rect",
+  },
+  {
+    alt: "Pipeline Customization",
+    title: "Pipeline Customization",
+    href: "/settings-data-management-19",
+    coords: "788,2827,1229,2891",
+    shape: "rect",
+  },
+  {
+    alt: "Record & Display Customization",
+    title: "Record & Display Customization",
+    href: "/settings-data-management-23",
+    coords: "72,3157,643,3213",
+    shape: "rect",
+  },
+  {
+    alt: "Tickets",
+    title: "Tickets",
+    href: "/settings-data-management-29",
+    coords: "53,3508,236,3564",
+    shape: "rect",
+  },
+  {
+    alt: "Object Configuration Options",
+    title: "Object Configuration Options",
+    href: "/settings-data-management-38",
+    coords: "88,3578,612,3641",
+    shape: "rect",
+  },
+  {
+    alt: "Products",
+    title: "Products",
+    href: "/settings-data-management-17",
+    coords: "56,3952,275,4010",
+    shape: "rect",
+  },
+  {
+    alt: "Quote",
+    title: "Quote",
+    href: "/settings-data-management-20",
+    coords: "980,3950,1160,4019",
+    shape: "rect",
+  },
+  {
+    alt: "Subscriptions",
+    title: "Subscriptions",
+    href: "/settings-data-management-25",
+    coords: "55,4287,338,4355",
+    shape: "rect",
+  },
+  {
+    alt: "Services",
+    title: "Services",
+    href: "/settings-data-management-30",
+    coords: "982,4288,1199,4355",
+    shape: "rect",
+  },
+  {
+    alt: "Corses",
+    title: "Corses",
+    href: "/settings-data-management-39",
+    coords: "1431,4292,1629,4352",
+    shape: "rect",
+  },
+  {
+    alt: "Listings",
+    title: "Listings",
+    href: "/settings-data-management-22",
+    coords: "55,4630,245,4701",
+    shape: "rect",
+  },
+  {
+    alt: "Appointments",
+    title: "Appointments",
+    href: "/settings-data-management-27",
+    coords: "518,4629,798,4696",
+    shape: "rect",
+  },
+  {
+    alt: "Invoices",
+    title: "Invoices",
+    href: "/settings-data-management-32",
+    coords: "978,4625,1176,4696",
+    shape: "rect",
+  },
+  {
+    alt: "Forecast",
+    title: "Forecast",
+    href: "/settings-data-management-41",
+    coords: "51,4969,263,5039",
+    shape: "rect",
+  },
+  {
+    alt: "Activities",
+    title: "Activities",
+    href: "/settings-data-management-42",
+    coords: "599,4965,814,5039",
+    shape: "rect",
+  },
+  {
+    alt: "Campaigns",
+    title: "Campaigns",
+    href: "/settings-data-management-04",
+    coords: "1437,4969,1687,5032",
+    shape: "rect",
+  },
+  {
+    alt: "Lists",
+    title: "Lists",
+    href: "/settings-data-management-05",
+    coords: "76,5311,236,5374",
+    shape: "rect",
+  },
+  {
+    alt: "Marketing Events",
+    title: "Marketing Events",
+    href: "/settings-data-management-06",
+    coords: "737,5305,1096,5379",
+    shape: "rect",
+  },
+  {
+    alt: "Work Flows",
+    title: "Work Flows",
+    href: "/settings-data-management-07",
+    coords: "1408,5309,1660,5383",
+    shape: "rect",
+  },
+  {
+    alt: "Orders",
+    title: "Orders",
+    href: "/settings-data-management-18",
+    coords: "49,5644,250,5713",
+    shape: "rect",
+  },
+  {
+    alt: "Carts",
+    title: "Carts",
+    href: "/settings-data-management-21",
+    coords: "60,5980,249,6051",
+    shape: "rect",
+  },
+  {
+    alt: "Custom Objects",
+    title: "Custom Objects",
+    href: "/settings-data-management-26",
+    coords: "60,6319,390,6393",
+    shape: "rect",
+  },
+  {
+    alt: "Translation",
+    title: "Translation",
+    href: "/settings-data-management-31",
+    coords: "30,6691,282,6758",
+    shape: "rect",
+  },
+  {
+    alt: "Data Enrichment",
+    title: "Data Enrichment",
+    href: "/settings-data-management-40",
+    coords: "1179,6691,1521,6763",
+    shape: "rect",
+  },
+  {
+    alt: "Import And Export",
+    title: "Import And Export",
+    href: "#/settings-data-management-24",
+    coords: "33,7006,382,7080",
+    shape: "rect",
+  },
+  {
+    alt: "Data Backup & Restore",
+    title: "Data Backup & Restore",
+    href: "/settings-data-management-28",
+    coords: "33,7324,432,7391",
+    shape: "rect",
+  },
+  {
+    alt: "Properties",
+    title: "Properties",
+    href: "/settings-data-management-01",
+    coords: "39,28,268,83",
+    shape: "rect",
+  },
+];
+
+const SettingsDataManagementPage = () => {
+  return (
+    <CommonImgMapPage
+      pageTitle={`Settings Data Management`}
+      image={SettingsDataManagementImage}
+      backRoute="/hubspot-settings"
+      areas={areas}
+    />
+  );
+};
+
+export default SettingsDataManagementPage;

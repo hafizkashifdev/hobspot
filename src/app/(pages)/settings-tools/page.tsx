@@ -1,0 +1,306 @@
+import { SettingsToolsImage } from "@/assets";
+import CommonImgMapPage from "@/components/common-img-map-page";
+import React from "react";
+
+const areas = [
+  {
+    alt: "Meetings",
+    title: "Meetings",
+    href: "settings-tools-01",
+    coords: "30,42,246,98",
+    shape: "rect",
+  },
+  {
+    alt: "Meeting Configuration",
+    title: "Meeting Configuration",
+    href: "settings-tools-34",
+    coords: "67,119,453,179",
+    shape: "rect",
+  },
+  {
+    alt: "Meeting Rotation (Create a Rotation)",
+    title: "Meeting Rotation (Create a Rotation)",
+    href: "settings-tools-35",
+    coords: "921,121,1522,177",
+    shape: "rect",
+  },
+  {
+    alt: "Calling",
+    title: "Calling",
+    href: "settings-tools-02",
+    coords: "35,479,204,535",
+    shape: "rect",
+  },
+  {
+    alt: "Blocked Numbers List",
+    title: "Blocked Numbers List",
+    href: "settings-tools-17",
+    coords: "493,560,886,611",
+    shape: "rect",
+  },
+  {
+    alt: "Interactive Voice Response",
+    title: "Interactive Voice Response",
+    href: "settings-tools-18",
+    coords: "911,560,1351,614",
+    shape: "rect",
+  },
+  {
+    alt: "Transcription & Analysis",
+    title: "Transcription & Analysis",
+    href: "settings-tools-19",
+    coords: "1383,560,1788,614",
+    shape: "rect",
+  },
+  {
+    alt: "Call Setup",
+    title: "Call Setup",
+    href: "settings-tools-16",
+    coords: "47,556,261,607",
+    shape: "rect",
+  },
+  {
+    alt: "Sales Workspace",
+    title: "Sales Workspace",
+    href: "settings-tools-15",
+    coords: "35,907,346,969",
+    shape: "rect",
+  },
+  {
+    alt: "Inbox & help Desk",
+    title: "Inbox & help Desk",
+    href: "settings-tools-03",
+    coords: "799,911,1116,963",
+    shape: "rect",
+  },
+  {
+    alt: "Help Desk",
+    title: "Help Desk",
+    href: "settings-tools-24",
+    coords: "1518,990,1748,1046",
+    shape: "rect",
+  },
+  {
+    alt: "Inboxes",
+    title: "Inboxes",
+    href: "settings-tools-21",
+    coords: "821,986,1027,1048",
+    shape: "rect",
+  },
+  {
+    alt: "Permissions ( Show the leads  & Deals Tab)",
+    title: "Permissions ( Show the leads  & Deals Tab)",
+    href: "#settings-tools-20",
+    coords: "56,985,702,1048",
+    shape: "rect",
+  },
+  {
+    alt: "Marketing",
+    title: "Marketing",
+    href: "settings-tools-07",
+    coords: "37,1329,256,1390",
+    shape: "rect",
+  },
+  {
+    alt: "Reply Recommendations",
+    title: "Reply Recommendations",
+    href: "settings-tools-28",
+    coords: "825,1316,1260,1376",
+    shape: "rect",
+  },
+  {
+    alt: "Ads",
+    title: "Ads",
+    href: "settings-tools-22",
+    coords: "46,1402,193,1453",
+    shape: "rect",
+  },
+  {
+    alt: "Email",
+    title: "Email",
+    href: "settings-tools-25",
+    coords: "49,1625,207,1681",
+    shape: "rect",
+  },
+  {
+    alt: "Configuration",
+    title: "Configuration",
+    href: "settings-tools-29",
+    coords: "72,1708,339,1758",
+    shape: "rect",
+  },
+  {
+    alt: "Subscriptions",
+    title: "Subscriptions",
+    href: "settings-tools-32",
+    coords: "376,1701,634,1750",
+    shape: "rect",
+  },
+  {
+    alt: "Subscriptions Type",
+    title: "Subscriptions Type",
+    href: "settings-tools-37",
+    coords: "372,2150,695,2208",
+    shape: "rect",
+  },
+  {
+    alt: "Availability Management",
+    title: "Availability Management",
+    href: "settings-tools-31",
+    coords: "818,1894,1267,1945",
+    shape: "rect",
+  },
+  {
+    alt: "Allow & Deny List",
+    title: "Allow & Deny List",
+    href: "settings-tools-36",
+    coords: "816,2159,1153,2210",
+    shape: "rect",
+  },
+  {
+    alt: "Content",
+    title: "Content",
+    href: "settings-tools-08",
+    coords: "791,2466,981,2524",
+    shape: "rect",
+  },
+  {
+    alt: "Tracking",
+    title: "Tracking",
+    href: "settings-tools-27",
+    coords: "72,2604,291,2662",
+    shape: "rect",
+  },
+  {
+    alt: "Navigation Menu",
+    title: "Navigation Menu",
+    href: "settings-tools-26",
+    coords: "804,2804,1130,2861",
+    shape: "rect",
+  },
+  {
+    alt: "SMTP",
+    title: "SMTP",
+    href: "settings-tools-30",
+    coords: "70,3054,256,3106",
+    shape: "rect",
+  },
+  {
+    alt: "Campaign",
+    title: "Campaign",
+    href: "settings-tools-33",
+    coords: "54,3329,304,3389",
+    shape: "rect",
+  },
+  {
+    alt: "Themes & Modules",
+    title: "Themes & Modules",
+    href: "settings-tools-40",
+    coords: "804,3048,1153,3115",
+    shape: "rect",
+  },
+  {
+    alt: "Blog",
+    title: "Blog",
+    href: "settings-tools-41",
+    coords: "802,3298,956,3356",
+    shape: "rect",
+  },
+  {
+    alt: "Forms",
+    title: "Forms",
+    href: "settings-tools-38",
+    coords: "51,3619,230,3673",
+    shape: "rect",
+  },
+  {
+    alt: "Podcasts (Reach your audience)",
+    title: "Podcasts (Reach your audience)",
+    href: "settings-tools-12",
+    coords: "804,3531,1265,3596",
+    shape: "rect",
+  },
+  {
+    alt: "Case Studies",
+    title: "Case Studies",
+    href: "settings-tools-09",
+    coords: "1306,3533,1571,3584",
+    shape: "rect",
+  },
+  {
+    alt: "Social",
+    title: "Social",
+    href: "settings-tools-39",
+    coords: "67,3850,223,3910",
+    shape: "rect",
+  },
+  {
+    alt: "Pages",
+    title: "Pages",
+    href: "settings-tools-10",
+    coords: "799,3768,986,3828",
+    shape: "rect",
+  },
+  {
+    alt: "Knowledge Base",
+    title: "Knowledge Base",
+    href: "settings-tools-11",
+    coords: "804,4008,1114,4079",
+    shape: "rect",
+  },
+  {
+    alt: "Private Content",
+    title: "Private Content",
+    href: "settings-tools-13",
+    coords: "1186,4014,1499,4072",
+    shape: "rect",
+  },
+  {
+    alt: "Customer Portal ( General & Template)",
+    title: "Customer Portal ( General & Template)",
+    href: "settings-tools-14",
+    coords: "802,4272,1429,4337",
+    shape: "rect",
+  },
+  {
+    alt: "Payments",
+    title: "Payments",
+    href: "settings-tools-05",
+    coords: "37,4300,260,4361",
+    shape: "rect",
+  },
+  {
+    alt: "AI Assistant",
+    title: "AI Assistant",
+    href: "settings-tools-06",
+    coords: "414,4298,677,4358",
+    shape: "rect",
+  },
+  {
+    alt: "SMS Settings",
+    title: "SMS Settings",
+    href: "settings-tools-04",
+    coords: "32,4577,286,4645",
+    shape: "rect",
+  },
+  {
+    alt: "Domains & URLs",
+    title: "Domains & URLs",
+    href: "settings-tools-23",
+    coords: "799,2539,1125,2599",
+    shape: "rect",
+  },
+];
+
+const SettingsToolsPage = () => {
+  return (
+    <CommonImgMapPage
+      pageTitle={`Settings Tools`}
+      image={SettingsToolsImage}
+      backRoute="/hubspot-settings"
+      areas={areas}
+    />
+  );
+};
+
+export default SettingsToolsPage;

@@ -112,3 +112,8 @@ export { default as Library21Image } from "./Library21Image.svg";
 export { default as HubspotWorkspaceSalesImage } from "./HubspotWorkspaceSalesImage.svg";
 export { default as HubspotWorkspaceHelpdeskImage } from "./HubspotWorkspaceHelpdeskImage.svg";
 export { default as HubspotWorkspaceHelpdeskDetailedTicketViewScreenImage } from "./HubspotWorkspaceHelpdeskDetailedTicketViewScreenImage.svg";
+export { default as SettingsDataManagementImage } from "./SettingsDataManagementImage.svg";
+export { default as SettingsToolsImage } from "./SettingsToolsImage.svg";
+export { default as WorkspaceSalesImage } from "./WorkspaceSalesImage.svg";
+export { default as WorkspaceHelpdeskImage } from "./WorkspaceHelpdeskImage.svg";
+export { default as LibraryImage } from "./LibraryImage.svg";
