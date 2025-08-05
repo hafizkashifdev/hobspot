@@ -181,6 +181,7 @@ const ContentImageMap = () => {
           >
             {mapAreas.map((area) => (
                 <Box
+                key={area.id}
                   onClick={() => handleAreaClick(area.href)}
                   onMouseEnter={() => handleAreaHover(area.id)}
                   onMouseLeave={handleAreaLeave}
