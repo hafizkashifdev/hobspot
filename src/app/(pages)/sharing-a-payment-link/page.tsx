@@ -7,7 +7,7 @@ const SharingAPaymentLinkPage = () => {
     <CommonPage
       pageTitle={` Sharing a Payment Link`}
       src={SharingAPaymentLinkImage}
-      backRoute="/invoice-main"
+      backRoute="/payment-links-main"
     />
   );
 };

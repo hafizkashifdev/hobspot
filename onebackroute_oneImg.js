@@ -6,15 +6,21 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-  { name: "CRM Calls 01", backRoute: "/crm-calls" },
-  { name: "CRM Calls 02", backRoute: "/crm-calls" },
-  { name: "CRM Calls 03", backRoute: "/crm-calls" },
-  { name: "CRM Calls 04", backRoute: "/crm-calls" },
-  { name: "CRM Calls 05", backRoute: "/crm-calls" },
-  { name: "CRM Calls 06", backRoute: "/crm-calls" },
-  { name: "CRM Calls 07", backRoute: "/crm-calls" },
-  { name: "CRM Calls 08", backRoute: "/crm-calls" },
-  { name: "CRM Calls 09", backRoute: "/crm-calls" },
+  {
+    name: "1 Hubspot Workspace _ Sales",
+    backRoute: "/Workspace _ Sales",
+    title: "Workspace _ Sales",
+  },
+  {
+    name: "1 Hubspot Workspace _ Helpdesk",
+    backRoute: "/Workspace _ HelpDesk",
+    title: "Workspace _ Helpdesk",
+  },
+  {
+    name: "2 Hubspot Workspace _ Helpdesk_Detailed Ticket View Screen",
+    backRoute: "/Workspace _ HelpDesk",
+    title: "Detailed Ticket View Screen",
+  },
 ];
 
 const toPascalCase = (str) =>
@@ -34,7 +40,7 @@ const toKebabCase = (str) =>
     .replace(/^-+|-+$/g, "");
 
 for (const page of pages) {
-  const { name } = page;
+  const { name, title } = page;
   let { backRoute } = page;
 
   if (!name || typeof name !== "string" || !name.trim()) {
@@ -83,7 +89,7 @@ import React from "react";
 const ${pascalComponent} = () => {
   return (
     <CommonPage
-      pageTitle={\`${name}\`}
+      pageTitle={\`${title}\`}
       src={${imageName}}
       backRoute="${backRoute}"
     />
