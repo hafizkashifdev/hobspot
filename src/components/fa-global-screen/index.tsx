@@ -33,7 +33,7 @@ const FaGlobalScreen = ({
   cardsData,
   gridSize = { xs: 12, md: 6, lg: 3 },
   backRoute = '/',
-  showBackButton = false
+  showBackButton = true
 }: FaGlobalScreenProps) => {
   return (
     <Box p={{ xs: 3, md: 4, lg: 6 }} position="relative">
