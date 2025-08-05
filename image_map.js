@@ -6,7 +6,11 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-  { name: "AQSE Overview", backRoute: "/" },
+  { name: "Settings Data Management", backRoute: "/Hubspot Settings" },
+  { name: "Settings Tools", backRoute: "/Hubspot Settings" },
+  { name: "Workspace _ Sales", backRoute: "/Hubspot Workspace" },
+  { name: "Workspace _ HelpDesk", backRoute: "/Hubspot Workspace" },
+  { name: "Library", backRoute: "/" },
 ];
 
 const toPascalCase = (str) =>

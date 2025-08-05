@@ -6,14 +6,22 @@ const assetsDir = path.join(__dirname, "src", "assets");
 const indexTsxPath = path.join(assetsDir, "index.tsx");
 
 const pages = [
-   { name: "Forecast Forecast Main Screen-1", backRoute: "/forecast-and-goals" },
-   { name: "Forecast Goal Main Screen-2", backRoute: "/forecast-and-goals" },
-   { name: "Forecast View  Goal-3", backRoute: "/forecast-and-goals" },
-   { name: "Forecast Create Goal Setup Stage-4", backRoute: "/forecast-and-goals" },
-   { name: "Forecast Create Goal Performance-5", backRoute: "/forecast-and-goals" },
-   { name: "Forecast Create Goal Notification Settings-6", backRoute: "/forecast-and-goals" },
-   { name: "Forecast Edit  Goal-7", backRoute: "/forecast-and-goals" },
-]; 
+  {
+    name: "1 Hubspot Workspace _ Sales",
+    backRoute: "/Workspace _ Sales",
+    title: "Workspace _ Sales",
+  },
+  {
+    name: "1 Hubspot Workspace _ Helpdesk",
+    backRoute: "/Workspace _ HelpDesk",
+    title: "Workspace _ Helpdesk",
+  },
+  {
+    name: "2 Hubspot Workspace _ Helpdesk_Detailed Ticket View Screen",
+    backRoute: "/Workspace _ HelpDesk",
+    title: "Detailed Ticket View Screen",
+  },
+];
 
 const toPascalCase = (str) =>
   str
@@ -32,7 +40,7 @@ const toKebabCase = (str) =>
     .replace(/^-+|-+$/g, "");
 
 for (const page of pages) {
-  const { name } = page;
+  const { name, title } = page;
   let { backRoute } = page;
 
   if (!name || typeof name !== "string" || !name.trim()) {
@@ -81,7 +89,7 @@ import React from "react";
 const ${pascalComponent} = () => {
   return (
     <CommonPage
-      pageTitle={\`${name}\`}
+      pageTitle={\`${title}\`}
       src={${imageName}}
       backRoute="${backRoute}"
     />
