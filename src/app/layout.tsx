@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { FRONTEND_SALE_SITE_BASE_URL } from "@/Config";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -37,11 +36,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hubspot Docs Breakdown",
     description: "Visual diagram meticulously break down the product and its processes, giving you all the detailed insights to explore how everything works.",
-    url: `https://hubspot.netlify.app`,
+    url: `https://hubspotdocs.netlify.app`,
     type: "website",
     images: [
       {
-        url: `https://hubspot.netlify.app/og.png`,
+        url: `https://hubspotdocs.netlify.app/og.png`,
         type: "image/png",
         width: 1200,
         height: 630,
