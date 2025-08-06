@@ -482,3 +482,25 @@ export { default as ForecastCreateGoalPerformance5Image } from "./ForecastCreate
 export { default as ForecastCreateGoalNotificationSettings6Image } from "./ForecastCreateGoalNotificationSettings6Image.svg";
 export { default as ForecastEditGoal7Image } from "./ForecastEditGoal7Image.svg";
 export { default as ForecastImage } from "./ForecastImage.svg";
+export { default as DataManagementDataModelImage } from "./DataManagementDataModelImage.svg";
+
+export { default as DataManagementDataModelOverviewImage } from "./DataManagementDataModelOverviewImage.svg";
+export { default as DataManagementDataModelOverviewAllObjectsDetailsImage } from "./DataManagementDataModelOverviewAllObjectsDetailsImage.svg";
+export { default as DataManagementDataModelOverviewAllObjectsDetailsViewDetailsImage } from "./DataManagementDataModelOverviewAllObjectsDetailsViewDetailsImage.svg";
+export { default as DataManagementDataModelOverviewAllObjectsDetailsViewDetailsUsageImage } from "./DataManagementDataModelOverviewAllObjectsDetailsViewDetailsUsageImage.svg";
+export { default as DataManagementDataModelOverviewAllObjectsDetailsViewDetailsPropertiesImage } from "./DataManagementDataModelOverviewAllObjectsDetailsViewDetailsPropertiesImage.svg";
+export { default as DataManagementDataModelOverviewAllObjectsDetailsViewDetailsAssociationsImage } from "./DataManagementDataModelOverviewAllObjectsDetailsViewDetailsAssociationsImage.svg";
+export { default as DataManagementDataModelOverviewAllObjectsDetailsViewDetailsUsedInImage } from "./DataManagementDataModelOverviewAllObjectsDetailsViewDetailsUsedInImage.svg";
+export { default as DataManagementDataModelLimitsImage } from "./DataManagementDataModelLimitsImage.svg";
+export { default as DataManagementDataModelLimitsRecordLimitsImage } from "./DataManagementDataModelLimitsRecordLimitsImage.svg";
+export { default as DataManagementDataModelLimitsRecordLimitsObjectsImage } from "./DataManagementDataModelLimitsRecordLimitsObjectsImage.svg";
+export { default as DataManagementDataModelLimitsRecordLimitsObjectsHubspotDefinedObjectsImage } from "./DataManagementDataModelLimitsRecordLimitsObjectsHubspotDefinedObjectsImage.svg";
+export { default as DataManagementDataModelLimitsRecordLimitsAssociationsImage } from "./DataManagementDataModelLimitsRecordLimitsAssociationsImage.svg";
+export { default as DataManagementDataModelLimitsDefinitionLimitsImage } from "./DataManagementDataModelLimitsDefinitionLimitsImage.svg";
+export { default as DataManagementDataModelLimitsDefinitionLimitsPropertiesImage } from "./DataManagementDataModelLimitsDefinitionLimitsPropertiesImage.svg";
+export { default as DataManagementDataModelLimitsDefinitionLimitsAssociationLabelsImage } from "./DataManagementDataModelLimitsDefinitionLimitsAssociationLabelsImage.svg";
+export { default as DataManagementDataModelLimitsDefinitionLimitsPipelinesImage } from "./DataManagementDataModelLimitsDefinitionLimitsPipelinesImage.svg";
+export { default as DataManagementDataModelLimitsDefinitionLimitsCustomObjectsImage } from "./DataManagementDataModelLimitsDefinitionLimitsCustomObjectsImage.svg";
+export { default as DataManagementDataModelAnalysisImage } from "./DataManagementDataModelAnalysisImage.svg";
+export { default as DataManagementDataModelAnalysisCrmGraphImage } from "./DataManagementDataModelAnalysisCrmGraphImage.svg";
+export { default as DataManagementDataModelAnalysisGridDetailsImage } from "./DataManagementDataModelAnalysisGridDetailsImage.svg";
