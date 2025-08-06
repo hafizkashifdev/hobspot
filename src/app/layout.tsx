@@ -9,9 +9,8 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 export const metadata: Metadata = {
-  title: "Meta Title",
-  description:
-    "Meta Description",
+  title: "Hubspot Docs Breakdown",
+  description: "Visual diagram meticulously break down the product and its processes, giving you all the detailed insights to explore how everything works.",
   icons: {
     icon: [
       { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
@@ -36,9 +35,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Meta Title",
-    description:
-      "Meta Description",
+    title: "Hubspot Docs Breakdown",
+    description: "Visual diagram meticulously break down the product and its processes, giving you all the detailed insights to explore how everything works.",
     url: `${FRONTEND_SALE_SITE_BASE_URL}`,
     type: "website",
     images: [
