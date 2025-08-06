@@ -2,5 +2,18 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  # Give Node more heap during the Next.js build on Netlify
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  # Optional: Node version (set if you need a specific node supported by Netlify)
+  # NODE_VERSION = "18"
+
+# Keep the plugin for Next.js runtime & image handling
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Optional headers for proper caching of static assets (recommended)
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
