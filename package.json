@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "clean": "rimraf .next",
-    "build": "npm run clean && next build",
-    "build:ci": "cross-env NODE_OPTIONS=--max_old_space_size=4096 next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write .",
     "prepare": "husky"
   },
   "dependencies": {
@@ -18,6 +15,7 @@
     "@mui/icons-material": "^7.1.2",
     "@mui/material": "^7.1.2",
     "@netlify/plugin-nextjs": "^5.11.5",
+    "f": "^1.4.0",
     "image-map-resizer": "^1.0.10",
     "next": "15.3.4",
     "react": "^19.0.0",
@@ -37,8 +35,6 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
-    "typescript": "^5",
-    "rimraf": "^5.0.0",
-    "cross-env": "^7.0.3"
+    "typescript": "^5"
   }
 }
