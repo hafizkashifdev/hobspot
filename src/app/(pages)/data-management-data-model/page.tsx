@@ -1,3 +1,5 @@
+"use client";
+
 import { DataManagementDataModelImage } from "@/assets";
 import CommonImgMapPage from "@/components/common-img-map-page";
 import React from "react";
