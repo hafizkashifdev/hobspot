@@ -37,15 +37,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hubspot Docs Breakdown",
     description: "Visual diagram meticulously break down the product and its processes, giving you all the detailed insights to explore how everything works.",
-    url: `${FRONTEND_SALE_SITE_BASE_URL}`,
+    url: `https://hubspot.netlify.app`,
     type: "website",
     images: [
       {
-        url: `${FRONTEND_SALE_SITE_BASE_URL}/og.png`,
+        url: `https://hubspot.netlify.app/og.png`,
         type: "image/png",
         width: 1200,
         height: 630,
-        alt: "Railsr",
+        alt: "Hubspot",
       },
     ],
   },
