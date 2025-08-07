@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "clean": "rimraf .next",
-    "build": "npm run clean && next build",
+    "build": "next build && next export",
     "build:ci": "cross-env NODE_OPTIONS=--max_old_space_size=6144 next build",
     "start": "next start",
     "lint": "next lint",
